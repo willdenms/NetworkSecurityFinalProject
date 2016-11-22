@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "Network Security Final Project",
+  "description": "University of Utah: School of Computing, Network Security final project. The purpose of this extension is to inform its users of network security risks which they might not be currently aware of.",
+  "version": "1.0",
+
+  "background_page": "background.html",
+
+  "browser_action": {
+    "default_icon": "Sherlock.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ]
+}

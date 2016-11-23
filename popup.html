@@ -2,14 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href="public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="public/js/jquery.js"></script>
+    <script src="public/notify/bootstrap-notify.min.js"></script>
+    <script src="public/bootstrap/js/bootstrap.min.js"></script>
+
     <script type="application/javascript"></script>
-    <script src="popupTest.js"></script>
+    <script type="application/javascript" src="popupTest.js"></script>
+
     <title>FinalProject</title>
 </head>
-<body>
-    This should be seen from the popup
+<script type="application/javascript">
+    function test() {
+       // debugger;
+        $("#test").html("Clicked");
+       // window.webkitNotifications.createNotification("Sherlock.gif", "Clicked", "It was clicked").show();
+    }
+</script>
 
-<input type="" value="Clicky" onclick="clickHandler()">
+
+<body>
+   <div id="test"> This should be seen from the popup </div>
+
+<input class="btn btn-default" type="button" value="Clicky" onclick="test()">
 
 </body>
 </html>

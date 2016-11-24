@@ -54,7 +54,7 @@ function NotificationOptions() {
         iconUrl: "",        //Required for notifications.create .
         title: "",          //Required for notifications.create
         message: "",        //Required for notifications.create
-    };
+    };;
     return notification;
 }
 

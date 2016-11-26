@@ -5,6 +5,8 @@
   "description": "University of Utah: School of Computing, Network Security final project. The purpose of this extension is to inform its users of network security risks which they might not be currently aware of.",
   "version": "0.1",
   "background_page": "background.html",
+  "options_page": "options.html",
+
   "browser_action": {
     "default_icon": "Sherlock.png",
     "default_popup": "popup.html"

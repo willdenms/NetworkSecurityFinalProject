@@ -16,9 +16,95 @@
 
 
 <body>
-   <div id="test"> This should be seen from the popup </div>
+    <div class="container-fluid" >
+        <div class="row">
+            <div class="col-xs-12" style="width: 400px">
+                <ul class="nav nav-pills">
+                    <li class="active"><a data-toggle="pill" href="#home">Settings</a></li>
+                    <li><a data-toggle="pill" href="#menu1">Add Blocker</a></li>
+                    <li><a data-toggle="pill" href="#menu2">Trackers</a></li>
+                    <li><a data-toggle="pill" href="#menu3">Hardware</a></li>
+                </ul>
 
-<input id="btn" class="btn btn-default" type="button" value="Click" />
+                <div class="tab-content">
+                    <div id="home" class="tab-pane fade in active">
+                        <h3>Settings</h3>
+                        <div id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="card">
+                                <div class="card-header" role="tab" id="headingOne">
+                                    <h5 class="mb-0">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Settings
+                                        </a>
+                                    </h5>
+                                </div>
 
+                                <div id="collapseOne" class="collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                    <div class="card-block">
+                                        **Add Settings options Here*
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" role="tab" id="headingTwo">
+                                    <h5 class="mb-0">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            Resources
+                                        </a>
+                                    </h5>
+                                </div>
+                                <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                    <div class="card-block">
+                                        **Add resources options Here**
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" role="tab" id="headingThree">
+                                    <h5 class="mb-0">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseTwo">
+                                            Performance
+                                        </a>
+                                    </h5>
+                                </div>
+                                <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                                    <div class="card-block">
+                                        **Add performance options Here**
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" role="tab" id="headingFour">
+                                    <h5 class="mb-0">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                                            Advanced Settings
+                                        </a>
+                                    </h5>
+                                </div>
+                                <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour">
+                                    <div class="card-block">
+                                        **Add Advanced Settings Here**
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="menu1" class="tab-pane fade">
+                        <h3>Add Blocker</h3>
+                        <p>Add Blockers go here</p>
+                    </div>
+                    <div id="menu2" class="tab-pane fade">
+                        <h3>Trackers</h3>
+                        <p>Cookies/Trackers go here</p>
+                    </div>
+                    <div id="menu3" class="tab-pane fade">
+                        <h3>Hardware</h3>
+                        <p>Hardware settings? or Hardware in use?</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

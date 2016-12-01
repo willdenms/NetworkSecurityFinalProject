@@ -18,6 +18,9 @@
     "notifications",
     "activeTab",
     "https://ajax.googleapis.com/",
-    "storage"
+    "storage",
+    "system.cpu",
+    "system.memory",
+    "system.storage"
   ]
 }

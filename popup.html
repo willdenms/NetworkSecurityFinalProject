@@ -88,8 +88,8 @@
                                 </div>
                                 <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour">
                                     <div class="card-block">
-                                        <input type="checkbox" name="alertSettings" id="adv-notSSL" value="non-SSL"/>Non-SSL<br>
-                                        <input type="checkbox" name="alertSettings" id="adv-hardware" value="hardware"/>Hardware<br>
+                                        <input type="checkbox" name="alertSettings" id="adv-notSSL" value="non-SSL"/>Non-SSL Warning<br>
+                                        <input type="checkbox" name="alertSettings" id="adv-hardware" value="hardware"/>Hardware Warning<br>
                                     </div>
                                 </div>
                             </div>
@@ -119,7 +119,18 @@
                     <!--Hardware Tab-->
                     <div id="menu3" class="tab-pane fade">
                         <h3>Hardware</h3>
-                        <p>Hardware settings? or Hardware in use?</p>
+                        <h4>CPU</h4>
+                          <h6><strong>Architecture Name:</strong><p id="arc-name"></p></h6>
+                          <h6><strong>Model Name:</strong><p id="model-name"></p></h6>
+                          <h6><strong>Processors:</strong><p id="proc-name"></p></h6>
+                        <h4>Storage</h4>
+                          <h6><strong>Name:</strong><p id="stor-name"></p></h6>
+                          <h6><strong>Capacity:</strong><p id="stor-cap"></p></h6>
+                          <h6><strong>Type:</strong><p id="stor-type"></p></h6>
+                        <h4>Memory</h4>
+                          <h6><strong>Capacity:</strong><p id="mem-cap"></p></h6>
+                        <button id="load">Load</button>
+                        <script src="hardware.js"></script>
                     </div>
                     <!--End Hardware Tab-->
                 </div>

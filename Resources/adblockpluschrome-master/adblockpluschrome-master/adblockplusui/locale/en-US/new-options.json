@@ -1,0 +1,446 @@
+{
+  "options_page_title": {
+    "description": "Options page title",
+    "message": "Adblock Plus Options"
+  },
+  "options_page_header_1": {
+    "description": "Page title in navigation sidebar",
+    "message": "Options"
+  },
+  "options_page_header_2": {
+    "description": "Name of extension in navigation sidebar",
+    "message": "Adblock <strong>Plus</strong>"
+  },
+  "options_tab_general": {
+    "description": "Name in sidebar for General tab",
+    "message": "General"
+  },
+  "options_tab_advanced": {
+    "description": "Name in sidebar for Advanced tab",
+    "message": "Advanced"
+  },
+  "options_tab_help": {
+    "description": "Name in sidebar for Help tab",
+    "message": "Help"
+  },
+  "options_version": {
+    "description": "Version label in navigation sidebar",
+    "message": "Version"
+  },
+  "options_tab_share": {
+    "description": "Share button in navigation sidebar",
+    "message": "Share"
+  },
+  "options_tab_contribute": {
+    "description": "Button in navigation sidebar to support Adblock Plus",
+    "message": "Support us"
+  },
+  "options_control_toggle_title": {
+    "description": "Title of toggle controls",
+    "message": "toggle"
+  },
+  "options_control_remove_title": {
+    "description": "Title of remove controls",
+    "message": "remove"
+  },
+  "options_readMore": {
+    "description": "Read more element that shows tooltip with description",
+    "message": "read more"
+  },
+  "options_blocking_title": {
+    "description": "Blocking section name in General tab",
+    "message": "Blocking"
+  },
+  "options_language_title": {
+    "description": "Ad blocking list option name in General tab",
+    "message": "<strong>Adblocking</strong> for websites in..."
+  },
+  "options_language_title_tooltip_1": {
+    "description": "Top part of tooltip description for 'Adblocking' section in General tab",
+    "message": "The default filter list is based on your browser's language settings. If you live in Germany, your default filter list is German+English. However, if you live in Germany and frequently visit Italian websites, you need to subscribe to the Italian filter list. To maintain optimal performance, it is recommended to select only the language that you need."
+  },
+  "options_language_title_tooltip_notes_1": {
+    "description": "First bottom part of tooltip description for 'Adblocking' section in General tab",
+    "message": "Consider: Sometimes ads appear because your filter lists are not up to date. If this is the case, it’s recommended to manually update all your filter lists. You can do that by going to <strong>Advanced > Update all filter lists</strong>."
+  },
+  "options_language_title_tooltip_notes_2": {
+    "description": "Second bottom part of tooltip description for 'Adblocking' section in General tab",
+    "message": "If you still see ads, please report them in our Adblock Plus sub-forum under <strong>Help > Forum > Filters for Adblock Plus</strong>."
+  },
+  "options_language_add": {
+    "description": "Add other language button in General Tab",
+    "message": "add other website languages"
+  },
+  "options_more_title": {
+    "description": "Blocking list option name in General tab",
+    "message": "More blocking options"
+  },
+  "options_more_title_tooltip_1": {
+    "description": "Tooltip description for 'More blocking options' section in General tab",
+    "message": "By default, Adblock Plus blocks all annoying ads, including video ads, animated ads, noisy ads, flashy banners, pop-ups, pop-unders and much more. In addition to ads, Adblock Plus can also block tracking, malware, social media buttons and more to increase your safety and privacy online."
+  },
+  "options_more_add": {
+    "description": "Button name for adding other filter list in General tab",
+    "message": "add other filter list"
+  },
+  "options_more_anti-adblock_tooltip_1": {
+    "message": "The Adblock Warning Removal List removes obtrusive messages and warnings targeted to users who use an adblocker."
+  },
+  "options_more_malware_tooltip_1": {
+    "message": "Increase your protection against malware, viruses, Trojan horses, worms, spyware, adware and more."
+  },
+  "options_more_malware_tooltip_2": {
+    "message": "If your computer is slow at startup or riddled with pop-ups, it may be infected with malware. Computers infected with malware are vulnerable to all kinds of cyber attacks, including stolen identity. Infected computers can also be used to send spam emails or attack other computers or servers, stealing passwords, social security numbers, personal documents and credit card information."
+  },
+  "options_more_privacy_tooltip_1": {
+    "message": "Adblock Plus can disable tracking (e.g. from ad agencies) to further protect your privacy on the web."
+  },
+  "options_more_privacy_tooltip_2": {
+    "message": "Companies such as ad agencies are tracking your online activity and browsing history every time you surf the web. According to Stanford University research, Adblock Plus is the most efficient solution available against third-party tracking companies."
+  },
+  "options_more_privacy_tooltip_notes_1": {
+    "message": "Note that this feature may conflict with Acceptable Ads, which allows some nonintrusive ads to be displayed, as well as the tracking that is needed to measure the performance of those ads. This is necessary because some websites only earn revenue from ads if their impact can be measured."
+  },
+  "options_more_social_tooltip_1": {
+    "message": "Adblock Plus can disable social media buttons on websites, ensuring that social networks can’t create a profile based on the websites you visit."
+  },
+  "options_more_social_tooltip_2": {
+    "message": "Buttons used to share content on social media platforms such as Facebook, Twitter, Google Plus and others are placed on almost every website that you visit. Even if you don't click them, these buttons send requests to the servers of the social network which use information to create a profile based on your browsing habits."
+  },
+  "options_exceptions_title": {
+    "description": "Exceptions section name in General tab",
+    "message": "Exceptions"
+  },
+  "options_acceptableAds_title": {
+    "description": "Acceptable ads option name in General tab",
+    "message": "Acceptable ads"
+  },
+  "options_acceptableAds_title_tooltip_1": {
+    "description": "First part of tooltip description for 'Acceptable Ads' section in General tab",
+    "message": "Since many websites rely on advertising revenue, we encourage the use of noninstrusive advertising."
+  },
+  "options_acceptableAds_title_tooltip_2": {
+    "description": "Second part of tooltip description for 'Acceptable Ads' section in General tab",
+    "message": "The Acceptable Ads initiative, which supports both users and website owners, is a set of strict guidelines that identifies acceptable ads. Ads meeting these criteria are displayed to users."
+  },
+  "options_acceptableAds_title_tooltip_3": {
+    "description": "Third part of tooltip description for 'Acceptable Ads' section in General tab",
+    "message": "You can, however, disable this feature at any time and browse ad-free."
+  },
+  "options_acceptableAds_description": {
+    "description": "Acceptable ads descriptive name in General tab",
+    "message": "Allow some non-intrusive advertising"
+  },
+  "options_whitelisted_add": {
+    "description": "Button label for adding whitelisted website",
+    "message": "add website"
+  },
+  "options_whitelisted_empty": {
+    "description": "Text shown when list of whitelisted websites is empty",
+    "message": "There are no websites in your whitelist."
+  },
+  "options_whitelisted_title": {
+    "description": "Whitelisting option name in General tab",
+    "message": "Whitelisted websites"
+  },
+  "options_whitelisted_title_tooltip_1": {
+    "description": "First top part of tooltip description for 'Whitelisted domains' section in General tab",
+    "message": "You can allow a website to display ads by adding it to your whitelist."
+  },
+  "options_whitelisted_title_tooltip_2": {
+    "description": "Second top part of tooltip description for 'Whitelisted domains' section in General tab",
+    "message": "This means that Adblock Plus is completely deactivated on the whitelisted site. Ads and other annoyances, such as tracking scripts, may be activated."
+  },
+  "options_whitelisted_title_tooltip_notes_1": {
+    "description": "Bottom part of tooltip description for 'Whitelisted domains' section in General tab",
+    "message": "Note that this feature is different from whitelisted Acceptable Ads."
+  },
+  "options_button_add": {
+    "description": "Add button label",
+    "message": "add"
+  },
+  "options_button_cancel": {
+    "description": "Cancel button label",
+    "message": "cancel"
+  },
+  "options_tweaks_title": {
+    "description": "Section title in Advanced tab",
+    "message": "Tweaks"
+  },
+  "options_tweaks_blockElement": {
+    "description": "Show 'Block element' option in Advanced tab",
+    "message": "Show 'Block element' right-click menu item"
+  },
+  "options_tweaks_showDevToolsPanel": {
+    "description": "Show developer tools panel option in Advanced tab",
+    "message": "Show 'Adblock Plus' panel in the developer tools"
+  },
+  "options_tweaks_showNotifications": {
+    "description": "Notification opt-out option in Advanced tab",
+    "message": "Show useful notifications"
+  },
+  "options_tweaks_safariContentBlocker": {
+    "description": "Switch between classic and Safari's Content Blocking",
+    "message": "Use Safari's native Content Blocking (experimental)"
+  },
+  "options_tweaks_restartSafari": {
+    "description": "Shown next to the option for Safai Content Blockers if disabled in order to indicate that a restart is required",
+    "message": "Please restart Safari"
+  },
+  "options_filterList_title": {
+    "description": "Section title in Advanced tab",
+    "message": "Filter lists"
+  },
+  "options_filterList_title_tooltip_1": {
+    "description": "First top part of tooltip description for 'Filter lists' section in Advanced tab",
+    "message": "You can create or add filter lists here."
+  },
+  "options_filterList_title_tooltip_notes_1": {
+    "description": "First bottom part of tooltip description for 'Filter lists' section in Advanced tab",
+    "message": "Filter lists are the heart of Adblock Plus, providing its functionality. In order for any feature of Adblock Plus to take effect, at least one filter list needs to be activated. These filter lists are not owned by Adblock Plus, but created by international volunteers, who also create the filter rules. A few of these filter lists are mentioned as examples in Adblock Plus."
+  },
+  "options_filterList_title_tooltip_notes_2": {
+    "description": "Second bottom part of tooltip description for 'Filter lists' section in Advanced tab",
+    "message": "Adblock Plus provides free hosting for popular filter lists. If you would like to create or maintain a filter list which is not yet provided by Adblock Plus, we would be more than happy to assist you with the hosting. Contact us at <strong>Help > Forum > Filters for Adblock Plus</strong>."
+  },
+  "options_tab_overview": {
+    "description": "Tab name in Advanced tab",
+    "message": "Overview"
+  },
+  "options_tab_ownList": {
+    "description": "Tab name in Advanced tab",
+    "message": "Edit or create own filter list"
+  },
+  "options_column_name": {
+    "description": "Name of column of subscription list table in Advanced tab",
+    "message": "Name"
+  },
+  "options_column_date": {
+    "description": "Name of column of subscription list table in Advanced tab",
+    "message": "Last update"
+  },
+  "options_filterList_add": {
+    "description": "Import button in Advanced tab",
+    "message": "add/import other filter list"
+  },
+  "options_filterList_update": {
+    "description": "Update button in Advanced tab",
+    "message": "update all filter lists"
+  },
+  "options_customFilters_empty": {
+    "description": "Text shown when list of custom filters is empty",
+    "message": "There are no custom filters."
+  },
+  "options_filterList_lastDownload_invalidURL": {
+    "description": "Error message in advanced tab",
+    "message": "Failed, not a valid address"
+  },
+  "options_filterList_lastDownload_connectionError": {
+    "description": "Error message in advanced tab",
+    "message": "Failed, download failure"
+  },
+  "options_filterList_lastDownload_invalidData": {
+    "description": "Error message in advanced tab",
+    "message": "Failed, not a valid filter list"
+  },
+  "options_filterList_lastDownload_checksumMismatch": {
+    "description": "Error message in advanced tab",
+    "message": "Failed, checksum mismatch"
+  },
+  "options_filterList_lastDownload_inProgress": {
+    "description": "Progress message in advanced tab",
+    "message": "Downloading…"
+  },
+  "options_filterList_updateNow": {
+    "description": "Context menu item in advanced tab, appears after click on subscription",
+    "message": "update now"
+  },
+  "options_filterList_website": {
+    "description": "Context menu item in advanced tab, appears after click on subscription",
+    "message": "website"
+  },
+  "options_filterList_source": {
+    "description": "Context menu item in advanced tab, appears after click on subscription",
+    "message": "source"
+  },
+  "options_filterList_delete": {
+    "description": "Context menu item in advanced tab, appears after click on subscription",
+    "message": "delete"
+  },
+  "options_filterList_own_list": {
+    "description": "Name of custom subscription entry in filter list section in Advanced tab",
+    "message": "Own filter list"
+  },
+  "options_filterList_edit_own_list": {
+    "description": "Entry in filter list section in Advanced tab",
+    "message": "edit your filter list"
+  },
+  "options_customFilters_title": {
+    "description": "Custom filters option name in Advanced tab",
+    "message": "Filter rules"
+  },
+  "options_customFilters_title_tooltip_1": {
+    "description": "Text of tooltip description for 'Filter rules' section in Advanced tab",
+    "message": "Learn how to write your own filter rules to define elements that should be blocked. See tutorials and the syntax description at <strong>adblockplus.org/filters</strong>"
+  },
+  "options_customFilters_textbox_placeholder": {
+    "description": "Adding custom filter textbox placeholder text in Advanced tab",
+    "message": "add your filter rule here"
+  },
+  "options_customFilter_edit": {
+    "description": "Label below single input view of user's filter list in Advanced tab",
+    "message": "edit filter rules"
+  },
+  "options_customFilter_cancel": {
+    "description": "Label below raw view of user's filter list in Advanced tab",
+    "message": "cancel"
+  },
+  "options_customFilter_save": {
+    "description": "Label below raw view of user's filter list in Advanced tab",
+    "message": "save"
+  },
+  "options_faq_title": {
+    "description": "FAQ section name in Help tab and link label in same section",
+    "message": "Frequently asked questions"
+  },
+  "options_faq_description": {
+    "description": "FAQ section description in Help tab",
+    "message": "You only need to refresh your filter list in \"Advanced\" very often, but there are also other known problems."
+  },
+  "options_forum_title": {
+    "description": "Forum section name in Help tab",
+    "message": "Forum"
+  },
+  "options_forum_description": {
+    "description": "Forum section description in Help tab",
+    "message": "If the frequently asked questions helped you can reach us in our forum."
+  },
+  "options_forum_link": {
+    "description": "Forum section link in Help tab",
+    "message": "Adblock Plus support forum"
+  },
+  "options_media_title": {
+    "description": "Social media Section name in Help tab",
+    "message": "Social media"
+  },
+  "options_media_description": {
+    "description": "Social media section description in Help tab",
+    "message": "If there are major problems with Adblock Plus which affects all of our users, we tell you in our social media channels."
+  },
+  "options_dialog_predefined_confirm": {
+    "description": "Confirming to add a predefined subscription when asked in a dialog",
+    "message": "Yes, use this filter list"
+  },
+  "options_dialog_predefined_title": {
+    "description": "Dialog title for adding a predefined subscription",
+    "message": "Do you really want to use this filter list?"
+  },
+  "options_dialog_custom_title": {
+    "description": "Title of custom subscription modal dialog",
+    "message": "Add other filter list"
+  },
+  "options_close": {
+    "description": "Close modal button",
+    "message": "close"
+  },
+  "options_dialog_custom_subscription_title": {
+    "description": "Add custom subscription modal import hint message",
+    "message": "Via URL/Link"
+  },
+  "options_dialog_custom_import": {
+    "description": "Button in add custom subscription modal dialog",
+    "message": "import filter list with this URL"
+  },
+  "options_dialog_edit_own_list": {
+    "description": "Edit own filter list section name in custom subscription modal dialog",
+    "message": "edit own filter list"
+  },
+  "options_dialog_create_own_list": {
+    "description": "Button in custom subscription modal dialog",
+    "message": "create own filter rules"
+  },
+   "options_dialog_language_title": {
+    "description": "Button in gerenal tab",
+    "message": "Add other website language"
+  },
+  "options_dialog_language_find": {
+    "description": "Placeholder text in add language modal dialog",
+    "message": "Find language"
+  },
+  "options_dialog_language_added": {
+    "description": "Table headline in add language modal dialog",
+    "message": "Added languages"
+  },
+  "options_dialog_language_added_empty": {
+    "description": "Text shown when list of added languages is empty",
+    "message": "There are no languages."
+  },
+  "options_dialog_language_other": {
+    "description": "Table headline in add language modal dialog",
+    "message": "Other languages"
+  },
+  "options_dialog_language_other_empty": {
+    "description": "Text shown when list of available languages is empty",
+    "message": "There are no available languages."
+  },
+  "options_language_en": {
+    "description": "Language name shown in add language modal dialog",
+    "message": "English"
+  },
+  "options_language_id": {
+    "description": "Language name shown in add language modal dialog",
+    "message": "Indonesian"
+  },
+  "options_language_bg": {
+    "description": "Language name shown in add language modal dialog",
+    "message": "Bulgarian"
+  },
+  "options_language_zh": {
+    "description": "Language name shown in add language modal dialog",
+    "message": "Chinese"
+  },
+  "options_language_cs_sk": {
+    "description": "Language name shown in add language modal dialog",
+    "message": "Czech and Slovak"
+  },
+  "options_language_nl": {
+    "description": "Language name shown in add language modal dialog",
+    "message": "Dutch"
+  },
+  "options_language_de": {
+    "description": "Language name shown in add language modal dialog",
+    "message": "German"
+  },
+  "options_language_he": {
+    "description": "Language name shown in add language modal dialog",
+    "message": "Hebrew"
+  },
+  "options_language_it": {
+    "description": "Language name shown in add language modal dialog",
+    "message": "Italian"
+  },
+  "options_language_lt": {
+    "description": "Language name shown in add language modal dialog",
+    "message": "Lithuanian"
+  },
+  "options_language_lv": {
+    "description": "Language name shown in add language modal dialog",
+    "message": "Latvian"
+  },
+  "options_language_ar": {
+    "description": "Language name shown in add language modal dialog",
+    "message": "Arabic"
+  },
+  "options_language_fr": {
+    "description": "Language name shown in add language modal dialog",
+    "message": "French"
+  },
+  "options_language_ro": {
+    "description": "Language name shown in add language modal dialog",
+    "message": "Romanian"
+  },
+  "options_language_ru_uk": {
+    "description": "Language name shown in add language modal dialog",
+    "message": "Russian and Ukrainian"
+  }
+}

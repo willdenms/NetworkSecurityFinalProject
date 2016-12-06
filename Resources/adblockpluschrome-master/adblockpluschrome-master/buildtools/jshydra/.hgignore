@@ -1,0 +1,5 @@
+^mozilla.*/
+^jstest/
+^\.tox/
+
+\.pyc$

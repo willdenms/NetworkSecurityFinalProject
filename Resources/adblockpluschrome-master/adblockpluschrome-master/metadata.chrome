@@ -1,0 +1,63 @@
+[default]
+inherit = metadata.common
+
+[general]
+basename = adblockpluschrome
+permissions = tabs
+  http://*/*
+  https://*/*
+  contextMenus
+  webRequest
+  webRequestBlocking
+  webNavigation
+  storage
+  unlimitedStorage
+  notifications
+options = options.html
+devtools = devtools.html
+browserAction = icons/abp-16.png icons/abp-19.png icons/abp-20.png icons/abp-32.png icons/abp-38.png icons/abp-40.png popup.html
+icons = icons/abp-16.png icons/abp-32.png icons/detailed/abp-48.png
+  icons/detailed/abp-64.png icons/detailed/abp-128.png
+managedStorageSchema = managed-storage-schema.json
+
+[compat]
+chrome = 41.0
+
+[mapping]
+icons/abp-16.png = chrome/icons/abp-16.png
+icons/abp-16-whitelisted.png = chrome/icons/abp-16-whitelisted.png
+icons/abp-16-notification-critical.png = chrome/icons/abp-16-notification-critical.png
+icons/abp-16-notification-information.png = chrome/icons/abp-16-notification-information.png
+icons/abp-19.png = chrome/icons/abp-19.png
+icons/abp-19-whitelisted.png = chrome/icons/abp-19-whitelisted.png
+icons/abp-19-notification-critical.png = chrome/icons/abp-19-notification-critical.png
+icons/abp-19-notification-information.png = chrome/icons/abp-19-notification-information.png
+icons/abp-20.png = chrome/icons/abp-20.png
+icons/abp-20-whitelisted.png = chrome/icons/abp-20-whitelisted.png
+icons/abp-20-notification-critical.png = chrome/icons/abp-20-notification-critical.png
+icons/abp-20-notification-information.png = chrome/icons/abp-20-notification-information.png
+icons/abp-32.png = chrome/icons/abp-32.png
+icons/abp-32-whitelisted.png = chrome/icons/abp-32-whitelisted.png
+icons/abp-32-notification-critical.png = chrome/icons/abp-32-notification-critical.png
+icons/abp-32-notification-information.png = chrome/icons/abp-32-notification-information.png
+icons/abp-38.png = chrome/icons/abp-38.png
+icons/abp-38-whitelisted.png = chrome/icons/abp-38-whitelisted.png
+icons/abp-38-notification-critical.png = chrome/icons/abp-38-notification-critical.png
+icons/abp-38-notification-information.png = chrome/icons/abp-38-notification-information.png
+icons/abp-40.png = chrome/icons/abp-40.png
+icons/abp-40-whitelisted.png = chrome/icons/abp-40-whitelisted.png
+icons/abp-40-notification-critical.png = chrome/icons/abp-40-notification-critical.png
+icons/abp-40-notification-information.png = chrome/icons/abp-40-notification-information.png
+icons/detailed/abp-48.png = chrome/icons/detailed/abp-48.png
+ext/devtools.js = chrome/ext/devtools.js
+devtools.html = chrome/devtools.html
+devtools.js = chrome/devtools.js
+devtools-panel.html = adblockplusui/devtools-panel.html
+devtools-panel.js = adblockplusui/devtools-panel.js
+skin/devtools-panel.css = adblockplusui/skin/devtools-panel.css
+managed-storage-schema.json = chrome/managed-storage-schema.json
+
+[convert_js]
+lib/adblockplus.js += lib/devtools.js lib/popupBlocker.js lib/uninstall.js lib/csp.js
+ext/common.js += chrome/ext/common.js
+ext/background.js += chrome/ext/background.js

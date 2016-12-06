@@ -41,7 +41,7 @@
           backgroundFrame.contentWindow.postMessage(queue[i], "*");
       window.removeEventListener("message", loadHandler, false);
     }
-  }
+  };;
   window.addEventListener("message", loadHandler, false);
 
   global.ext.backgroundPage = {

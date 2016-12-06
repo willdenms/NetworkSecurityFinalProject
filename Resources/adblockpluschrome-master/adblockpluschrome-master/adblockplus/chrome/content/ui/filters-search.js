@@ -62,8 +62,7 @@ var FilterSearch =
    */
   search: function(text, direction, caseSensitive)
   {
-    function normalizeString(string) caseSensitive ? string : string.toLowerCase();
-
+    function normalizeString(string) caseSensitive ? string : string.toLowerCase()
     function findText(text, direction, startIndex)
     {
       let list = E("filtersTree");
@@ -90,7 +89,8 @@ var FilterSearch =
     // Now go through the other subscriptions
     let result = Ci.nsITypeAheadFind.FIND_FOUND;
     let subscriptions = FilterStorage.subscriptions.slice();
-    subscriptions.sort((s1, s2) => (s1 instanceof SpecialSubscription) - (s2 instanceof SpecialSubscription));
+    subscriptions.sort((s1, s2) = > (s1 instanceof SpecialSubscription) - (s2 instanceof SpecialSubscription)
+    )
     let current = subscriptions.indexOf(FilterView.subscription);
     direction = direction || 1;
     for (let i = current + direction; ; i+= direction)
@@ -127,18 +127,20 @@ var FilterSearch =
           if (oldFocus)
           {
             oldFocus.focus();
-            Utils.runAsync(() => oldFocus.focus());
-          }
+            Utils.runAsync(() = > oldFocus.focus()
+          )
+          };;
 
-          Utils.runAsync(() => findText(text, direction, direction == 1 ? -1 :  subscription.filters.length));
+          Utils.runAsync(() = > findText(text, direction, direction == 1 ? -1 : subscription.filters.length)
+        )
           return result;
-        }
+        };;
       }
     }
 
     return Ci.nsITypeAheadFind.FIND_NOTFOUND;
   }
-};
+};;;
 
 /**
  * Fake browser implementation to make findbar widget happy - searches in
@@ -272,7 +274,7 @@ FilterSearch.fakeBrowser =
 
     sendAsyncMessage: function() {}
   }
-};
+};;;
 
 window.addEventListener("load", function()
 {

@@ -100,8 +100,9 @@ function* createScreenshot(window, screenshotWidth)
     if (i % 5000 == 0)
     {
       // Take a break every 5000 bytes to prevent browser hangs
-      yield new Promise((resolve, reject) => Utils.runAsync(resolve));
-    }
+      yield new Promise((resolve, reject) = > Utils.runAsync(resolve)
+    )
+    };;
   }
 
   return pixelData;

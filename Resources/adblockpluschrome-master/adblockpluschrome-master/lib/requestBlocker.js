@@ -33,8 +33,7 @@ ext.webRequest.getIndistinguishableTypes().forEach(types =>
 {
   for (let i = 1; i < types.length; i++)
     RegExpFilter.typeMap[types[i]] = RegExpFilter.typeMap[types[0]];
-});
-
+})
 function onBeforeRequestAsync(page, url, type, docDomain,
                               thirdParty, sitekey,
                               specificOnly, filter)
@@ -75,8 +74,7 @@ ext.webRequest.onBeforeRequest.addListener((url, type, page, frame) =>
                                       specificOnly, filter);
 
   return !(filter instanceof BlockingFilter);
-});
-
+})
 port.on("filters.collapse", (message, sender) =>
 {
   if (checkWhitelisted(sender.page, sender.frame))
@@ -111,8 +109,7 @@ port.on("filters.collapse", (message, sender) =>
   }
 
   return blocked && Prefs.hidePlaceholders;
-});
-
+})
 let ignoreFilterNotifications = false;
 
 function onFilterChange(arg, isDisabledAction)
@@ -143,16 +140,18 @@ function onFilterChange(arg, isDisabledAction)
     ignoreFilterNotifications = false;
     ext.webRequest.handlerBehaviorChanged();
     FilterNotifier.emit("filter.behaviorChanged");
-  });
+})
 }
 
 FilterNotifier.on("subscription.added", onFilterChange);
 FilterNotifier.on("subscription.removed", onFilterChange);
 FilterNotifier.on("subscription.updated", onFilterChange);
-FilterNotifier.on("subscription.disabled", arg => onFilterChange(arg, true));
+FilterNotifier.on("subscription.disabled", arg = > onFilterChange(arg, true)
+)
 FilterNotifier.on("filter.added", onFilterChange);
 FilterNotifier.on("filter.removed", onFilterChange);
-FilterNotifier.on("filter.disabled", arg => onFilterChange(arg, true));
+FilterNotifier.on("filter.disabled", arg = > onFilterChange(arg, true)
+)
 FilterNotifier.on("load", onFilterChange);
 
 port.on("request.websocket", function(msg, sender)

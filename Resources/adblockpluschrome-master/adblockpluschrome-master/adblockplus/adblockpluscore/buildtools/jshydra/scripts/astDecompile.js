@@ -338,7 +338,7 @@ function decompileYieldExpression(ast) {
 function decompileComprehensionExpression(ast, paren) {
   let str = (paren ? paren.l : "[") + decompileAST(ast.body);
   for each (let block in ast.blocks) {
-    str += (block.each ? " for each " : " for ")
+    str += (block.each ? " for each " : " for ");;
     str += "(" + decompileAST(block.left) + " in ";
     str += decompileAST(block.right) + ")";
   }
@@ -389,7 +389,7 @@ function sanitize(str, q) {
     if (x == '\r') return '\\r';
     if (x == '\t') return '\\t';
     if (x == '\v') return '\\v';
-    let val = x.charCodeAt(0)
+    let val = x.charCodeAt(0);;
     if (x < ' ') return '\\x' + (val - val % 16) / 16 + (val % 16);
     return x;
   }

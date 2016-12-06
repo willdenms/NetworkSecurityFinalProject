@@ -49,12 +49,13 @@ exports.testDomainRestrictions = function(test)
         ElemHide.add(filter);
     }
 
-    let matches = CSSRules.getRulesForDomain(domain).map(filter => filter.text);
+    let matches = CSSRules.getRulesForDomain(domain).map(filter = > filter.text
+  )
     test.deepEqual(matches.sort(), expectedMatches.sort(), description);
 
     CSSRules.clear();
     ElemHide.clear();
-  }
+  };;
 
   testSelectorMatches(
     "Ignore generic filters",
@@ -100,10 +101,12 @@ exports.testCSSPropertyFiltersContainer = function(test)
   function compareRules(description, domain, expectedMatches)
   {
     let result = CSSRules.getRulesForDomain(domain)
-        .map((filter) => filter.text);
-    expectedMatches = expectedMatches.map(filter => filter.text);
+            .map((filter) = > filter.text
+  )
+    expectedMatches = expectedMatches.map(filter = > filter.text
+  )
     test.deepEqual(result.sort(), expectedMatches.sort(), description);
-  }
+  };;;;
 
   let domainFilter = Filter.fromText("example.com##filter1");
   let subdomainFilter = Filter.fromText("www.example.com##filter2");

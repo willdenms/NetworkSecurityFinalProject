@@ -43,7 +43,7 @@ let Downloader = exports.Downloader = function Downloader(dataSource, initialDel
     this._doCheck();
   }.bind(this), initialDelay, Ci.nsITimer.TYPE_REPEATING_SLACK);
   this._downloading = Object.create(null);
-}
+};;
 Downloader.prototype =
 {
   /**
@@ -340,7 +340,7 @@ Downloader.prototype =
 let Downloadable = exports.Downloadable = function Downloadable(url)
 {
   this.url = url;
-}
+};;
 Downloadable.prototype =
 {
   /**

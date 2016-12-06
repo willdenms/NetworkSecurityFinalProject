@@ -114,8 +114,7 @@ function getContextInfo(event)
   }
 
   return items;
-};
-
+}
 let ContextMenuObserver =
 {
   observe: function(subject, topic, data)
@@ -134,4 +133,4 @@ Services.obs.addObserver(ContextMenuObserver, "AdblockPlus:content-contextmenu",
 onShutdown.add(() => {
   Services.obs.removeObserver(ContextMenuObserver, "content-contextmenu");
   Services.obs.removeObserver(ContextMenuObserver, "AdblockPlus:content-contextmenu");
-});
+})

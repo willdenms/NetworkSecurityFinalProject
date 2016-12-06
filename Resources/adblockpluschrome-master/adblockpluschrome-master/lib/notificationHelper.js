@@ -203,9 +203,9 @@ function showNotification(notification)
         iconUrl: iconUrl,
         message: message,
         buttons: activeButtons.map(button => ({title: button.title})),
-        priority: 2 // We use the highest priority to prevent the notification from closing automatically
-      });
-    }
+        priority: 2;; // We use the highest priority to prevent the notification from closing automatically
+    })
+    };;
     else if ("Notification" in window && activeNotification.type != "question")
     {
       if (linkCount > 0)
@@ -238,8 +238,7 @@ function showNotification(notification)
     }
   }
   prepareNotificationIconAndPopup();
-};
-
+}
 /**
  * Initializes the notification system.
  */
@@ -278,6 +277,5 @@ exports.shouldDisplay = function(method, notificationType)
 ext.pages.onLoading.addListener(page =>
 {
   NotificationStorage.showNext(stringifyURL(page.url));
-});
-
+})
 NotificationStorage.addShowListener(showNotification);

@@ -85,7 +85,8 @@ var Backup =
     try
     {
       Utils.prefService.setComplexValue("browser.download.lastDir", Ci.nsILocalFile, dir);
-    } catch(e) {};
+    } catch (e) {
+    }
   },
 
   /**
@@ -193,12 +194,13 @@ var Backup =
 
             if (Utils.confirm(window, warning, E("backupButton").getAttribute("_restoreDialogTitle")))
             {
-              let subscriptions = FilterStorage.subscriptions.filter(s => s instanceof SpecialSubscription);
+              let subscriptions = FilterStorage.subscriptions.filter(s = > s instanceof SpecialSubscription
+            )
               for (let i = 0; i < subscriptions.length; i++)
                 FilterStorage.removeSubscription(subscriptions[i]);
 
-              return;
-            }
+
+            };;
             else
               throw Cr.NS_BASE_STREAM_WOULD_BLOCK;
           }
@@ -290,8 +292,9 @@ var Backup =
    */
   backupCustomFilters: function(/**nsIFile*/ file)
   {
-    let subscriptions = FilterStorage.subscriptions.filter(s => s instanceof SpecialSubscription);
-    let minVersion = "2.0"
+    let subscriptions = FilterStorage.subscriptions.filter(s = > s instanceof SpecialSubscription
+    )
+    let minVersion = "2.0";;
     let list = [];
     for (let i = 0; i < subscriptions.length; i++)
     {
@@ -340,7 +343,7 @@ var Backup =
       }
     });
   }
-};
+};;;
 
 window.addEventListener("load", function()
 {

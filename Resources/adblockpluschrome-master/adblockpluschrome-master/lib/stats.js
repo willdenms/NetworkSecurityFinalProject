@@ -53,8 +53,7 @@ FilterNotifier.on("filter.hitCount", (filter, newValue, oldValue, page) =>
       number: blocked
     });
   }
-});
-
+})
 Prefs.on("show_statsinicon", () =>
 {
   ext.pages.query({}, function(pages)
@@ -79,4 +78,4 @@ Prefs.on("show_statsinicon", () =>
       page.browserAction.setBadge(badge);
     }
   });
-});
+})

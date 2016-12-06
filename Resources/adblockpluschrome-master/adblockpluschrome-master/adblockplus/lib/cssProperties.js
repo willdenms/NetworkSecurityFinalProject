@@ -25,4 +25,4 @@ port.on("addHits", filters =>
 {
   for (let text of filters)
     FilterStorage.increaseHitCount(Filter.fromText(text));
-});
+})

@@ -70,8 +70,7 @@ exports.testOneSubscriptionDownloads = function(test)
   {
     requests.push([this.getTimeOffset(), metadata.method, metadata.path]);
     return [Cr.NS_OK, 200, "[Adblock]\n! ExPiREs: 1day\nfoo\nbar"];
-  });
-
+})
   this.runScheduledTasks(50).then(() =>
   {
     test.deepEqual(requests, [
@@ -79,8 +78,10 @@ exports.testOneSubscriptionDownloads = function(test)
       [24 + initialDelay, "GET", "/subscription"],
       [48 + initialDelay, "GET", "/subscription"],
     ], "Requests after 50 hours");
-  }).catch(unexpectedError.bind(test)).then(() => test.done());
-};
+}).
+  catch(unexpectedError.bind(test)).then(() = > test.done()
+  )
+};;;
 
 exports.testTwoSubscriptionsDownloads = function(test)
 {
@@ -98,8 +99,7 @@ exports.testTwoSubscriptionsDownloads = function(test)
   {
     requests.push([this.getTimeOffset(), metadata.method, metadata.path]);
     return [Cr.NS_OK, 200, "[Adblock]\n! ExPiREs: 1day\nfoo\nbar"];
-  };
-
+  }
   this.registerHandler("/subscription1", handler);
   this.registerHandler("/subscription2", handler);
 
@@ -113,8 +113,10 @@ exports.testTwoSubscriptionsDownloads = function(test)
       [48 + initialDelay, "GET", "/subscription1"],
       [50 + initialDelay, "GET", "/subscription2"],
     ], "Requests after 55 hours");
-  }).catch(unexpectedError.bind(test)).then(() => test.done());
-};
+}).
+  catch(unexpectedError.bind(test)).then(() = > test.done()
+  )
+};;;;;
 
 exports.testSubscriptionHeaders = {};
 
@@ -135,8 +137,7 @@ for (let currentTest of [
     this.registerHandler("/subscription", metadata =>
     {
       return [Cr.NS_OK, 200, currentTest.header + "\n!Expires: 8 hours\nfoo\n!bar\n\n@@bas\n#bam"];
-    });
-
+  })
     this.runScheduledTasks(2).then(() =>
     {
       test.equal(subscription.downloadStatus, currentTest.downloadStatus, "Download status");
@@ -156,8 +157,10 @@ for (let currentTest of [
         test.deepEqual(subscription.filters, [
         ], "Resulting subscription filters");
       }
-    }).catch(unexpectedError.bind(test)).then(() => test.done());
-  };
+  }).
+    catch(unexpectedError.bind(test)).then(() = > test.done()
+    )
+  };;;
 }
 
 exports.testsDisabledUpdates  = function(test)
@@ -172,13 +175,14 @@ exports.testsDisabledUpdates  = function(test)
   {
     requests++;
     throw new Error("Unexpected request");
-  });
-
+})
   this.runScheduledTasks(50).then(() =>
   {
     test.equal(requests, 0, "Request count");
-  }).catch(unexpectedError.bind(test)).then(() => test.done());
-};
+}).
+  catch(unexpectedError.bind(test)).then(() = > test.done()
+  )
+};;;
 
 exports.testExpirationTime = {};
 
@@ -261,16 +265,17 @@ for (let currentTest of [
     {
       requests.push(this.getTimeOffset());
       return [Cr.NS_OK, 200, "[Adblock]\nfoo\n!Expires: " + currentTest.expiration + "\nbar"];
-    });
-
+  })
     this.randomResult = currentTest.randomResult;
 
     let maxHours = Math.round(Math.max.apply(null, currentTest.requests)) + 1;
     this.runScheduledTasks(maxHours, currentTest.skipAfter, currentTest.skip).then(() =>
     {
       test.deepEqual(requests, currentTest.requests, "Requests");
-    }).catch(unexpectedError.bind(test)).then(() => test.done());
-  };
+  }).
+    catch(unexpectedError.bind(test)).then(() = > test.done()
+    )
+  };;;
 }
 
 exports.testChecksumVerification = {};
@@ -298,13 +303,14 @@ for (let [testName, subscriptionBody, expectedResult] of [
     this.registerHandler("/subscription", metadata =>
     {
       return [Cr.NS_OK, 200, subscriptionBody];
-    });
-
+  })
     this.runScheduledTasks(2).then(() =>
     {
       test.equal(subscription.downloadStatus, expectedResult ? "synchronize_ok" : "synchronize_checksum_mismatch");
-    }).catch(unexpectedError.bind(test)).then(() => test.done());
-  };
+  }).
+    catch(unexpectedError.bind(test)).then(() = > test.done()
+    )
+  };;;
 }
 
 exports.testSpecialComments = {};
@@ -337,14 +343,15 @@ for (let [comment, check] of [
     this.registerHandler("/subscription", metadata =>
     {
       return [Cr.NS_OK, 200, "[Adblock]\n" + comment + "\nfoo\nbar"];
-    });
-
+  })
     this.runScheduledTasks(2).then(() =>
     {
       check(test, subscription);
       test.deepEqual(subscription.filters, [Filter.fromText("foo"), Filter.fromText("bar")], "Special comment not added to filters");
-    }).catch(unexpectedError.bind(test)).then(() => test.done());
-  };
+  }).
+    catch(unexpectedError.bind(test)).then(() = > test.done()
+    )
+  };;;
 }
 
 exports.testRedirects = function(test)
@@ -355,8 +362,7 @@ exports.testRedirects = function(test)
   this.registerHandler("/subscription", metadata =>
   {
     return [Cr.NS_OK, 200, "[Adblock]\nfoo\n!Redirect: http://example.com/redirected\nbar"];
-  });
-
+})
   let requests;
 
   this.runScheduledTasks(30).then(() =>
@@ -371,9 +377,8 @@ exports.testRedirects = function(test)
     {
       requests.push(this.getTimeOffset());
       return [Cr.NS_OK, 200, "[Adblock]\nfoo\n! Expires: 8 hours\nbar"];
-    });
-
-    resetSubscription(subscription);
+})
+  resetSubscription(subscription);
     return this.runScheduledTasks(15);
   }).then(() =>
   {
@@ -395,8 +400,10 @@ exports.testRedirects = function(test)
   {
     test.equal(FilterStorage.subscriptions[0], subscription, "Redirect not followed on redirect loop");
     test.equal(subscription.downloadStatus, "synchronize_connection_error", "Download status after redirect loop");
-  }).catch(unexpectedError.bind(test)).then(() => test.done());
-};
+}).
+  catch(unexpectedError.bind(test)).then(() = > test.done()
+  )
+};;;
 
 exports.testFallback = function(test)
 {
@@ -415,8 +422,7 @@ exports.testFallback = function(test)
   {
     requests.push(this.getTimeOffset());
     return [Cr.NS_OK, 404, ""];
-  });
-
+})
   this.runScheduledTasks(100).then(() =>
   {
     test.deepEqual(requests, [0 + initialDelay, 24 + initialDelay, 48 + initialDelay, 72 + initialDelay, 96 + initialDelay], "Continue trying if the fallback doesn't respond");
@@ -430,9 +436,8 @@ exports.testFallback = function(test)
     {
       fallbackParams = decodeURIComponent(metadata.queryString);
       return [Cr.NS_OK, 200, "410 Gone"];
-    });
-
-    return this.runScheduledTasks(100);
+})
+  return this.runScheduledTasks(100);
   }).then(() =>
   {
     test.deepEqual(requests, [0 + initialDelay, 24 + initialDelay, 48 + initialDelay], "Stop trying if the fallback responds with Gone");
@@ -449,8 +454,8 @@ exports.testFallback = function(test)
     this.registerHandler("/fallback", metadata =>
     {
       return [Cr.NS_OK, 200, "301 http://example.com/redirected"];
-    });
-    return this.runScheduledTasks(100);
+})
+  return this.runScheduledTasks(100);
   }).then(() =>
   {
     test.equal(FilterStorage.subscriptions[0].url, "http://example.com/subscription", "Ignore invalid redirect from fallback");
@@ -465,9 +470,8 @@ exports.testFallback = function(test)
     {
       redirectedRequests.push(this.getTimeOffset());
       return [Cr.NS_OK, 200, "[Adblock]\n!Expires: 1day\nfoo\nbar"];
-    });
-
-    return this.runScheduledTasks(100);
+})
+  return this.runScheduledTasks(100);
   }).then(() =>
   {
     test.equal(FilterStorage.subscriptions[0].url, "http://example.com/redirected", "Valid redirect from fallback is followed");
@@ -479,9 +483,8 @@ exports.testFallback = function(test)
     this.registerHandler("/subscription", metadata =>
     {
       return [Cr.NS_OK, 200, "[Adblock]\n! Checksum: wrong\nfoo\nbar"];
-    });
-
-    subscription = Subscription.fromURL("http://example.com/subscription");
+})
+  subscription = Subscription.fromURL("http://example.com/subscription");
     resetSubscription(subscription);
     FilterStorage.removeSubscription(FilterStorage.subscriptions[0]);
     FilterStorage.addSubscription(subscription);
@@ -496,13 +499,12 @@ exports.testFallback = function(test)
     this.registerHandler("/subscription", metadata =>
     {
       return [Cr.NS_OK, 200, "[Adblock]\n! Redirect: http://example.com/subscription2"];
-    });
-    this.registerHandler("/subscription2", metadata =>
+})
+  this.registerHandler("/subscription2", metadata =>
     {
       return [Cr.NS_OK, 200, "[Adblock]\n! Redirect: http://example.com/subscription"];
-    });
-
-    subscription = Subscription.fromURL("http://example.com/subscription");
+})
+  subscription = Subscription.fromURL("http://example.com/subscription");
     resetSubscription(subscription);
     FilterStorage.removeSubscription(FilterStorage.subscriptions[0]);
     FilterStorage.addSubscription(subscription);
@@ -511,8 +513,10 @@ exports.testFallback = function(test)
   }).then(() =>
   {
     test.equal(FilterStorage.subscriptions[0].url, "http://example.com/redirected", "Fallback can still redirect even after a redirect loop");
-  }).catch(unexpectedError.bind(test)).then(() => test.done());
-};
+}).
+  catch(unexpectedError.bind(test)).then(() = > test.done()
+  )
+};;;
 
 exports.testStateFields = function(test)
 {
@@ -522,8 +526,7 @@ exports.testStateFields = function(test)
   this.registerHandler("/subscription", metadata =>
   {
     return [Cr.NS_OK, 200, "[Adblock]\n! Expires: 2 hours\nfoo\nbar"];
-  });
-
+})
   let startTime = this.currentTime;
   this.runScheduledTasks(2).then(() =>
   {
@@ -536,9 +539,8 @@ exports.testStateFields = function(test)
     this.registerHandler("/subscription", metadata =>
     {
       return [Cr.NS_ERROR_FAILURE, 0, ""];
-    });
-
-    return this.runScheduledTasks(2);
+})
+  return this.runScheduledTasks(2);
   }).then(() =>
   {
     test.equal(subscription.downloadStatus, "synchronize_connection_error", "downloadStatus after connection error");
@@ -550,9 +552,8 @@ exports.testStateFields = function(test)
     this.registerHandler("/subscription", metadata =>
     {
       return [Cr.NS_OK, 404, ""];
-    });
-
-    return this.runScheduledTasks(24);
+})
+  return this.runScheduledTasks(24);
   }).then(() =>
   {
     test.equal(subscription.downloadStatus, "synchronize_connection_error", "downloadStatus after download error");
@@ -560,5 +561,7 @@ exports.testStateFields = function(test)
     test.equal(subscription.lastSuccess * MILLIS_IN_SECOND, startTime + initialDelay * MILLIS_IN_HOUR, "lastSuccess after download error");
     test.equal(subscription.lastCheck * MILLIS_IN_SECOND, startTime + (27 + initialDelay) * MILLIS_IN_HOUR, "lastCheck after download error");
     test.equal(subscription.errors, 2, "errors after download error");
-  }).catch(unexpectedError.bind(test)).then(() => test.done());
-};
+}).
+  catch(unexpectedError.bind(test)).then(() = > test.done()
+  )
+};;;

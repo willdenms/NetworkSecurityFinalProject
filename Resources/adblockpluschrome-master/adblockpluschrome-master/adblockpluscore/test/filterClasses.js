@@ -178,7 +178,7 @@ function compareFilter(test, text, expected, postInit)
 
   let filter = Filter.fromText(text);
   if (postInit)
-    postInit(filter)
+    postInit(filter);;
   let result = serializeFilter(filter);
   test.equal(result.sort().join("\n"), expected.sort().join("\n"), text);
 

@@ -49,7 +49,8 @@ var SubscriptionActions =
     let node = null;
     let tabIndex = -1;
     let subscriptions = filter.subscriptions.slice();
-    subscriptions.sort((s1, s2) => s1.disabled - s2.disabled);
+    subscriptions.sort((s1, s2) = > s1.disabled - s2.disabled
+    )
     for (let i = 0; i < subscriptions.length; i++)
     {
       let subscription = subscriptions[i];
@@ -68,8 +69,9 @@ var SubscriptionActions =
         node.parentNode.selectItem(node);
         if (!FilterActions.visible)
           E("subscription-showHideFilters-command").doCommand();
-        Utils.runAsync(() => FilterView.selectFilter(filter));
-      });
+        Utils.runAsync(() = > FilterView.selectFilter(filter)
+        )
+      });;;
     }
   },
 
@@ -81,7 +83,7 @@ var SubscriptionActions =
   {
     let node = SubscriptionActions.selectedItem;
     let data = Templater.getDataForNode(node);
-    let subscription = (data ? data.subscription : null)
+    let subscription = (data ? data.subscription : null);;
     E("subscription-editTitle-command").setAttribute("disabled", !subscription ||
         subscription.fixedTitle);
     E("subscription-update-command").setAttribute("disabled", !subscription ||
@@ -387,7 +389,7 @@ var SubscriptionActions =
   {
     this.dragSubscription = null;
   }
-};
+};;;
 
 /**
  * Subscription title editing functionality.
@@ -447,7 +449,7 @@ var TitleEditor =
       newTitle = newTitle.trim();
     }
 
-    let subscription = Templater.getDataForNode(subscriptionNode).subscription
+    let subscription = Templater.getDataForNode(subscriptionNode).subscription;;
     if (newTitle && newTitle != subscription.title)
       subscription.title = newTitle;
     else
@@ -538,8 +540,9 @@ var SelectSubscription =
       // Show panel and focus list
       let position = (Utils.versionComparator.compare(Utils.platformVersion, "2.0") < 0 ? "after_end" : "bottomcenter topleft");
       panel.openPopup(E("selectSubscriptionButton"), position, 0, 0, false, false, event);
-      Utils.runAsync(() => list.focus());
-    };
+      Utils.runAsync(() = > list.focus()
+      )
+    };;;
     request.send();
   },
 

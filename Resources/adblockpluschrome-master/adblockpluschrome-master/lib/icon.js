@@ -40,14 +40,14 @@ function loadImage(url)
     image.addEventListener("load", () =>
     {
       resolve(image);
-    });
-    image.addEventListener("error", () =>
+})
+  image.addEventListener("error", () =>
     {
-      reject("Failed to load image " + url);
-    });
-  });
-};
-
+      reject("Failed to load image " + url
+)
+})
+})
+};;
 function setIcon(page, notificationType, opacity, frames)
 {
   opacity = opacity || 0;
@@ -76,8 +76,7 @@ FilterNotifier.on("page.WhitelistingStateRevalidate", (page, filter) =>
   whitelistedState.set(page, !!filter);
   if (canUpdateIcon)
     setIcon(page);
-});
-
+})
 function renderFrames(notificationType)
 {
   return Promise.all([
@@ -135,7 +134,7 @@ function renderFrames(notificationType)
     }
 
     return frames;
-  });
+})
 }
 
 function animateIcon(notificationType, frames)
@@ -149,8 +148,8 @@ function animateIcon(notificationType, frames)
     {
       pages.push(page);
       setIcon(page, notificationType, opacity, frames);
-    };
-    ext.pages.onActivated.addListener(onActivated);
+    }
+  ext.pages.onActivated.addListener(onActivated);
 
     canUpdateIcon = false;
     let interval = setInterval(() =>
@@ -173,9 +172,11 @@ function animateIcon(notificationType, frames)
         ext.pages.onActivated.removeListener(onActivated);
         canUpdateIcon = true;
       }
-    }, 100);
-  });
-}
+},
+  100
+)
+})
+};;;;
 
 let stopIconAnimation =
 /**
@@ -191,7 +192,7 @@ exports.stopIconAnimation = function()
   return notRunning.then(() =>
   {
     stopRequested = false;
-  });
+})
 };
 
 /**
@@ -210,7 +211,7 @@ exports.startIconAnimation = function(type)
       if (stopRequested)
       {
         resolve();
-        return;
+
       }
 
       let frames = results[0];
@@ -222,11 +223,13 @@ exports.startIconAnimation = function(type)
         {
           clearInterval(interval);
           resolve();
-          return;
+
         }
 
         animateIcon(type, frames);
-      }, 10000);
-    });
-  });
-};
+},
+  10000
+  )
+})
+})
+};;;

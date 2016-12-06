@@ -39,7 +39,7 @@ exports.testGetSelectorsForDomain = function(test)
     return selectors.sort().filter((selector, index, selectors) =>
     {
       return index == 0 || selector != selectors[index -  1];
-    });
+  })
   }
   function selectorsEqual(domain, expectedSelectors, specificOnly)
   {
@@ -162,4 +162,4 @@ exports.testGetSelectorsForDomain = function(test)
   removeFilter("example.org##foo");
 
   test.done();
-};
+};;;;;

@@ -77,7 +77,7 @@ function registerHandler(notifications, checkCallback)
     };
 
     return [Cr.NS_OK, 200, JSON.stringify(notification)];
-  });
+})
 }
 
 exports.testNoData = function(test)
@@ -99,8 +99,10 @@ exports.testSingleNotification = function(test)
   {
     test.deepEqual(showNotifications(), [information], "The notification is shown");
     test.deepEqual(showNotifications(), [], "Informational notifications aren't shown more than once");
-  }).catch(unexpectedError.bind(test)).then(() => test.done());
-};
+}).
+  catch(unexpectedError.bind(test)).then(() = > test.done()
+  )
+};;;
 
 exports.testInformationAndCritical = function(test)
 {
@@ -120,8 +122,10 @@ exports.testInformationAndCritical = function(test)
   {
     test.deepEqual(showNotifications(), [critical], "The critical notification is given priority");
     test.deepEqual(showNotifications(), [critical], "Critical notifications can be shown multiple times");
-  }).catch(unexpectedError.bind(test)).then(() => test.done());
-};
+}).
+  catch(unexpectedError.bind(test)).then(() = > test.done()
+  )
+};;;
 
 exports.testNoType = function(test)
 {
@@ -135,8 +139,10 @@ exports.testNoType = function(test)
   {
     test.deepEqual(showNotifications(), [information], "The notification is shown");
     test.deepEqual(showNotifications(), [], "Notification is treated as type information");
-  }).catch(unexpectedError.bind(test)).then(() => test.done());
-};
+}).
+  catch(unexpectedError.bind(test)).then(() = > test.done()
+  )
+};;;
 
 exports.testTargetSelection = {};
 
@@ -193,8 +199,10 @@ for (let [propName, value, result] of [
       let expected = (result ? [information] : []);
       test.deepEqual(showNotifications(), expected, "Selected notification for " + JSON.stringify(information.targets));
       test.deepEqual(showNotifications(), [], "No notification on second call");
-    }).catch(unexpectedError.bind(test)).then(() => test.done());
-  };
+  }).
+    catch(unexpectedError.bind(test)).then(() = > test.done()
+    )
+  };;;
 }
 
 exports.testMultipleTargets = {};
@@ -233,8 +241,10 @@ for (let [[propName1, value1, result1], [propName2, value2, result2]] of pairs([
     {
       let expected = (result1 || result2 ? [information] : [])
       test.deepEqual(showNotifications(), expected, "Selected notification for " + JSON.stringify(information.targets));
-    }).catch(unexpectedError.bind(test)).then(() => test.done());
-  }
+  }).
+    catch(unexpectedError.bind(test)).then(() = > test.done()
+    )
+  };;
 }
 
 exports.testParametersSent = function(test)
@@ -255,8 +265,10 @@ exports.testParametersSent = function(test)
     test.equal(parameters,
           "addonName=adblockpluschrome&addonVersion=1.4.1&application=chrome&applicationVersion=27.0&platform=chromium&platformVersion=12.0&lastVersion=3&downloadCount=0",
           "The correct parameters are sent to the server");
-  }).catch(unexpectedError.bind(test)).then(() => test.done());
-};
+}).
+  catch(unexpectedError.bind(test)).then(() = > test.done()
+  )
+};;;
 
 exports.testExpirationInterval = {};
 
@@ -298,16 +310,18 @@ for (let currentTest of [
   exports.testExpirationInterval[testId] = function(test)
   {
     let requests = [];
-    registerHandler.call(this, [], metadata => requests.push(this.getTimeOffset()));
-
+    registerHandler.call(this, [], metadata = > requests.push(this.getTimeOffset())
+    )
     this.randomResult = currentTest.randomResult;
 
     let maxHours = Math.round(Math.max.apply(null, currentTest.requests)) + 1;
     this.runScheduledTasks(maxHours, currentTest.skipAfter, currentTest.skip).then(() =>
     {
       test.deepEqual(requests, currentTest.requests, "Requests");
-    }).catch(unexpectedError.bind(test)).then(() => test.done());
-  };
+  }).
+    catch(unexpectedError.bind(test)).then(() = > test.done()
+    )
+  };;;;;
 }
 
 exports.testUsingSeverityInsteadOfType = function(test)
@@ -368,8 +382,10 @@ exports.testURLSpecificNotification = function(test)
     test.deepEqual(showNotifications("http://foo.com"), [withURLFilterFoo], "URL-specific notification is retrieved");
     test.deepEqual(showNotifications("http://foo.com"), [], "URL-specific notification is not retrieved");
     test.deepEqual(showNotifications("http://www.example.com"), [subdomainURLFilter], "URL-specific notification matches subdomain");
-  }).catch(unexpectedError.bind(test)).then(() => test.done());
-};
+}).
+  catch(unexpectedError.bind(test)).then(() = > test.done()
+  )
+};;;
 
 exports.testGlobalOptOut = function(test)
 {
@@ -418,8 +434,10 @@ exports.testGlobalOptOut = function(test)
   }).then(() =>
   {
     test.deepEqual(showNotifications(), [critical], "Critical notifications are not ignored");
-  }).catch(unexpectedError.bind(test)).then(() => test.done());
-};
+}).
+  catch(unexpectedError.bind(test)).then(() = > test.done()
+  )
+};;;
 
 exports.testMessageWithoutLocalization = function(test)
 {

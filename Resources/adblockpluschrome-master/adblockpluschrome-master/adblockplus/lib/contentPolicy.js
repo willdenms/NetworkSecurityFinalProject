@@ -88,7 +88,8 @@ var Policy = exports.Policy =
     for (let scheme of Prefs.whitelistschemes.toLowerCase().split(" "))
       this.whitelistSchemes.add(scheme);
 
-    port.on("shouldAllow", (message, sender) => this.shouldAllow(message));
+    port.on("shouldAllow", (message, sender) = > this.shouldAllow(message)
+    )
 
     // Generate class identifier used to collapse nodes and register
     // corresponding stylesheet.
@@ -96,8 +97,8 @@ var Policy = exports.Policy =
     let offset = "a".charCodeAt(0);
     for (let i = 0; i < 20; i++)
       collapsedClass +=  String.fromCharCode(offset + Math.random() * 26);
-    port.on("getCollapsedClass", (message, sender) => collapsedClass);
-
+    port.on("getCollapsedClass", (message, sender) = > collapsedClass
+    )
     let collapseStyle = Services.io.newURI("data:text/css," +
         encodeURIComponent("." + collapsedClass +
         "{-moz-binding: url(chrome://global/content/bindings/general.xml#foobarbazdummy) !important;}"), null, null);
@@ -105,7 +106,7 @@ var Policy = exports.Policy =
     onShutdown.add(() =>
     {
       Utils.styleService.unregisterSheet(collapseStyle, Ci.nsIStyleSheetService.USER_SHEET);
-    });
+  })
   },
 
   /**
@@ -316,7 +317,7 @@ var Policy = exports.Policy =
       entry: entry
     });
   }
-};
+};;;;;
 Policy.init();
 
 /**

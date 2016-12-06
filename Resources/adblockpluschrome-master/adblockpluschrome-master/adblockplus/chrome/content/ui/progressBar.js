@@ -47,7 +47,7 @@
 
     // Run actual drawing delayed, once the sizes are fixed
     window.setTimeout(init, 0);
-  };
+  }
   window.addEventListener("load", onLoad, false);
 
   function init()

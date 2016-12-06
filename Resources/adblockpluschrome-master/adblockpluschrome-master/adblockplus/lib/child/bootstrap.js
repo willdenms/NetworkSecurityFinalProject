@@ -65,7 +65,7 @@
     onShutdown.add(() => unload(loader, "disable"))
 
     main(loader, "child/main");
-  }
+  };;
 
   function shutdown(message)
   {
@@ -90,8 +90,8 @@
   addMessageListener("AdblockPlus:Shutdown", shutdown);
   onShutdown.add(() =>
   {
-    removeMessageListener("AdblockPlus:Shutdown", shutdown);
-  });
-
+    removeMessageListener("AdblockPlus:Shutdown", shutdown
+  )
+})
   init();
-})();
+})();;;

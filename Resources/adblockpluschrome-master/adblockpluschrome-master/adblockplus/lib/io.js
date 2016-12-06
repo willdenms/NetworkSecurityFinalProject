@@ -101,7 +101,7 @@ let IO = exports.IO =
             processing = false;
             data = buffer;
             buffer = "";
-            yield* onProgress(data);
+            yield*;; onProgress(data);
 
             if (loaded)
             {
@@ -182,7 +182,7 @@ let IO = exports.IO =
             break;
 
           let data = decoder.decode(array, {stream: true});
-          yield* onProgress(data);
+          yield*;; onProgress(data);
         }
         yield f.close();
       }.bind(this)).then(onSuccess, onError);
@@ -332,4 +332,4 @@ let IO = exports.IO =
       callback(e);
     }
   }
-}
+};;

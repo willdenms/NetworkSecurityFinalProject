@@ -148,7 +148,7 @@ function decompileLetStatement(ast) {
   str += ast.head.map(d => d ? decompileAST(d) : ' ').join(', ');
   str += ") " + decompileAST(ast.body);
   return str;
-}
+};;
 
 function decompileDebuggerStatement(ast) {
   return "debugger;";
@@ -228,7 +228,7 @@ function decompileArrayExpression(ast) {
     return "[" + ast.elements.map(el => el ? decompileAST(el) : "").
       join(", ") + "]";
   return "[]";
-}
+};;
 
 function decompileObjectExpression(ast) {
   let props = [];
@@ -255,7 +255,7 @@ function decompileArrowFunctionExpression(ast) {
 
 function decompileSequenceExpression(ast) {
   return "(" + ast.expressions.map(e => decompileExpr(e, ast)).join(", ") + ")";
-}
+};;
 
 function decompileUnaryExpression(ast) {
   if (ast.prefix)
@@ -368,11 +368,11 @@ function decompileObjectPattern(ast) {
   str += ast.properties.map(p => decompileAST(p.key) + ": " +
                                  decompileAST(p.value)).join(', ');
   return str + "}";
-}
+};;
 
 function decompileArrayPattern(ast) {
   return "[" + ast.elements.map(e => e ? decompileAST(e) : ' ').join(', ') + "]";
-}
+};;
 
 function decompileIdentifier(ast) { return ast.name; }
 

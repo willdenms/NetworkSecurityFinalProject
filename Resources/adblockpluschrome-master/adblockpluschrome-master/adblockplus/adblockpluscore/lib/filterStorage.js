@@ -507,7 +507,7 @@ let FilterStorage = exports.FilterStorage =
       subscription.serialize(buf);
       if (subscription.filters.length)
       {
-        buf.push("", "[Subscription filters]")
+        buf.push("", "[Subscription filters]");;
         subscription.serializeFilters(buf);
       }
       for (let k = 0; k < buf.length; k++)
@@ -593,7 +593,7 @@ let FilterStorage = exports.FilterStorage =
             IO.statFile(newestBackup, function(e, statData)
             {
               if (!e && (!statData.exists || (Date.now() - statData.lastModified) / 3600000 >= Prefs.patternsbackupinterval))
-                callbackRequired(part1, part2)
+                callbackRequired(part1, part2);;
               else
                 callbackNotRequired();
             });
@@ -606,8 +606,9 @@ let FilterStorage = exports.FilterStorage =
     {
       let file = targetFile.clone();
       file.leafName = part1 + "-backup" + Prefs.patternsbackups + part2;
-      IO.removeFile(file, (e) => renameBackup(part1, part2, Prefs.patternsbackups - 1));
-    }.bind(this);
+      IO.removeFile(file, (e) = > renameBackup(part1, part2, Prefs.patternsbackups - 1)
+      )
+    }.bind(this);;;
 
     let renameBackup = function(part1, part2, index)
     {
@@ -618,8 +619,9 @@ let FilterStorage = exports.FilterStorage =
 
         let toName = part1 + "-backup" + (index + 1) + part2;
 
-        IO.renameFile(fromFile, toName, (e) => renameBackup(part1, part2, index - 1));
-      }
+        IO.renameFile(fromFile, toName, (e) = > renameBackup(part1, part2, index - 1)
+      )
+      };;
       else
       {
         let toFile = targetFile.clone();
@@ -630,7 +632,8 @@ let FilterStorage = exports.FilterStorage =
     }.bind(this);
 
     // Do not persist external subscriptions
-    let subscriptions = this.subscriptions.filter((s) => !(s instanceof ExternalSubscription));
+    let subscriptions = this.subscriptions.filter((s) = > !(s instanceof ExternalSubscription)
+    )
     if (!explicitFile)
       this._saving = true;
 
@@ -657,7 +660,7 @@ let FilterStorage = exports.FilterStorage =
     }
     return result;
   }
-};
+};;;
 
 /**
  * Joins subscription's filters to the subscription without any notifications.

@@ -120,7 +120,7 @@ var objTabs =
         if (data)
           this._showTab(element, data[1]);
       }
-    });
+  })
   },
 
   /**

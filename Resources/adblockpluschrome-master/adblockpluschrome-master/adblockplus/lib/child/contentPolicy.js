@@ -158,9 +158,10 @@ let shouldAllowAsync = exports.shouldAllowAsync = function(window, node, content
     isPrivate: isPrivate(window)
   }).then(response =>
   {
-    callback(processPolicyResponse(window, node, response));
-  });
-};
+    callback(processPolicyResponse(window, node, response)
+  )
+})
+};;;
 
 /**
  * Stores nodes and generates a unique ID for them that can be used for
@@ -215,8 +216,8 @@ function refilterNode(/**Node*/ node, /**Object*/ entry)
     // Force node to be collapsed
     if (!allow)
       schedulePostProcess(node)
-  });
-}
+})
+};;
 
 /**
  * Actual nsIContentPolicy and nsIChannelEventSink implementation
@@ -257,7 +258,7 @@ var PolicyImplementation =
         catMan.deleteCategoryEntry(category, this.contractID, false);
 
       registrar.unregisterFactory(this.classID, this);
-    });
+  })
   },
 
   //
@@ -344,8 +345,9 @@ var PolicyImplementation =
         if (!shouldAllow(opener, opener.document, "POPUP", uri))
         {
           subject.stop();
-          Utils.runAsync(() => subject.close());
-        }
+          Utils.runAsync(() = > subject.close()
+        )
+        };;
         else if (uri == "about:blank")
         {
           // An about:blank pop-up most likely means that a load will be
@@ -358,7 +360,7 @@ var PolicyImplementation =
                                  .documentChannel;
             if (channel)
               this.observe(subject, topic, data, channel.URI.spec);
-          });
+        })
         }
         break;
       }
@@ -490,5 +492,5 @@ function postProcessNodes()
       else
         node.classList.add(cls);
     }
-  });
+})
 }

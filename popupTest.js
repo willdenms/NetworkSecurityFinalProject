@@ -54,24 +54,26 @@ function NotificationOptions() {
         iconUrl: "",        //Required for notifications.create .
         title: "",          //Required for notifications.create
         message: "",        //Required for notifications.create
-    };;
+    };
     return notification;
 }
 
 function test() {
-    console.log("made it to test");
-    // debugger;
-    //alert("Triggered JS")
-    $("#test").html("I have been clicked");
+    console.log(chrome.extension.getBackgroundPage());
 
-    var options = NotificationOptions();
-    options.title = "Test";
-    options.iconUrl = "Sherlock.png";
-    options.message = "Made it!";
-
-    chrome.notifications.create(options, function(d){
-        alert("callback in test");
-    })
+    //console.log("made it to test");
+    //// debugger;
+    ////alert("Triggered JS")
+    //$("#test").html("I have been clicked");
+    //
+    //var options = NotificationOptions();
+    //options.title = "Test";
+    //options.iconUrl = "Sherlock.png";
+    //options.message = "Made it!";
+    //
+    //chrome.notifications.create(options, function(d){
+    //    alert("callback in test");
+    //})
 }
 
 $(document).ready(function() {

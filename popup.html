@@ -9,6 +9,13 @@
     <script src="public/notify/bootstrap-notify.min.js" type="application/javascript"></script>
     <script src="public/bootstrap/js/bootstrap.min.js" type="application/javascript"></script>
 
+    <!--Ad Blocker Scripts-->
+    <link rel="stylesheet" type="text/css" href="public/AdBlock/popup.css">
+    <script src="public/AdBlock/ext/popup.js" type="application/javascript"></script>
+    <script src="public/AdBlock/popup.js" type="application/javascript"></script>
+    <script src="public/AdBlock/notification.js" type="application/javascript"></script>
+    <script src="public/AdBlock/stats.js" type="application/javascript"></script>
+    <!--Ad Blocker Scripts-->
 
     <title>FinalProject</title>
 </head>
@@ -43,6 +50,7 @@
                                 <div id="collapseOne" class="collapse in" role="tabpanel" aria-labelledby="headingOne">
                                     <div class="card-block">
                                         **Add Settings options Here*
+                                        <button type="button" id="btn">click</button>
                                     </div>
                                 </div>
                             </div>
@@ -94,9 +102,68 @@
 
                     <!--Add Blocker Tab-->
                     <div id="menu1" class="tab-pane fade">
-                        <h3>Add Blocker</h3>
-                        <p>Add Blockers go here</p>
-                    </div>
+                        <div id="wrapper">
+                            <div id="notification" hidden>
+                                <div id="notification-content">
+                                    <h1>
+                                        <span id="notification-title"></span>
+                                        <span id="notification-close"></span>
+                                    </h1>
+                                    <p id="notification-message"></p>
+                                </div>
+                                <ul id="notification-close-content">
+                                    <li id="notification-hide"
+                                        class="i18n_overlay_notification_closing_button_hide"></li>
+                                    <li id="notification-optout"
+                                        class="i18n_overlay_notification_closing_button_optout"></li>
+                                </ul>
+                            </div>
+
+                            <div id="clickhide-instructions" class="i18n_clickhide_instructions"></div>
+
+                            <ul id="menu">
+                                <li id="enabled" class="menu-item" role="button">
+                                    <div class="icon"></div>
+                                    <span id="enabled-yes" class="i18n_enabled_for_site"></span>
+                                    <span id="enabled-no" class="i18n_disabled_for_site"></span>
+                                </li>
+
+                                <li id="clickhide" class="menu-item" role="button">
+                                    <div class="icon"></div>
+                                    <span class="i18n_easy_create_filter"></span>
+                                </li>
+                                <li id="clickhide-cancel" class="menu-item" role="button">
+                                    <div class="icon"></div>
+                                    <span class="i18n_cancel"></span>
+                                </li>
+
+                                <li id="stats-container">
+                                    <div class="menu-item collapse" data-option="show_statsinpopup" data-collapsable="stats-container" role="button">
+                                        <div class="icon"></div>
+                                        <span class="i18n_stats_title"></span>
+                                        <div class="collapse-icon-placeholder"></div>
+                                        <div class="collapse-icon"></div>
+                                    </div>
+                                    <ul id="stats" class="collapsable">
+                                        <li>
+                                            <div>
+                                                <div id="stats-page"></div>
+                                                <div id="stats-total"></div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div id="show-iconnumber" class="checkbox" role="checkbox" aria-checked></div>
+                                            <label for="show-iconnumber" class="i18n_stats_show_iconnumber"></label>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <footer id="options" role="button">
+                            <div class="icon"></div>
+                            <span class="i18n_options_short"></span>
+                        </footer>                    </div>
                     <!--End Add Blocker Tab-->
 
                     <!--Trackers Tab-->

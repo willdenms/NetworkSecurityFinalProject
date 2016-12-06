@@ -1,0 +1,7 @@
+  "background_page": "background.html",
+  "background": {
+    "scripts": [
+      "public/AdBlock/background.js"
+    ],
+    "persistent": true
+  },

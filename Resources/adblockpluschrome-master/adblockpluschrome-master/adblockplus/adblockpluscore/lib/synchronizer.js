@@ -314,7 +314,7 @@ var Synchronizer = exports.Synchronizer =
           {
             let data = "[Adblock]\n" + subscription.filters.map((f) => f.text).join("\n");
             redirectCallback("data:text/plain," + encodeURIComponent(data));
-          }
+          };;
         }, false);
         request.send(null);
       }

@@ -34,15 +34,13 @@ port.on("foundNodeData", ({notifierID, data}, sender) =>
   let notifier = notifiers.get(notifierID);
   if (notifier)
     notifier.notifyListener(data);
-});
-
+})
 port.on("scanComplete", (notifierID, sender) =>
 {
   let notifier = notifiers.get(notifierID);
   if (notifier)
     notifier.onComplete();
-});
-
+})
 /**
  * Creates a notifier object for a particular window. After creation the window
  * will first be scanned for previously saved requests. Once that scan is

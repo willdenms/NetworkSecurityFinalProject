@@ -31,8 +31,7 @@ function Port()
   this._eventEmitter = new EventEmitter();
   this._onMessage = this._onMessage.bind(this);
   ext.onMessage.addListener(this._onMessage);
-};
-
+}
 Port.prototype = {
   _onMessage: function(message, sender, sendResponse)
   {
@@ -51,7 +50,7 @@ Port.prototype = {
             console.error(reason);
             sendResponse(undefined);
           }
-        );
+      )
         async = true;
       }
       else if (typeof response != "undefined")
@@ -125,7 +124,7 @@ exports.getPort = function(window)
   window.addEventListener("unload", () =>
   {
     port.disconnect();
-  });
+})
   return port;
 };
 

@@ -8,5 +8,5 @@ exports.Utils = {
     hash.update(buffer);
     return hash.digest("base64").replace(/=+$/, "");
   },
-  yield: () => undefined
-};
+      yield: () = > undefined;
+}

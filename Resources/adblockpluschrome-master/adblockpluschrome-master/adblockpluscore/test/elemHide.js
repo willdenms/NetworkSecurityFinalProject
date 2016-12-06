@@ -40,7 +40,7 @@ function normalizeSelectors(selectors)
   return selectors.sort().filter((selector, index, selectors) =>
   {
     return index == 0 || selector != selectors[index -  1];
-  });
+})
 }
 
 function testResult(test, domain, expectedSelectors, criteria)
@@ -57,10 +57,10 @@ function testResult(test, domain, expectedSelectors, criteria)
   let [selectors, filterKeys] = ElemHide.getSelectorsForDomain(domain, criteria,
                                                                true);
   test.deepEqual(filterKeys.map(k => ElemHide.getFilterByKey(k).selector),
-                 selectors);
+      selectors;;
+)
   test.deepEqual(normalizeSelectors(selectors), normalizedExpectedSelectors);
 }
-
 exports.testGetSelectorsForDomain = function(test)
 {
   let addFilter = filterText => ElemHide.add(Filter.fromText(filterText));
@@ -243,8 +243,7 @@ exports.testGetSelectorsForDomain = function(test)
   testResult(test, "foo.com", []);
 
   test.done();
-};
-
+};;;;;
 exports.testZeroFilterKey = function(test)
 {
   ElemHide.add(Filter.fromText("##test"));

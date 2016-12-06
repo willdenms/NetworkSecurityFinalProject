@@ -87,4 +87,4 @@ exports.initAntiAdblockNotification = function initAntiAdblockNotification()
   FilterNotifier.on("subscription.updated", onSubscriptionChange);
   FilterNotifier.on("subscription.removed", onSubscriptionChange);
   FilterNotifier.on("subscription.disabled", onSubscriptionChange);
-}
+};

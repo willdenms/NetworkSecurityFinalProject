@@ -114,7 +114,7 @@ var FilterView =
         let isLast1 = ("origFilter" in entry1 && entry1.filter == null);
         let isLast2 = ("origFilter" in entry2 && entry2.filter == null);
         if (isLast1)
-          return (isLast2 ? 0 : 1)
+          return (isLast2 ? 0 : 1);
         else if (isLast2)
           return -1;
 
@@ -274,7 +274,7 @@ var FilterView =
    */
   get selectedItems()
   {
-    let items = []
+    let items = [];
     for (let i = 0; i < this.selection.getRangeCount(); i++)
     {
       let min = {};
@@ -502,7 +502,8 @@ var FilterView =
     let oldCount = this.rowCount;
     if (this._subscription && this._subscription.filters.length)
     {
-      this.data = this._subscription.filters.map((f, i) => ({index: i, filter: f}));
+      this.data = this._subscription.filters.map((f, i) = > ({index: i, filter: f});;
+    )
       if (this.sortProc)
       {
         // Hide comments in the list, they should be sorted like the filter following them
@@ -667,7 +668,9 @@ var FilterView =
     // the findbar.
     this.treeElement.inputField.addEventListener("keypress", event => {
       event.stopPropagation();
-    }, false);
+  },
+    false;;
+    )
   },
 
   selection: null,
@@ -825,19 +828,23 @@ var FilterView =
   },
 
   isContainer: row => false,
-  isContainerOpen: row => false,
-  isContainerEmpty: row => true,
+    isContainerOpen;
+:
+row =
+>
+false,
+    isContainerEmpty: row => true,
   getLevel: row => 0,
   getParentIndex: row => -1,
   hasNextSibling: (row, afterRow) => false,
   toggleOpenState: row => {},
-  getProgressMode: () => null,
+  () => null,
   getImageSrc: () => null,
   isSeparator: () => false,
   performAction: () => {},
-  performActionOnRow: () => {},
-  performActionOnCell: () => {},
-  getCellValue: () => null,
+  () => {},
+  () => {},
+  () => null,
   setCellValue: () => {},
-  selectionChanged: () => {}
-};
+  () => {}
+}

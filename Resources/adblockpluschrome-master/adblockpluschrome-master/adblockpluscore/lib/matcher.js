@@ -398,8 +398,7 @@ CombinedMatcher.prototype =
 
     return result;
   }
-}
-
+};
 /**
  * Shared CombinedMatcher instance that should usually be used.
  * @type CombinedMatcher

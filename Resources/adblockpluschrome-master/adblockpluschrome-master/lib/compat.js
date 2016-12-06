@@ -212,8 +212,7 @@ var Services =
       return 0;
     }
   }
-}
-
+};
 //
 // FileUtils.jsm module emulation
 //

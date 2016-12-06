@@ -85,8 +85,8 @@ function hasRecord(panel, request, filter)
 
     // Matched element hiding filters don't relate to a particular request,
     // so we also have to match the CSS selector in order to distinguish them.
-    (record.filter && record.filter.selector) == (filter && filter.selector)
-  );
+      (record.filter && record.filter.selector) == (filter && filter.selector);
+)
 }
 
 function addRecord(panel, request, filter)
@@ -179,8 +179,7 @@ function logHiddenElements(page, selectors, docDomain)
       }
     }
   }
-};
-
+}
 /**
  * Logs a whitelisting filter, that disables (some kind of)
  * blocking for a particular document, to the devtools panel.
@@ -371,15 +370,13 @@ chrome.runtime.onConnect.addListener(port =>
       FilterNotifier.off("filter.removed", onFilterRemoved);
       FilterNotifier.off("subscription.added", onSubscriptionAdded);
     }
-  });
-
-  panels[inspectedTabId] = {port: port, records: []};
-});
-
+})
+panels[inspectedTabId] = {port: port, records: []};
+})
 port.on("devtools.traceElemHide", (message, sender) =>
 {
   logHiddenElements(
     sender.page, message.selectors,
-    extractHostFromFrame(sender.frame)
-  );
-});
+    extractHostFromFrame(sender.frame);
+)
+})

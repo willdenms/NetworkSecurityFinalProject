@@ -57,10 +57,10 @@ function getFiltersForElement(element, callback)
   },
   response =>
   {
-    callback(response.filters, response.selectors);
-  });
+    callback(response.filters, response.selectors;;
+)
+})
 }
-
 function getBlockableElementOrAncestor(element, callback)
 {
   // We assume that the user doesn't want to block the whole page.
@@ -105,10 +105,9 @@ function getBlockableElementOrAncestor(element, callback)
           callback(element);
         else
           getBlockableElementOrAncestor(element.parentElement, callback);
-      });
-
+    })
       return;
-    }
+    };;
   }
 
   // We reached the document root without finding a blockable element.
@@ -180,9 +179,8 @@ function highlightElement(element, shadowColor, backgroundColor)
     element._unhighlight = () =>
     {
       overlay.parentNode.removeChild(overlay);
-    };
-  };
-
+    }
+  };;;
   let highlightWithStyleAttribute = function()
   {
     let originalBoxShadow = element.style.getPropertyValue("box-shadow");
@@ -212,9 +210,8 @@ function highlightElement(element, shadowColor, backgroundColor)
         originalBackgroundColor,
         originalBackgroundColorPriority
       );
-    };
-  };
-
+    }
+  };;;
   // If this element is an overlay that we've created previously then we need
   // to give it a background colour. Otherwise we need to create an overlay
   // and then recurse in order to set the overlay's background colour.
@@ -259,9 +256,10 @@ function highlightElements(selectorString)
       clearInterval(highlightedElementsInterval);
       highlightedElementsInterval = null;
     }
-  }, 0);
-}
-
+},
+  0;;
+)
+};;
 // Unhighlight the elements that were highlighted by selector string previously.
 function unhighlightElements()
 {
@@ -312,11 +310,9 @@ function mouseOver(event)
         currentElement = element;
       }
     }
-  });
-
+})
   event.stopPropagation();
-}
-
+};;
 // No longer hovering over this element so unhighlight it.
 function mouseOut(event)
 {
@@ -358,10 +354,9 @@ function startPickingElement()
       {
         if (filters.length > 0)
           addElementOverlay(element);
-      });
-    }
-  );
-
+})
+}
+)
   document.addEventListener("mousedown", stopEventPropagation, true);
   document.addEventListener("mouseup", stopEventPropagation, true);
   document.addEventListener("mouseenter", stopEventPropagation, true);
@@ -373,8 +368,7 @@ function startPickingElement()
   document.addEventListener("keydown", keyDown, true);
 
   ext.onExtensionUnloaded.addListener(deactivateBlockElement);
-}
-
+};;
 // The user has picked an element - currentElement. Highlight it red, generate
 // filters for it and open a popup dialog so that the user can confirm.
 function elementPicked(event)
@@ -423,14 +417,12 @@ function elementPicked(event)
           }
         });
       }
-    });
-
-    if (selectors.length > 0)
+})
+  if (selectors.length > 0)
       highlightElements(selectors.join(","));
 
     highlightElement(currentElement, "#fd1708", "#f6a1b5");
-  });
-
+})
   event.preventDefault();
   event.stopPropagation();
 }
@@ -512,8 +504,9 @@ if (document instanceof HTMLDocument)
         type: "composer.content.clearPreviousRightClickEvent"
       }
     });
-  }, true);
-
+},
+  true;;
+)
   ext.onMessage.addListener((msg, sender, sendResponse) =>
   {
     switch (msg.type)
@@ -540,9 +533,10 @@ if (document instanceof HTMLDocument)
               currentElement = element;
               elementPicked(event);
             }
-          });
+          };;
+        )
         }
-        break;
+      break;
       case "composer.content.finished":
         if (currentElement && msg.remove)
         {
@@ -582,9 +576,9 @@ if (document instanceof HTMLDocument)
           });
         }
         break;
-    }
-  });
-
+    };;;;;;;;;;;;;;
+})
   if (window == window.top)
     ext.backgroundPage.sendMessage({type: "composer.ready"});
-}
+};;
+

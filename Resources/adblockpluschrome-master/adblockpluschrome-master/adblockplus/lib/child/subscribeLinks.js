@@ -25,8 +25,7 @@ onShutdown.add(() =>
 {
   Services.obs.removeObserver(onContentWindow,
       "content-document-global-created");
-});
-
+})
 function onContentWindow(subject, topic, data)
 {
   if (subject instanceof Ci.nsIDOMWindow && subject.top == subject)

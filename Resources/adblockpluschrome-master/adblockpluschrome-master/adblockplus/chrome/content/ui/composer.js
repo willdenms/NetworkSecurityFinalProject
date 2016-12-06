@@ -22,8 +22,8 @@ var advancedMode = false;
 function init()
 {
   [nodesID, item] = window.arguments;
-  window.addEventListener("unload", () => Policy.deleteNodes(nodesID));
-
+  window.addEventListener("unload", () = > Policy.deleteNodes(nodesID);;
+)
   E("filterType").value = (!item.filter || item.filter.disabled || item.filter instanceof WhitelistFilter ? "filterlist" : "whitelist");
   E("customPattern").value = item.location;
 
@@ -41,7 +41,7 @@ function init()
     insertionPoint.parentNode.insertBefore(suggestion, insertionPoint);
 
     return address;
-  }
+  };
 
   let ioService = Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService);
   try
@@ -152,10 +152,10 @@ function init()
 
     if (item.type == type)
       typeNode.setAttribute("disabled", "true");
-    typeNode.addEventListener("command", () => checkboxUpdated(typeNode), false);
+    typeNode.addEventListener("command", () = > checkboxUpdated(typeNode), false;;
+  )
     typeGroup.appendChild(typeNode);
   }
-
   let collapseDefault = E("collapseDefault");
   collapseDefault.label = collapseDefault.getAttribute(Prefs.fastcollapse ? "label_no" : "label_yes");
   E("collapse").value = "";
@@ -167,7 +167,6 @@ function init()
 
   updatePatternSelection();
 }
-
 function checkboxUpdated(checkbox)
 {
   checkbox._lastChange = Date.now();
@@ -178,7 +177,7 @@ function updateFilter()
 {
   let filter = "";
 
-  let type = E("filterType").value
+  let type = E("filterType").value;
   if (type == "whitelist")
     filter += "@@";
 
@@ -245,9 +244,10 @@ function updateFilter()
 
     if (options.length)
     {
-      options.sort((a, b) => a[0] - b[0]);
+      options.sort((a, b) = > a[0] - b[0];;
+    )
       filter += "$" + options.map(o => o[1]).join(",");
-    }
+    };;
   }
   else
   {
@@ -278,7 +278,7 @@ function generateLinkText(element, replacement)
 {
   let template = element.getAttribute("textTemplate");
   if (typeof replacement != "undefined")
-    template = template.replace(/\?1\?/g, replacement)
+    template = template.replace(/\?1\?/g, replacement);
 
   let [, beforeLink, linkText, afterLink] = /(.*)\[link\](.*)\[\/link\](.*)/.exec(template) || [null, "", template, ""];
   while (element.firstChild && element.firstChild.nodeType != Node.ELEMENT_NODE)

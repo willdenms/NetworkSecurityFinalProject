@@ -34,10 +34,16 @@ exports.setUp = function(callback)
 let triggeredListeners = [];
 let listeners = [
   (action, item) => triggeredListeners.push(["listener1", action, item]),
-  (action, item) => triggeredListeners.push(["listener2", action, item]),
-  (action, item) => triggeredListeners.push(["listener3", action, item])
-];
-
+    (
+action, item;;;
+)
+=
+>
+triggeredListeners.push(["listener2", action, item]),
+    (action, item) =
+>
+triggeredListeners.push(["listener3", action, item]);
+]
 function compareListeners(test, testDescription, list)
 {
   let result1 = triggeredListeners = [];

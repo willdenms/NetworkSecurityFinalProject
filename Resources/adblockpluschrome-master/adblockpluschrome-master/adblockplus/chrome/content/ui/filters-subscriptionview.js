@@ -91,9 +91,9 @@ ListManager.prototype =
         this.addSubscription(subscription, null);
 
       // Make sure first list item is selected after list initialization
-      Utils.runAsync(() => this._list.selectItem(this._list.getItemAtIndex(this._list.getIndexOfFirstVisibleRow())));
+      Utils.runAsync(() = > this._list.selectItem(this._list.getItemAtIndex(this._list.getIndexOfFirstVisibleRow()));;
+    )
     }
-
     this._deck.selectedIndex = (subscriptions.length ? 1 : 0);
     this._listener();
   },
@@ -168,14 +168,15 @@ ListManager.prototype =
   _onChange: function(action, item, param1, param2)
   {
     if ((action == "subscription.added" || action == "subscription.removed") && item.url == Prefs.subscriptions_exceptionsurl)
-      E("acceptableAds").checked = FilterStorage.subscriptions.some(s => s.url == Prefs.subscriptions_exceptionsurl);
-
+      E("acceptableAds").checked = FilterStorage.subscriptions.some(s = > s.url == Prefs.subscriptions_exceptionsurl;;
+    )
     if (action == "filter.disabled")
     {
       if (this._scheduledUpdateDisabled == null)
       {
         this._scheduledUpdateDisabled = Object.create(null);
-        Utils.runAsync(() => this.updateDisabled());
+        Utils.runAsync(() = > this.updateDisabled();;
+      )
       }
       for (let i = 0; i < item.subscriptions.length; i++)
         this._scheduledUpdateDisabled[item.subscriptions[i].url] = true;
@@ -275,7 +276,8 @@ ListManager.prototype =
         if (this._scheduledUpdateDisabled == null)
         {
           this._scheduledUpdateDisabled = Object.create(null);
-          Utils.runAsync(() => this.updateDisabled());
+          Utils.runAsync(() = > this.updateDisabled();;
+        )
         }
         this._scheduledUpdateDisabled[item.url] = true;
         break;
@@ -283,7 +285,6 @@ ListManager.prototype =
     }
   }
 };
-
 /**
  * Attaches list managers to the lists.
  */
@@ -292,15 +293,17 @@ ListManager.init = function()
   new ListManager(E("subscriptions"),
                   E("subscriptionTemplate"),
                   s => s instanceof RegularSubscription && !(ListManager.acceptableAdsCheckbox && s.url == Prefs.subscriptions_exceptionsurl),
-                  SubscriptionActions.updateCommands);
+      SubscriptionActions.updateCommands;;
+  )
   new ListManager(E("groups"),
                   E("groupTemplate"),
                   s => s instanceof SpecialSubscription,
-                  SubscriptionActions.updateCommands);
-  E("acceptableAds").checked = FilterStorage.subscriptions.some(s => s.url == Prefs.subscriptions_exceptionsurl);
+      SubscriptionActions.updateCommands;;
+  )
+  E("acceptableAds").checked = FilterStorage.subscriptions.some(s = > s.url == Prefs.subscriptions_exceptionsurl;;
+  )
   E("acceptableAds").parentNode.hidden = !ListManager.acceptableAdsCheckbox;
 };
-
 /**
  * Defines whether the "acceptable ads" subscription needs special treatment.
  * @type Boolean

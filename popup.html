@@ -10,12 +10,33 @@
     <script src="public/bootstrap/js/bootstrap.min.js" type="application/javascript"></script>
 
     <!--Ad Blocker Scripts-->
-    <link rel="stylesheet" type="text/css" href="public/AdBlock/popup.css">
-    <script src="public/AdBlock/ext/popup.js" type="application/javascript"></script>
-    <script src="public/AdBlock/popup.js" type="application/javascript"></script>
-    <script src="public/AdBlock/notification.js" type="application/javascript"></script>
-    <script src="public/AdBlock/stats.js" type="application/javascript"></script>
+    <!--<link rel="stylesheet" type="text/css" href="public/AdBlock/popup.css">-->
+    <!--<script src="public/AdBlock/ext/popup.js" type="application/javascript"></script>-->
+    <!--<script src="public/AdBlock/popup.js" type="application/javascript"></script>-->
+    <!--<script src="public/AdBlock/notification.js" type="application/javascript"></script>-->
+    <!--<script src="public/AdBlock/stats.js" type="application/javascript"></script>-->
     <!--Ad Blocker Scripts-->
+
+
+    <!--Disconnect Me-->
+    <!--<link rel="stylesheet" href="public/DisconnectMe/stylesheets/vendor/tipped/tipped.css">-->
+    <!--<link rel="stylesheet" href="public/DisconnectMe/stylesheets/chrollusion/index.css">-->
+    <!--<link rel="stylesheet" href="public/DisconnectMe/stylesheets/legacy.css">-->
+    <!--<link rel="stylesheet" href="public/DisconnectMe/stylesheets/popup.css">-->
+    <script src="public/DisconnectMe/scripts/vendor/port/port.js"></script>
+    <script src="public/DisconnectMe/scripts/vendor/jquery/jquery.js"></script>
+    <script src="public/DisconnectMe/scripts/vendor/tipped/tipped.js"></script>
+    <script src="public/DisconnectMe/scripts/vendor/d3/d3.js"></script>
+    <script src="public/DisconnectMe/scripts/vendor/d3/d3.layout.js"></script>
+    <script src="public/DisconnectMe/scripts/vendor/d3/d3.geom.js"></script>
+    <script src="public/DisconnectMe/scripts/vendor/favicon/favicon.js"></script>
+    <script src="public/DisconnectMe/scripts/chrollusion/index-content-script.js"></script>
+    <script src="public/DisconnectMe/scripts/chrollusion/collusion-addon.js"></script>
+    <script src="public/DisconnectMe/scripts/chrollusion/graphrunner.js"></script>
+    <script src="public/DisconnectMe/scripts/chrollusion/index.js"></script>
+    <script src="public/DisconnectMe/scripts/popup.js"></script>
+    <!--Disconnect Me-->
+
 
     <title>FinalProject</title>
 </head>
@@ -54,6 +75,7 @@
                                         <input type="checkbox" name="alertSettings" id="hardware" value="hardware"/>Hardware Usage<br>
                                         <input type="checkbox" name="alertSettings" id="gpsWifi" value="gpsWifi"/>GPS and WIFI Location<br>
                                         <input type="checkbox" name="alertSettings" id="performance" value="performance"/>Performance<br>
+                                      </form>
                                     </div>
                                 </div>
                             </div>
@@ -167,17 +189,177 @@
                                 </li>
                             </ul>
                         </div>
-
-                        <footer id="options" role="button">
-                            <div class="icon"></div>
-                            <span class="i18n_options_short"></span>
-                        </footer>                    </div>
+<!-Todo Figure out id issue--->
+                        <!--<footer id="options" role="button">-->
+                            <!--<div class="icon"></div>-->
+                            <!--<span class="i18n_options_short"></span>-->
+                        <!--</footer>                    -->
+                    </div>
                     <!--End Add Blocker Tab-->
 
                     <!--Trackers Tab-->
                     <div id="menu2" class="tab-pane fade">
-                        <h3>Trackers</h3>
-                        <p>Cookies/Trackers go here</p>
+                        <div id="list">
+                            <table id="shortcuts">
+                                <tr>
+                                    <td>
+                                        <table class="shortcut">
+                                            <tr>
+                                                <td class="badge"><img></td>
+                                                <td class="text"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table>
+                                <tbody id="categories">
+                                <tr class="category">
+                                    <td class="badge"><img></td>
+                                    <td class="text">
+                                        <table>
+                                            <tr>
+                                                <td class="name"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="count"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td class="action"><img src="public/DisconnectMe/images/expand/1.png"></td>
+                                </tr>
+                                <tr class="border">
+                                    <td colspan="3"></td>
+                                </tr>
+                                <tr class="services">
+                                    <td colspan="3">
+                                        <div>
+                                            <table>
+                                                <tbody>
+                                                <tr class="service">
+                                                    <td class="control"><input type="checkbox"></td>
+                                                    <td class="link">
+                                                        <a title="Visit " target="_blank"></a>
+                                                    </td>
+                                                    <td class="text"></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <table id="options">
+                                <tr>
+                                    <td class="whitelisting badge"><span class="glyphicon glyphicon-menu-hamburger"></span></td>
+                                    <td class="whitelisting text"></td>
+                                    <td class="visualization badge"><img></td>
+                                    <td class="visualization text">Visualize page</td>
+                                </tr>
+                                <tr>
+                                    <td class="indicator"><input type="checkbox"></td>
+                                    <td class="indicator">Show counter</td>
+                                    <td class="cap"><input type="checkbox"></td>
+                                    <td class="cap">Cap counter</td>
+                                </tr>
+                            </table>
+                            <table id="dashboard">
+                                <tr>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td class="label">
+                                                    Time
+                                                    <br>
+                                                    saved
+                                                </td>
+                                                <td class="label">Bandwidth saved</td>
+                                                <!-- <td class="label">Requests secured</td> -->
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3" id="data"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div id="graph">
+                            <div class="notification" id="update" style="display: none">
+                                <div class="close"></div>
+                                &nbsp;<strong><span class="chrome">v2.0</span><span class="safari">v2.0</span></strong> • Click <strong>Hide inactive sites</strong> in the sidebar to view the graph for just the current site. • Click a blocked site in the graph to unblock the site.
+                                <div class="share" id="js-share-fb" style="display: none"></div>
+                                <div class="share" id="js-share-tweet" style="display: none"></div>
+                            </div>
+                            <div class="notification" id="recommends" style="display: none">
+                                <div class="close"></div>
+                                <span id='recommender-message'></span>
+                            </div>
+                            <div id="page">
+                                <div id="sidebar" style="display: none;">
+                                    <h1></h1>
+                                    <img id="logo">
+                                    <hr/>
+
+                                    <div id="sidebar-content">
+                                        <div class="live-data">
+                                            <p>Browse the web normally. As you do, the graph in this popup and the counter in the toolbar will update. Each circle in the graph represents a site that’s been or would’ve been sent some of your personal info.</p>
+                                            <p>Circles with a halo are sites you’ve visited. Circles without a halo are sites you haven’t.</p>
+                                            <p><span class="tracker">Red</span> circles are known tracking sites. <span class="site">Gray</span> circles aren’t but may still track you.</p>
+                                            <p>Mouse over a circle to view that site’s tracking footprint. Click a red circle to block or unblock that site.</p>
+                                        </div> <!-- end of live-data -->
+                                        <div id="domain-infos"></div> <!-- Templates are copied into here -->
+                                        <div class="settings-menu">
+                                            <ul>
+                                                <li id="unblock-tracking"></li>
+                                                <li id="disable-wifi"></li>
+                                                <li id="hide-sidebar">Hide sidebar</li>
+                                                <li class="invisible" id="show-instructions">Show instructions</li>
+                                            </ul>
+                                        </div> <!-- end of settingsmenu -->
+                                    </div> <!-- End of #sidebar-content -->
+                                </div> <!-- End of #sidebar -->
+                                <div id="chart"></div><!-- The d3 layout graph will go inside this div -->
+                                <div class="settings-menu collapsed" id="show-sidebar">+</div>
+                                <div class="settings-menu collapsed" id="show-list">Show list view</div>
+                            </div>
+                            <div id="addon-installation-detected" style="display: none;">
+                                Collusion add-on detected! Reload this page to see your graph.
+                            </div>
+                            <div id="templates">
+                                <div class="info" style="display: none;">
+                                    <h2 class="domain"><a class="domain"></a></h2>
+
+                                    <div class="referrees">
+                                        <p>When you visit this site, the following sites are informed:</p>
+                                        <ul></ul>
+                                    </div>
+                                    <div class="referrers">
+                                        <p>This site is informed when you visit the following sites:</p>
+                                        <ul></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="legacy">
+                            <table class="services">
+                                <tr>
+                                    <td><img></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                            <table id="minioptions">
+                                <tr class="search">
+                                    <td><input type="checkbox"></td>
+                                    <td>Anonymize search</td>
+                                </tr>
+                                <tr class="wifi">
+                                    <td><input type="checkbox"></td>
+                                    <td>Secure Wi-Fi</td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                     <!--End Trackers Tab-->
 

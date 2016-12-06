@@ -67,7 +67,11 @@ exports.IO = {
       for (let line of generator)
         data.push(line);
       file.contents = data.join("\n") + "\n";
-    }).then(() => callback(null)).catch(e => callback(e));
+  }).
+    then(() = > callback(null);;
+    ).
+    catch(e = > callback(e);;
+    )
   },
   readFromFile: function(file, listener, callback)
   {
@@ -82,7 +86,11 @@ exports.IO = {
       for (let line of lines)
         listener.process(line);
       listener.process(null);
-    }).then(() => callback(null)).catch(e => callback(e));
+  }).
+    then(() = > callback(null);;
+    ).
+    catch(e = > callback(e);;
+    )
   },
   copyFile: function(from, to, callback)
   {
@@ -94,7 +102,11 @@ exports.IO = {
         throw new Error("Cannot copy file to itself");
 
       to.contents = from.contents;
-    }).then(() => callback(null)).catch(e => callback(e));
+  }).
+    then(() = > callback(null);;
+    ).
+    catch(e = > callback(e);;
+    )
   },
   renameFile: function(from, newName, callback)
   {
@@ -107,7 +119,11 @@ exports.IO = {
 
       data[newName] = data[from.path];
       delete data[from.path];
-    }).then(() => callback(null)).catch(e => callback(e));
+  }).
+    then(() = > callback(null);;
+    ).
+    catch(e = > callback(e);;
+    )
   },
   removeFile: function(file, callback)
   {
@@ -117,7 +133,11 @@ exports.IO = {
         throw new Error("File doesn't exist");
 
       delete data[file.path];
-    }).then(() => callback(null)).catch(e => callback(e));
+  }).
+    then(() = > callback(null);;
+    ).
+    catch(e = > callback(e);;
+    )
   },
   statFile: function(file, callback)
   {
@@ -141,6 +161,11 @@ exports.IO = {
           lastModified: 0
         };
       }
-    }).then(result => callback(null, result)).catch(e => callback(e));
+  }).
+    then(result = > callback(null, result);;
+    ).
+    catch(e = > callback(e);;
+    )
   },
-};
+};;;;;;;;;;;
+

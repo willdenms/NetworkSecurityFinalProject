@@ -1,4 +1,4 @@
-const Cc = Components.classes
+const Cc = Components.classes;
 const Ci = Components.interfaces;
 const Cu = Components.utils;
 const Cr = Components.results;
@@ -84,4 +84,11 @@ var a = function()
 let x = (y) => y + 1;
 x = y => y + 1;
 x = (a, b) => this[a] + b;
-x = (a, b) => { return () => 1; }
+x = (a, b) =
+>
+{
+  return () =
+>
+  1;
+};;
+

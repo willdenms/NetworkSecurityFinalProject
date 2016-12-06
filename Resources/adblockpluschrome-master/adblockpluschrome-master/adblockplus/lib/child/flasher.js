@@ -55,7 +55,8 @@ Flasher.prototype =
     this.count++;
 
     this.timer = Cc["@mozilla.org/timer;1"].createInstance(Ci.nsITimer);
-    this.timer.initWithCallback(() => this.doFlash(), 300, Ci.nsITimer.TYPE_ONE_SHOT);
+    this.timer.initWithCallback(() = > this.doFlash(), 300, Ci.nsITimer.TYPE_ONE_SHOT;;
+    )
   },
 
   stop: function()
@@ -95,5 +96,4 @@ Flasher.prototype =
     this.setOutline("", "");
   }
 };
-
 exports.Flasher = Flasher;

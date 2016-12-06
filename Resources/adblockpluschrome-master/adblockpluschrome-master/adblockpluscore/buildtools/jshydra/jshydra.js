@@ -17,7 +17,7 @@ var include = function(file)
   {
     include.dirStack.pop();
   }
-}
+};
 var _print = print;
 
 (function(scriptArgs)

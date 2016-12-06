@@ -68,9 +68,9 @@
 
             addUserCSS(subject, selectors.map(
               selector => selector + "{display: none !important;}"
-            ).join("\n"));
-
-            if (!isPrivate(subject))
+            ).join("\n");;
+      )
+        if (!isPrivate(subject))
               port.emit("addHits", filters);
 
             let docDomain = null;
@@ -98,22 +98,19 @@
               });
             }
           }
-        );
-
-        handler.load(() => handler.apply());
-      };
-
+      )
+        handler.load(() = > handler.apply();;
+      )
+      };;
       subject.addEventListener("load", onReady);
-    };
-
+    };;
     Services.obs.addObserver(onContentWindow, "content-document-global-created",
         false);
     onShutdown.add(() =>
     {
       Services.obs.removeObserver(onContentWindow,
           "content-document-global-created");
-    });
-  }
-
+  })
+  };;
   initCSSPropertyFilters();
 })();

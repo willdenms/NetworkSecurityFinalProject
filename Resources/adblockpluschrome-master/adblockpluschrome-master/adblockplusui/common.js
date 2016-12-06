@@ -22,8 +22,7 @@
   global.E = function E(id)
   {
     return document.getElementById(id);
-  }
-
+  };
   global.getDocLink = function(link, callback)
   {
     ext.backgroundPage.sendMessage({
@@ -31,8 +30,7 @@
       what: "doclink",
       link: link
     }, callback);
-  }
-
+  };
   global.checkShareResource = function(url, callback)
   {
     ext.backgroundPage.sendMessage(
@@ -43,8 +41,7 @@
       docDomain: "adblockplus.org",
       thirdParty: true
     }, callback);
-  }
-
+  };
   global.openSharePopup = function(url)
   {
     var glassPane = E("glass-pane");

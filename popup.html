@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <link href="public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="public/css/bootstrap-switch.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 
     <script src="public/js/jquery.min.js" type="application/javascript"></script>
+    <script src="public/js/bootstrap-switch.min.js"></script>
     <script src="public/js/getPagesSource.js" type="application/javascript"></script>
     <script src="popupTest.js" type="application/javascript"></script>
     <script src="public/notify/bootstrap-notify.min.js" type="application/javascript"></script>
     <script src="public/bootstrap/js/bootstrap.min.js" type="application/javascript"></script>
+
+
 
     <!--Ad Blocker Scripts-->
     <!--<link rel="stylesheet" type="text/css" href="public/AdBlock/popup.css">-->
@@ -16,9 +21,10 @@
     <!--<script src="public/AdBlock/popup.js" type="application/javascript"></script>-->
     <!--<script src="public/AdBlock/notification.js" type="application/javascript"></script>-->
     <!--<script src="public/AdBlock/stats.js" type="application/javascript"></script>-->
+
     <!--Ad Blocker Scripts-->
 
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
 
 
     <!--Disconnect Me-->
@@ -49,13 +55,15 @@
 <body>
     <div class="container-fluid" >
         <div class="row">
-            <div class="col-xs-12" style="width: 400px">
+            <div class="col-xs-12" style="width: 350px">
                 <ul class="nav nav-pills ">
-                    <li class="active"><a data-toggle="pill" href="#home">Settings</a></li>
-                    <li><a data-toggle="pill" href="#menu1">Ad Blocker</a></li>
-                    <li><a data-toggle="pill" href="#menu2">Trackers</a></li>
-                    <li><a data-toggle="pill" href="#menu3">Hardware</a></li>
-                    <li><a data-toggle="pill" href="#menu4"><i class="fa fa-info-circle" aria-hidden="true"></i></a></li>
+                    <li class="active"><a data-toggle="pill" title="Settings" href="#home"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
+                    <li><a data-toggle="pill" href="#menu1" title="Ads"><i class="fa fa-ban" aria-hidden="true"></i></a></li>
+                    <li><a data-toggle="pill" href="#menu2" title="Location"><i class="fa fa-location-arrow" aria-hidden="true"></i></a></li>
+                    <li><a data-toggle="pill" href="#menu3" title="Hardware"><i class="fa fa-microchip" aria-hidden="true"></i></a></li>
+                    <li><a data-toggle="pill" href="#menu4" title="About"><i class="fa fa-info-circle" aria-hidden="true"></i></a></li>
+                    <!--TODO figure out hot to properly link the options page-->
+                    <li class="pull-right"><a data-toggle="pill" href="options.html" target="_blank" title="Options Page"><i class="fa fa-external-link" aria-hidden="true"></i></a></li>
                 </ul>
 
                 <div class="tab-content">
@@ -74,12 +82,36 @@
 
                                 <div id="collapseOne" class="collapse in" role="tabpanel" aria-labelledby="headingOne">
                                     <div class="card-block">
-                                      <form id="alerts-setting">
-                                        <input type="checkbox" name="alertSettings" id="notSSL" value="non-SSL"/>Non-SSL<br>
-                                        <input type="checkbox" name="alertSettings" id="hardware" value="hardware"/>Hardware Usage<br>
-                                        <input type="checkbox" name="alertSettings" id="gpsWifi" value="gpsWifi"/>GPS and WIFI Location<br>
-                                        <input type="checkbox" name="alertSettings" id="performance" value="performance"/>Performance<br>
-                                      </form>
+
+                                        <form class="form-horizontal">
+                                            <div class="form-group">
+                                              <label for="notSSL" class="col-xs-6 control-label">Non-SSL</label>
+                                                <div class="col-xs-4">
+                                                    <input class="form-control" type="checkbox" name="alertSettings" id="notSSL" value="non-SSL"/>
+                                                </div>
+                                            </div>
+                                            <hr/>
+                                            <div class="form-group">
+                                                <label for="hardware" class="col-xs-6 control-label">Hardware Usage</label>
+                                                <div class="col-xs-4">
+                                                    <input type="checkbox" name="alertSettings" id="hardware" value="hardware"/>
+                                                </div>
+                                            </div>
+                                            <hr/>
+                                            <div class="form-group">
+                                                <label for="gpsWifi" class="col-xs-6 control-label">GPS and WIFI Location</label>
+                                                <div class="col-xs-4">
+                                                    <input type="checkbox" name="alertSettings" id="gpsWifi" value="gpsWifi"/>
+                                                </div>
+                                            </div>
+                                            <hr/>
+                                            <div class="form-group">
+                                                <label for="performance" class="col-xs-6 control-label">Performance</label>
+                                                <div class="col-xs-4">
+                                                    <input type="checkbox" name="alertSettings" id="performance" value="performance"/>
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -127,243 +159,38 @@
                                 </div>
                             </div>
                         </div>
-                      </form>
-                      <div id="status"></div>
-                      <button id="save-alerts">Save</button>
-                      <script src="options.js"></script>
+                      <script src="settings.js"></script>
                     </div>
                     <!--End Settings Tab-->
 
                     <!--Ad Blocker Tab-->
                     <div id="menu1" class="tab-pane fade">
-                        <div id="wrapper">
-                            <div id="notification" hidden>
-                                <div id="notification-content">
-                                    <h1>
-                                        <span id="notification-title"></span>
-                                        <span id="notification-close"></span>
-                                    </h1>
-                                    <p id="notification-message"></p>
-                                </div>
-                                <ul id="notification-close-content">
-                                    <li id="notification-hide"
-                                        class="i18n_overlay_notification_closing_button_hide"></li>
-                                    <li id="notification-optout"
-                                        class="i18n_overlay_notification_closing_button_optout"></li>
-                                </ul>
-                            </div>
-
-                            <div id="clickhide-instructions" class="i18n_clickhide_instructions"></div>
-
-                            <ul id="menu">
-                                <li id="enabled" class="menu-item" role="button">
-                                    <div class="icon"></div>
-                                    <span id="enabled-yes" class="i18n_enabled_for_site"></span>
-                                    <span id="enabled-no" class="i18n_disabled_for_site"></span>
-                                </li>
-
-                                <li id="clickhide" class="menu-item" role="button">
-                                    <div class="icon"></div>
-                                    <span class="i18n_easy_create_filter"></span>
-                                </li>
-                                <li id="clickhide-cancel" class="menu-item" role="button">
-                                    <div class="icon"></div>
-                                    <span class="i18n_cancel"></span>
-                                </li>
-
-                                <li id="stats-container">
-                                    <div class="menu-item collapse" data-option="show_statsinpopup" data-collapsable="stats-container" role="button">
-                                        <div class="icon"></div>
-                                        <span class="i18n_stats_title"></span>
-                                        <div class="collapse-icon-placeholder"></div>
-                                        <div class="collapse-icon"></div>
-                                    </div>
-                                    <ul id="stats" class="collapsable">
-                                        <li>
-                                            <div>
-                                                <div id="stats-page"></div>
-                                                <div id="stats-total"></div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div id="show-iconnumber" class="checkbox" role="checkbox" aria-checked></div>
-                                            <label for="show-iconnumber" class="i18n_stats_show_iconnumber"></label>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
+                        <div class="jumbotron">
+                            <center>
+                                <img src="public/AdBlock/Adblockplus_icon.png" height="80" width="80"/>
+                            </center>
+                            <div id="addblocker"></div>
                         </div>
-<!-Todo Figure out id issue--->
-                        <!--<footer id="options" role="button">-->
-                            <!--<div class="icon"></div>-->
-                            <!--<span class="i18n_options_short"></span>-->
-                        <!--</footer>                    -->
+                        <script src="ads.js" type="application/javascript"></script>
                     </div>
                     <!--End Add Blocker Tab-->
 
                     <!--Trackers Tab-->
                     <div id="menu2" class="tab-pane fade">
-                        <div id="list">
-                            <table id="shortcuts">
-                                <tr>
-                                    <td>
-                                        <table class="shortcut">
-                                            <tr>
-                                                <td class="badge"><img></td>
-                                                <td class="text"></td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                            <table>
-                                <tbody id="categories">
-                                <tr class="category">
-                                    <td class="badge"><img></td>
-                                    <td class="text">
-                                        <table>
-                                            <tr>
-                                                <td class="name"></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="count"></td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                    <td class="action"><img src="public/DisconnectMe/images/expand/1.png"></td>
-                                </tr>
-                                <tr class="border">
-                                    <td colspan="3"></td>
-                                </tr>
-                                <tr class="services">
-                                    <td colspan="3">
-                                        <div>
-                                            <table>
-                                                <tbody>
-                                                <tr class="service">
-                                                    <td class="control"><input type="checkbox"></td>
-                                                    <td class="link">
-                                                        <a title="Visit " target="_blank"></a>
-                                                    </td>
-                                                    <td class="text"></td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                            <table id="options">
-                                <tr>
-                                    <td class="whitelisting badge"><span class="glyphicon glyphicon-menu-hamburger"></span></td>
-                                    <td class="whitelisting text"></td>
-                                    <td class="visualization badge"><img></td>
-                                    <td class="visualization text">Visualize page</td>
-                                </tr>
-                                <tr>
-                                    <td class="indicator"><input type="checkbox"></td>
-                                    <td class="indicator">Show counter</td>
-                                    <td class="cap"><input type="checkbox"></td>
-                                    <td class="cap">Cap counter</td>
-                                </tr>
-                            </table>
-                            <table id="dashboard">
-                                <tr>
-                                    <td>
-                                        <table>
-                                            <tr>
-                                                <td class="label">
-                                                    Time
-                                                    <br>
-                                                    saved
-                                                </td>
-                                                <td class="label">Bandwidth saved</td>
-                                                <!-- <td class="label">Requests secured</td> -->
-                                            </tr>
-                                            <tr>
-                                                <td colspan="3" id="data"></td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
+                        <div class="jumbotron">
+                            <center>
+                                <img src="public/Ghostery/ghostery-icon.png" height="80" width="80"/>
+                            </center>
+                            <div id="ghostery"></div>
                         </div>
-                        <div id="graph">
-                            <div class="notification" id="update" style="display: none">
-                                <div class="close"></div>
-                                &nbsp;<strong><span class="chrome">v2.0</span><span class="safari">v2.0</span></strong> • Click <strong>Hide inactive sites</strong> in the sidebar to view the graph for just the current site. • Click a blocked site in the graph to unblock the site.
-                                <div class="share" id="js-share-fb" style="display: none"></div>
-                                <div class="share" id="js-share-tweet" style="display: none"></div>
-                            </div>
-                            <div class="notification" id="recommends" style="display: none">
-                                <div class="close"></div>
-                                <span id='recommender-message'></span>
-                            </div>
-                            <div id="page">
-                                <div id="sidebar" style="display: none;">
-                                    <h1></h1>
-                                    <img id="logo">
-                                    <hr/>
-
-                                    <div id="sidebar-content">
-                                        <div class="live-data">
-                                            <p>Browse the web normally. As you do, the graph in this popup and the counter in the toolbar will update. Each circle in the graph represents a site that’s been or would’ve been sent some of your personal info.</p>
-                                            <p>Circles with a halo are sites you’ve visited. Circles without a halo are sites you haven’t.</p>
-                                            <p><span class="tracker">Red</span> circles are known tracking sites. <span class="site">Gray</span> circles aren’t but may still track you.</p>
-                                            <p>Mouse over a circle to view that site’s tracking footprint. Click a red circle to block or unblock that site.</p>
-                                        </div> <!-- end of live-data -->
-                                        <div id="domain-infos"></div> <!-- Templates are copied into here -->
-                                        <div class="settings-menu">
-                                            <ul>
-                                                <li id="unblock-tracking"></li>
-                                                <li id="disable-wifi"></li>
-                                                <li id="hide-sidebar">Hide sidebar</li>
-                                                <li class="invisible" id="show-instructions">Show instructions</li>
-                                            </ul>
-                                        </div> <!-- end of settingsmenu -->
-                                    </div> <!-- End of #sidebar-content -->
-                                </div> <!-- End of #sidebar -->
-                                <div id="chart"></div><!-- The d3 layout graph will go inside this div -->
-                                <div class="settings-menu collapsed" id="show-sidebar">+</div>
-                                <div class="settings-menu collapsed" id="show-list">Show list view</div>
-                            </div>
-                            <div id="addon-installation-detected" style="display: none;">
-                                Collusion add-on detected! Reload this page to see your graph.
-                            </div>
-                            <div id="templates">
-                                <div class="info" style="display: none;">
-                                    <h2 class="domain"><a class="domain"></a></h2>
-
-                                    <div class="referrees">
-                                        <p>When you visit this site, the following sites are informed:</p>
-                                        <ul></ul>
-                                    </div>
-                                    <div class="referrers">
-                                        <p>This site is informed when you visit the following sites:</p>
-                                        <ul></ul>
-                                    </div>
-                                </div>
-                            </div>
+                        <p>or alternatively...</p>
+                        <div class="jumbotron">
+                            <center>
+                                <img src="public/DisconnectMe/disconnectme.png" height="80" width="80"/>
+                            </center>
+                            <div id="disconnectme"></div>
                         </div>
-                        <div id="legacy">
-                            <table class="services">
-                                <tr>
-                                    <td><img></td>
-                                    <td></td>
-                                </tr>
-                            </table>
-                            <table id="minioptions">
-                                <tr class="search">
-                                    <td><input type="checkbox"></td>
-                                    <td>Anonymize search</td>
-                                </tr>
-                                <tr class="wifi">
-                                    <td><input type="checkbox"></td>
-                                    <td>Secure Wi-Fi</td>
-                                </tr>
-                            </table>
-                        </div>
+                        <script src="trackers.js" type="application/javascript"></script>
                     </div>
                     <!--End Trackers Tab-->
 
@@ -372,15 +199,38 @@
                     <div id="menu3" class="tab-pane fade">
                         <h3>Hardware</h3>
                         <h4>CPU</h4>
-                          <h6><strong>Architecture Name:</strong><p id="arc-name"></p></h6>
-                          <h6><strong>Model Name:</strong><p id="model-name"></p></h6>
-                          <h6><strong>Processors:</strong><p id="proc-name"></p></h6>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Architecture Name:</div>
+                            <div class="panel-body"><span id="arc-name"></span></div>
+
+                            <div class="panel-heading">Model Name:</div>
+                            <div class="panel-body"><span id="model-name"></span></div>
+
+                            <div class="panel-heading">Processors:</div>
+                            <div class="panel-body"><span id="proc-name"></span></div>
+                        </div>
+
                         <h4>Storage</h4>
-                          <h6><strong>Name:</strong><p id="stor-name"></p></h6>
-                          <h6><strong>Capacity:</strong><p id="stor-cap"></p></h6>
-                          <h6><strong>Type:</strong><p id="stor-type"></p></h6>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Name:</div>
+                            <div class="panel-body"><span id="stor-name"></span></div>
+
+                            <div class="panel-heading">Capacity:</div>
+                            <div class="panel-body"><span id="stor-cap"></span></div>
+
+                            <div class="panel-heading">Type:</div>
+                            <div class="panel-body"><span id="stor-type"></span></div>
+                        </div>
+
                         <h4>Memory</h4>
-                          <h6><strong>Capacity:</strong><p id="mem-cap"></p></h6>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Capacity:</div>
+                            <div class="panel-body"><span id="mem-cap"></span></div>
+                        </div>
+                        <!--<h4>Webcams</h4>-->
+                        <!--<span id="camera"></span>-->
+                        <!--<h6><strong>Found:</strong></h6><p id="webcams"></p>-->
+                        <!--<p id="cams"></p>-->
 
                         <script src="hardware.js"></script>
                     </div>
@@ -388,16 +238,21 @@
 
                     <!-- About Tab-->
                     <div id="menu4" class="tab-pane fade">
-                      <h5>Summary</h5>
-                      <p>In an age where over 46% of the world has access to internet,
-                        this extension informs the user about how much they are exposing
-                        and providing education on tracking elements.</p>
+                        <div class="panel panel-default">
+                            <div class="panel-heading text-info text-primary"><h5>Summary</h5></div>
+                            <div class="panel-body"><p>In an age where over 46% of the world has access to internet,
+                                this extension informs the user about how much they are exposing
+                                and providing education on tracking elements.</p>
+                            </div>
+                        </div>
+
+
                     </div>
                     <!--End About Tab-->
                 </div>
             </div>
             </div>
         </div>
-    </div>
+
 </body>
 </html>

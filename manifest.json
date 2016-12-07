@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
 
-  "name": "Network Security Final Project",
-  "description": "University of Utah: School of Computing, Network Security final project. The purpose of this extension is to inform its users of network security risks which they might not be currently aware of.",
+  "name": "SafeSurfer",
+  "description": "Safe Surfer | University of Utah: School of Computing, Network Security final project. The purpose of this extension is to inform its users of network security risks which they might not be currently aware of.",
   "version": "0.1",
   "permissions": [
     "tabs",
@@ -10,6 +10,7 @@
     "background",
     "webNavigation",
     "notifications",
+    "management",
     "activeTab",
     "https://ajax.googleapis.com/",
     "storage",
@@ -26,7 +27,7 @@
     "https://*/*",
     "<all_urls>"
   ],
-  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+
   "background": {
     "page": "background.html"
   },
@@ -34,7 +35,7 @@
     "page":"options.html",
     "chrome-style": true
   },
-
+  "options_page": "options.html",
   "browser_action": {
     "default_icon": "Sherlock.png",
     "default_popup": "popup.html",

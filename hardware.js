@@ -20,6 +20,38 @@ function loadData(){
   chrome.system.memory.getInfo(function(data){
     document.getElementById("mem-cap").textContent = data['capacity']+" bytes";
   });
+
+  //Todo get webcam working
+  //$("#camera").webcam({
+  //  width: 320,
+  //  height: 240,
+  //  mode: "callback",
+  //  swffile: "/download/jscam_canvas_only.swf",
+  //  onTick: function() {},
+  //  onSave: function() {},
+  //  onCapture: function() {},
+  //  debug: function() {},
+  //  onLoad: function() {}
+  //});
+  //
+  //var cams = webcam.getCameraList();
+  //$("#webcams").text(cams.length())
+  //for(var i in cams) {
+  //  $("#cams").append("<li>" + cams[i] + "</li>");
+  //}
+
+  //TODO add memory from page posssibly add a d3 chart here
+  //MEMORY
+  // Would show, for example
+  //{
+  // jsHeapSizeLimit: 767557632,
+  // totalJSHeapSize: 58054528,
+  // usedJSHeapSize: 42930044
+  //}
+  //var memoryInfo = window.performance.memory;
+
+
+
 }
 
 

@@ -77,18 +77,18 @@ function test() {
 }
 
 $(document).ready(function() {
-
-    if ("@adblockplus.org/abp/public;1" in Components.classes)
-    {
-        var abpURL = Components.classes["@adblockplus.org/abp/public;1"]
-            .getService(Components.interfaces.nsIURI);
-        var AdblockPlus = Components.utils.import(abpURL.spec, null).AdblockPlus;
-        alert(AdblockPlus.subscriptionCount);
-    }
-    else
-    {
-        // Adblock Plus is not installed
-    }
+    //
+    //if ("@adblockplus.org/abp/public;1" in Components.classes)
+    //{
+    //    var abpURL = Components.classes["@adblockplus.org/abp/public;1"]
+    //        .getService(Components.interfaces.nsIURI);
+    //    var AdblockPlus = Components.utils.import(abpURL.spec, null).AdblockPlus;
+    //    alert(AdblockPlus.subscriptionCount);
+    //}
+    //else
+    //{
+    //    // Adblock Plus is not installed
+    //}
 });
 
 

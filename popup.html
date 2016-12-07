@@ -10,6 +10,7 @@
     <script src="public/notify/bootstrap-notify.min.js" type="application/javascript"></script>
     <script src="public/Bootstrap/js/bootstrap.min.js" type="application/javascript"></script>
     <script src="js/willden/browserSettings.js" type="application/javascript"></script>
+    <script src="js/willden/mediaAlert.js" type="application/javascript"></script>
 
     <!--Ad Blocker Scripts-->
     <!--<link rel="stylesheet" type="text/css" href="public/AdBlock/popup.css">-->
@@ -48,6 +49,8 @@
 
 
 <body>
+
+
 <div class="container-fluid" >
     <div class="row">
         <div class="col-xs-12" style="width: 400px">
@@ -60,12 +63,17 @@
             </ul>
 
             <div class="tab-content">
+
                 <!--Settings Tab-->
                 <div id="home" class="tab-pane fade in active">
                     <h3>Settings</h3>
                     <div id="accordion" role="tablist" aria-multiselectable="true">
 
                         <!--Browser Settings-->
+<!--Testing media detection-->
+                        <!--<input type="button" value="Get Media Devices" onclick="getDevices();">-->
+
+
                         <div class="card">
                             <div class="card-header" role="tab" id="headingBrowser">
                                 <h5 class="mb-0">
@@ -144,7 +152,6 @@
                                                 </select></dd>
                                             </dl>
                                         </fieldset>
-
 
                                     </form>
                                 </div>

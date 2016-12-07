@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e114961-88e9-4987-8a2b-fab1be70c7cc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -208,7 +207,7 @@
       <workItem from="1480997407258" duration="245000" />
       <workItem from="1481043152875" duration="5000" />
       <workItem from="1481082294867" duration="68000" />
-      <workItem from="1481083018230" duration="331000" />
+      <workItem from="1481083018230" duration="507000" />
     </task>
     <task id="LOCAL-00001" summary="Added ssl modal&#10;">
       <created>1481077296992</created>
@@ -252,11 +251,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481080790706</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Updated .gitignore to remove erroneous files">
+      <created>1481083408227</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1481083408227</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="649000" />
+    <option name="totallyTimeSpent" value="825000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2880" height="1620" extended-state="0" />
@@ -340,7 +346,8 @@
     <MESSAGE value="upload excluded files" />
     <MESSAGE value="another commit for manifest&#10;" />
     <MESSAGE value="fixed manifest" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed manifest" />
+    <MESSAGE value="Updated .gitignore to remove erroneous files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated .gitignore to remove erroneous files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e114961-88e9-4987-8a2b-fab1be70c7cc" name="Default" comment="" />
+    <list default="true" id="7e114961-88e9-4987-8a2b-fab1be70c7cc" name="Default" comment="upload excluded files">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
+    <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -9,12 +12,132 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="NetworkSecurityFinalProject" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="getPagesSource.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/getPagesSource.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="51" column="59" selection-start-line="51" selection-start-column="59" selection-end-line="51" selection-end-column="59" />
+              <folding>
+                <element signature="n#!!doc;n#DOMtoString#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="background.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/background.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.365854">
+              <caret line="20" column="58" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="background.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/background.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.857143">
+              <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manifest.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/manifest.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6757679">
+              <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootbox.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/bootbox.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="content.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/DisconnectMe/scripts/content.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="34" column="34" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="34" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="popupTest.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/popupTest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="80" column="61" selection-start-line="80" selection-start-column="43" selection-end-line="80" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="content.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/content.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="18" selection-end-column="29" />
+              <folding>
+                <element signature="n#!!doc;n#onWindowLoad#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="popup.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/popup.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-263.9762">
+              <caret line="382" column="0" selection-start-line="382" selection-start-column="0" selection-end-line="382" selection-end-column="0" />
+              <folding>
+                <marker date="1481080473209" expanded="true" signature="38:328" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hardware.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hardware.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.2586207">
+              <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -24,15 +147,43 @@
       <projects_view />
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/public/DisconnectMe/scripts/background.js" />
+        <option value="$PROJECT_DIR$/public/js/content.js" />
+        <option value="$PROJECT_DIR$/public/DisconnectMe/scripts/popup.js" />
+        <option value="$PROJECT_DIR$/background.html" />
+        <option value="$PROJECT_DIR$/hardware.js" />
+        <option value="$PROJECT_DIR$/popup.html" />
+        <option value="$PROJECT_DIR$/popupTest.js" />
+        <option value="$PROJECT_DIR$/public/js/getPagesSource.js" />
+        <option value="$PROJECT_DIR$/background.js" />
+        <option value="$PROJECT_DIR$/manifest.json" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="width" value="2880" />
-    <option name="height" value="1620" />
+    <option name="x" value="8626" />
+    <option name="y" value="528" />
+    <option name="width" value="3808" />
+    <option name="height" value="2301" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -49,10 +200,29 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NetworkSecurityFinalProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NetworkSecurityFinalProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NetworkSecurityFinalProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -60,93 +230,60 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="FullScreen" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+  </component>
+  <component name="Push.Settings">
+    <excluded-roots>
+      <path value="$PROJECT_DIR$/Resources/disconnect" />
+    </excluded-roots>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mahowa\OneDrive\Documents\School\CS 6490 - Network Security\Assignments\NetworkSecurityFinalProject\public\js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mahowa\OneDrive\Documents\School\CS 6490 - Network Security\Assignments\NetworkSecurityFinalProject\public\js" />
+      <recent name="C:\Users\mahowa\OneDrive\Documents\School\CS 6490 - Network Security\Assignments\NetworkSecurityFinalProject" />
+    </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <module />
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
       <method />
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
       <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
       <method />
     </configuration>
   </component>
@@ -155,9 +292,7 @@
       <projects_view />
     </option>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
-  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -166,51 +301,108 @@
       <changelist id="7e114961-88e9-4987-8a2b-fab1be70c7cc" name="Default" comment="" />
       <created>1480997406004</created>
       <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
       <updated>1480997406004</updated>
       <workItem from="1480997407258" duration="245000" />
       <workItem from="1481043152875" duration="5000" />
     </task>
+    <task id="LOCAL-00001" summary="Added ssl modal&#10;">
+      <created>1481077296992</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1481077296992</updated>
+    </task>
+    <task id="LOCAL-00002" summary="If modal is dismissed the warning system is reset for the website&#10;">
+      <created>1481078126795</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1481078126795</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Fixed SSL Check">
+      <created>1481079520167</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1481079520167</updated>
+    </task>
+    <task id="LOCAL-00004" summary="upload excluded files">
+      <created>1481080128116</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1481080128116</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="250000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="2880" height="1620" extended-state="0" />
+    <frame x="8626" y="528" width="3808" height="2301" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21219513" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23613156" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08668076" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23613156" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21219513" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-    </layout>
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -218,8 +410,350 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added ssl modal&#10;" />
+    <MESSAGE value="If modal is dismissed the warning system is reset for the website&#10;" />
+    <MESSAGE value="Fixed SSL Check" />
+    <MESSAGE value="upload excluded files" />
+    <option name="LAST_COMMIT_MESSAGE" value="upload excluded files" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Resources/disconnect/firefox/content/disconnect.safariextension/opera/chrome/manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/DisconnectMe/scripts/content.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="34" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="34" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/DisconnectMe/scripts/background.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3597519">
+          <caret line="762" column="36" selection-start-line="762" selection-start-column="36" selection-end-line="762" selection-end-column="36" />
+          <folding>
+            <element signature="e#840#904#0" expanded="false" />
+            <element signature="n#!!block;n#initializeArray#0" expanded="false" />
+            <element signature="e#1053#1090#0" expanded="false" />
+            <element signature="n#!!block;n#editSettings#0" expanded="false" />
+            <element signature="e#1222#1267#0" expanded="false" />
+            <element signature="n#!!block;n#checkForNotification#0" expanded="false" />
+            <element signature="e#1386#2058#0" expanded="false" />
+            <element signature="e#1396#2011#0" expanded="false" />
+            <element signature="e#1589#2005#0" expanded="false" />
+            <element signature="e#1638#1997#0" expanded="false" />
+            <element signature="e#2025#2054#0" expanded="false" />
+            <element signature="e#2064#2128#0" expanded="false" />
+            <element signature="n#!!block;n#mapCookie#0" expanded="false" />
+            <element signature="e#2492#2674#0" expanded="false" />
+            <element signature="e#2837#2951#0" expanded="false" />
+            <element signature="e#3023#3097#0" expanded="false" />
+            <element signature="n#!!block;n#mapCookies#0" expanded="false" />
+            <element signature="e#3186#3682#0" expanded="false" />
+            <element signature="e#3381#3678#0" expanded="false" />
+            <element signature="e#3493#3670#0" expanded="false" />
+            <element signature="e#3688#3720#0" expanded="false" />
+            <element signature="n#!!block;n#deleteCookies#0" expanded="false" />
+            <element signature="e#3906#4200#0" expanded="false" />
+            <element signature="e#3993#4196#0" expanded="false" />
+            <element signature="e#4206#4280#0" expanded="false" />
+            <element signature="n#!!block;n#reduceCookies#0" expanded="false" />
+            <element signature="e#4378#5699#0" expanded="false" />
+            <element signature="e#4657#5695#0" expanded="false" />
+            <element signature="e#4748#5540#0" expanded="false" />
+            <element signature="e#4911#5451#0" expanded="false" />
+            <element signature="e#4992#5439#0" expanded="false" />
+            <element signature="e#5095#5427#0" expanded="false" />
+            <element signature="e#5330#5385#0" expanded="false" />
+            <element signature="e#5581#5689#0" expanded="false" />
+            <element signature="e#5705#5736#0" expanded="false" />
+            <element signature="n#!!block;n#initializeToolbar#0" expanded="false" />
+            <element signature="e#5809#5922#0" expanded="false" />
+            <element signature="e#5995#6051#0" expanded="false" />
+            <element signature="e#6092#6138#0" expanded="false" />
+            <element signature="n#!!block;n#getCount#0" expanded="false" />
+            <element signature="e#6230#6357#0" expanded="false" />
+            <element signature="e#6378#6420#0" expanded="false" />
+            <element signature="n#!!block;n#dispatchBubble#0" expanded="false" />
+            <element signature="e#6583#6689#0" expanded="false" />
+            <element signature="e#6775#6805#0" expanded="false" />
+            <element signature="e#6823#6871#0" expanded="false" />
+            <element signature="n#!!block;n#updateCounter#0" expanded="false" />
+            <element signature="e#7172#7625#0" expanded="false" />
+            <element signature="e#7232#7374#0" expanded="false" />
+            <element signature="e#7404#7607#0" expanded="false" />
+            <element signature="e#7440#7599#0" expanded="false" />
+            <element signature="e#7629#7701#0" expanded="false" />
+            <element signature="n#!!block;n#safelyUpdateCounter#0" expanded="false" />
+            <element signature="e#7792#7987#0" expanded="false" />
+            <element signature="e#7870#7983#0" expanded="false" />
+            <element signature="e#7903#7977#0" expanded="false" />
+            <element signature="e#7993#8053#0" expanded="false" />
+            <element signature="n#!!block;n#incrementCounter#0" expanded="false" />
+            <element signature="e#8759#9090#0" expanded="false" />
+            <element signature="e#9094#9135#0" expanded="false" />
+            <element signature="n#!!block;n#paid#0" expanded="false" />
+            <element signature="e#9309#9332#0" expanded="false" />
+            <element signature="e#9356#9390#0" expanded="false" />
+            <element signature="n#!!block;n#clearBadge#0" expanded="false" />
+            <element signature="e#9589#9668#0" expanded="false" />
+            <element signature="e#9670#9701#0" expanded="false" />
+            <element signature="e#9729#9761#0" expanded="false" />
+            <element signature="e#9801#9835#0" expanded="false" />
+            <element signature="e#9857#9904#0" expanded="false" />
+            <element signature="e#9962#10007#0" expanded="false" />
+            <element signature="e#10030#10076#0" expanded="false" />
+            <element signature="e#10100#10174#0" expanded="false" />
+            <element signature="e#10203#10268#0" expanded="false" />
+            <element signature="e#10292#10327#0" expanded="false" />
+            <element signature="e#10345#10367#0" expanded="false" />
+            <element signature="e#10401#10422#0" expanded="false" />
+            <element signature="e#10450#10472#0" expanded="false" />
+            <element signature="e#10502#10525#0" expanded="false" />
+            <element signature="e#10557#10583#0" expanded="false" />
+            <element signature="e#10621#10642#0" expanded="false" />
+            <element signature="e#10670#10676#0" expanded="false" />
+            <element signature="e#10759#10783#0" expanded="false" />
+            <element signature="e#10817#10847#0" expanded="false" />
+            <element signature="e#10894#10900#0" expanded="false" />
+            <element signature="e#11121#11183#0" expanded="false" />
+            <element signature="e#11236#11260#0" expanded="false" />
+            <element signature="e#11293#11325#0" expanded="false" />
+            <element signature="e#11470#11509#0" expanded="false" />
+            <element signature="e#11549#11602#0" expanded="false" />
+            <element signature="e#11635#11682#0" expanded="false" />
+            <element signature="e#11738#11750#0" expanded="false" />
+            <element signature="e#11963#11973#0" expanded="false" />
+            <element signature="e#12161#12234#0" expanded="false" />
+            <element signature="e#12280#12584#0" expanded="false" />
+            <element signature="e#12630#12811#0" expanded="false" />
+            <element signature="e#12857#13032#0" expanded="false" />
+            <element signature="e#13221#15730#0" expanded="false" />
+            <element signature="e#13289#13512#0" expanded="false" />
+            <element signature="e#13639#15547#0" expanded="false" />
+            <element signature="e#13822#14536#0" expanded="false" />
+            <element signature="e#13895#14183#0" expanded="false" />
+            <element signature="e#13945#14173#0" expanded="false" />
+            <element signature="e#14050#14163#0" expanded="false" />
+            <element signature="e#14205#14366#0" expanded="false" />
+            <element signature="e#14378#14530#0" expanded="false" />
+            <element signature="e#14614#15541#0" expanded="false" />
+            <element signature="e#14659#14843#0" expanded="false" />
+            <element signature="e#14728#14835#0" expanded="false" />
+            <element signature="e#14909#14989#0" expanded="false" />
+            <element signature="e#15014#15175#0" expanded="false" />
+            <element signature="e#15211#15371#0" expanded="false" />
+            <element signature="e#15383#15535#0" expanded="false" />
+            <element signature="e#15776#16144#0" expanded="false" />
+            <element signature="e#16190#16605#0" expanded="false" />
+            <element signature="e#16651#17365#0" expanded="false" />
+            <element signature="e#17492#17831#0" expanded="false" />
+            <element signature="e#17877#20035#0" expanded="false" />
+            <element signature="e#20081#20456#0" expanded="false" />
+            <element signature="e#20502#22188#0" expanded="false" />
+            <element signature="e#22234#24175#0" expanded="false" />
+            <element signature="e#24221#24601#0" expanded="false" />
+            <element signature="e#24658#25672#0" expanded="false" />
+            <element signature="e#25904#26351#0" expanded="false" />
+            <element signature="e#25946#26345#0" expanded="false" />
+            <element signature="e#26416#26566#0" expanded="false" />
+            <element signature="e#26572#26855#0" expanded="false" />
+            <element signature="e#26868#26985#0" expanded="false" />
+            <element signature="e#26911#26983#0" expanded="false" />
+            <element signature="e#27080#27154#0" expanded="false" />
+            <element signature="e#27107#27140#0" expanded="false" />
+            <element signature="e#27482#27531#0" expanded="false" />
+            <element signature="e#27566#27970#0" expanded="false" />
+            <element signature="e#27592#27968#0" expanded="false" />
+            <element signature="e#27798#27962#0" expanded="false" />
+            <element signature="e#27880#27956#0" expanded="false" />
+            <element signature="e#27979#28033#0" expanded="false" />
+            <element signature="e#28085#28385#0" expanded="false" />
+            <element signature="e#28175#28381#0" expanded="false" />
+            <element signature="e#28389#28448#0" expanded="false" />
+            <element signature="e#28513#33746#0" expanded="false" />
+            <element signature="e#28710#28795#0" expanded="false" />
+            <element signature="e#29300#31632#0" expanded="false" />
+            <element signature="e#29950#30252#0" expanded="false" />
+            <element signature="e#30043#30246#0" expanded="false" />
+            <element signature="e#30579#30915#0" expanded="false" />
+            <element signature="e#30673#30909#0" expanded="false" />
+            <element signature="e#30921#31467#0" expanded="false" />
+            <element signature="e#30948#31177#0" expanded="false" />
+            <element signature="e#31764#32124#0" expanded="false" />
+            <element signature="e#32602#32670#0" expanded="false" />
+            <element signature="e#32750#32848#0" expanded="false" />
+            <element signature="e#32889#33033#0" expanded="false" />
+            <element signature="e#33115#33195#0" expanded="false" />
+            <element signature="e#33201#33717#0" expanded="false" />
+            <element signature="e#33289#33464#0" expanded="false" />
+            <element signature="e#33523#33698#0" expanded="false" />
+            <element signature="e#33803#33871#0" expanded="false" />
+            <element signature="e#33945#34271#0" expanded="false" />
+            <element signature="e#33971#34269#0" expanded="false" />
+            <element signature="e#34275#34343#0" expanded="false" />
+            <element signature="e#34427#34727#0" expanded="false" />
+            <element signature="e#34871#35120#0" expanded="false" />
+            <element signature="e#34881#35073#0" expanded="false" />
+            <element signature="e#34944#35067#0" expanded="false" />
+            <element signature="e#35087#35116#0" expanded="false" />
+            <element signature="e#35125#35193#0" expanded="false" />
+            <element signature="e#35266#38546#0" expanded="false" />
+            <element signature="e#35306#38521#0" expanded="false" />
+            <element signature="e#35537#35853#0" expanded="false" />
+            <element signature="e#35593#35845#0" expanded="false" />
+            <element signature="e#35877#36033#0" expanded="false" />
+            <element signature="e#36067#36170#0" expanded="false" />
+            <element signature="e#36123#36164#0" expanded="false" />
+            <element signature="e#36176#38517#0" expanded="false" />
+            <element signature="e#36196#38486#0" expanded="false" />
+            <element signature="e#36579#36893#0" expanded="false" />
+            <element signature="e#37054#37133#0" expanded="false" />
+            <element signature="e#37609#37695#0" expanded="false" />
+            <element signature="e#37787#37940#0" expanded="false" />
+            <element signature="e#38038#38136#0" expanded="false" />
+            <element signature="e#38142#38478#0" expanded="false" />
+            <element signature="e#38242#38453#0" expanded="false" />
+            <element signature="e#38550#38577#0" expanded="false" />
+            <element signature="e#38637#40463#0" expanded="false" />
+            <element signature="e#38720#38963#0" expanded="false" />
+            <element signature="e#39014#39233#0" expanded="false" />
+            <element signature="e#39273#39487#0" expanded="false" />
+            <element signature="e#39526#39712#0" expanded="false" />
+            <element signature="e#39757#39943#0" expanded="false" />
+            <element signature="e#39988#40174#0" expanded="false" />
+            <element signature="e#40258#40444#0" expanded="false" />
+            <element signature="e#40467#40511#0" expanded="false" />
+            <element signature="e#40601#41147#0" expanded="false" />
+            <element signature="e#40678#41143#0" expanded="false" />
+            <element signature="e#40783#41140#0" expanded="false" />
+            <element signature="e#40922#41120#0" expanded="false" />
+            <element signature="e#40975#41115#0" expanded="false" />
+            <element signature="e#41018#41108#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/DisconnectMe/scripts/popup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2568016">
+          <caret line="169" column="39" selection-start-line="169" selection-start-column="39" selection-end-line="169" selection-end-column="39" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/content.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="18" selection-end-column="29" />
+          <folding>
+            <element signature="n#!!doc;n#onWindowLoad#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/AdBlock/background.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.4890511">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/AdBlock/ext/background.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/bootbox.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/background.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.857143">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hardware.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.2586207">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/popup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-263.9762">
+          <caret line="382" column="0" selection-start-line="382" selection-start-column="0" selection-end-line="382" selection-end-column="0" />
+          <folding>
+            <marker date="1481080473209" expanded="true" signature="38:328" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/popupTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="80" column="61" selection-start-line="80" selection-start-column="43" selection-end-line="80" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/background.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.365854">
+          <caret line="20" column="58" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/getPagesSource.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="51" column="59" selection-start-line="51" selection-start-column="59" selection-end-line="51" selection-end-column="59" />
+          <folding>
+            <element signature="n#!!doc;n#DOMtoString#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6757679">
+          <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

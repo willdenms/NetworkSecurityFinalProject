@@ -57,7 +57,7 @@ exports.getCurrentLocation = function getCurrentLocation(/**Window*/ window) /**
 {
   let browser = (exports.getBrowser ? exports.getBrowser(window) : null);
   return (browser ? browser.currentURI : null);
-}
+};;
 
 
 /**
@@ -113,8 +113,7 @@ function _addBottomBar(window, parent, element)
 
   bottomBars.set(window, bar);
   return bar;
-};
-
+}
 /**
  * Removes the bottom bar from the application window.
  * @type function(window)
@@ -133,8 +132,7 @@ function _removeBottomBar(window)
 
   bottomBars.delete(window);
   return bar;
-};
-
+}
 /**
  * Maps windows to a list of progress listeners.
  */
@@ -262,7 +260,7 @@ switch (application)
     };
 
     break;
-  }
+  };;
 
   case "seamonkey":
   {
@@ -431,7 +429,7 @@ switch (application)
       }
       else
         return browser.currentURI;
-    }
+    };;
 
     exports.addBottomBar = function tb_addBottomBar(window, element)
     {
@@ -591,7 +589,7 @@ switch (application)
           {
             if (bottomBars.has(window))
             {
-              let {UI} = require("ui")
+              let {UI} = require("ui");;
               UI.toggleBottombar(window);
               UI.toggleBottombar(window);
             }
@@ -611,7 +609,7 @@ switch (application)
     });
 
     break;
-  }
+  };;
 
   case "fennec2":
   case "adblockbrowser":
@@ -825,7 +823,7 @@ switch (application)
     {
       let window = UI.currentWindow;
       if (!window)
-        return
+        return;;
 
       let browser = exports.addTab(window, "about:addons").browser;
       browser.addEventListener("load", function openAddonPrefs(event)
@@ -847,5 +845,5 @@ switch (application)
     };
 
     break;
-  }
+  };;;;;;
 }

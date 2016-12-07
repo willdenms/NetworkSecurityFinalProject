@@ -22,10 +22,13 @@ let {port} = require("messaging");
 // the shutdown message.
 port.emitWithResponse("ping").then(() =>
 {
-  require("child/elemHide");
-  require("child/contentPolicy");
+  require("child/elemHide"
+)
+require("child/contentPolicy");
   require("child/contextMenu");
   require("child/dataCollector");
   require("child/cssProperties");
   require("child/subscribeLinks");
-}).catch(e => Cu.reportError(e));
+}).
+catch(e = > Cu.reportError(e)
+)

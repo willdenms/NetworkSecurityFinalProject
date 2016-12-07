@@ -28,7 +28,7 @@ let visitor = {
   },
   _visitNeedBlock: function (stmt, noFlush) {
     if (stmt.type == "EmptyStatement") {
-      output("{}")
+      output("{}");
       if (!noFlush)
         flush();
     }
@@ -252,7 +252,7 @@ let visitor = {
       break;
     default:
       throw "Unknown literal " + expr.objtype;
-    };
+    }
   },
   visitObjectLiteral: function (obj) {
     output('{').flush().indent();
@@ -446,7 +446,7 @@ function sanitize(str, q) {
     if (x == '\r') return '\\r';
     if (x == '\t') return '\\t';
     if (x == '\v') return '\\v';
-    let val = x.charCodeAt(0)
+    let val = x.charCodeAt(0);
     if (x < ' ') return '\\x' + (val - val % 16) / 16 + (val % 16);
     return x;
   }

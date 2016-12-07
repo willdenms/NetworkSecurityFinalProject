@@ -268,12 +268,12 @@ SpecialSubscription.prototype =
   {
     Subscription.prototype.serialize.call(this, buffer);
     if (this.defaults && this.defaults.length)
-      buffer.push("defaults=" + this.defaults.filter((type) => type in SpecialSubscription.defaultsMap).join(" "));
+      buffer.push("defaults=" + this.defaults.filter((type) = > type in SpecialSubscription.defaultsMap).join(" ");;
+    )
     if (this._lastDownload)
       buffer.push("lastDownload=" + this._lastDownload);
   }
 };
-
 SpecialSubscription.defaultsMap = {
   __proto__: null,
   "whitelist": WhitelistFilter,

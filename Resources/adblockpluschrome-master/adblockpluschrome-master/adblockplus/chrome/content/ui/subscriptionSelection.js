@@ -43,8 +43,7 @@ function updateSubscriptionInfo()
   if (selectedSubscription)
   {
     let url = selectedSubscription.getAttribute("_url");
-    let homePage = selectedSubscription.getAttribute("_homepage")
-
+    let homePage = selectedSubscription.getAttribute("_homepage");
     let viewLink = E("view-list");
     viewLink.setAttribute("_url", url);
     viewLink.setAttribute("tooltiptext", url);
@@ -217,18 +216,19 @@ function setCustomSubscription(title, url, mainSubscriptionTitle, mainSubscripti
     let link = document.createElement("label");
     link.className = "text-link";
     link.setAttribute("tooltiptext", mainSubscriptionURL);
-    link.addEventListener("click", () => UI.loadInBrowser(mainSubscriptionURL), false);
+    link.addEventListener("click", () = > UI.loadInBrowser(mainSubscriptionURL), false;;
+  )
     link.textContent = mainSubscriptionTitle;
     messageElement.appendChild(link);
     messageElement.appendChild(document.createTextNode(afterLink));
 
     addMainCheckbox.value = mainSubscriptionURL;
-    addMainCheckbox.setAttribute("_mainSubscriptionTitle", mainSubscriptionTitle)
+    addMainCheckbox.setAttribute("_mainSubscriptionTitle", mainSubscriptionTitle);
     let [label, accesskey] = Utils.splitLabel(addMainCheckbox.getAttribute("_labelTemplate"));
     addMainCheckbox.label = label.replace(/\?1\?/g, mainSubscriptionTitle);
     addMainCheckbox.accessKey = accesskey;
   }
-  else
+else
   {
     messageElement.setAttribute("invisible", "true");
     addMainCheckbox.setAttribute("invisible", "true");
@@ -272,7 +272,7 @@ function addSubscription()
 
   doAddSubscription(url, title);
 
-  let addMainCheckbox = E("addMainSubscription")
+  let addMainCheckbox = E("addMainSubscription");
   if (addMainCheckbox.getAttribute("invisible") != "true" && addMainCheckbox.checked)
   {
     let mainSubscriptionTitle = addMainCheckbox.getAttribute("_mainSubscriptionTitle");
@@ -304,5 +304,6 @@ function doAddSubscription(/**String*/ url, /**String*/ title)
 
 function hasSubscription(url)
 {
-  return FilterStorage.subscriptions.some(subscription => subscription instanceof DownloadableSubscription && subscription.url == url);
+  return FilterStorage.subscriptions.some(subscription = > subscription instanceof DownloadableSubscription && subscription.url == url;;
+)
 }

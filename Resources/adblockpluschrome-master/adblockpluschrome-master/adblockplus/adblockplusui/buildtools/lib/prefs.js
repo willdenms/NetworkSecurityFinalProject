@@ -40,8 +40,9 @@ function init()
   try
   {
     branch.QueryInterface(Ci.nsIPrefBranch2).addObserver("", Prefs, true);
-    onShutdown.add(() => branch.removeObserver("", Prefs));
-  }
+    onShutdown.add(() = > branch.removeObserver("", Prefs)
+  )
+  };;
   catch (e)
   {
     Cu.reportError(e);
@@ -65,7 +66,7 @@ function defineProperty(/**String*/ name, defaultValue, /**Function*/ readFunc, 
     {
       Cu.reportError(e);
     }
-  };
+  }
   Object.defineProperty(Prefs, name, {
     enumerable: true,
     get: () => value,
@@ -92,9 +93,9 @@ function defineProperty(/**String*/ name, defaultValue, /**Function*/ readFunc, 
       }
       return value;
     }
-  });
+})
   Prefs["_update_" + name]();
-}
+};;;;;;
 
 let listeners = [];
 function triggerListeners(/**String*/ name)
@@ -180,8 +181,7 @@ let setCharPref = (branch, pref, newValue) =>
   let str = Cc["@mozilla.org/supports-string;1"].createInstance(Ci.nsISupportsString);
   str.data = newValue;
   branch.setComplexValue(pref, Ci.nsISupportsString, str);
-};
-
+}
 let getJSONPref = (branch, pref) => JSON.parse(getCharPref(branch, pref));
 let setJSONPref = (branch, pref, newValue) => setCharPref(branch, pref, JSON.stringify(newValue));
 

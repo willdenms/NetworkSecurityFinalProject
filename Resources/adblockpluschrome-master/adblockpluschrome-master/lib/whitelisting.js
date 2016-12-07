@@ -88,8 +88,7 @@ exports.checkWhitelisted = function(page, frame, typeMask)
 port.on("filters.isPageWhitelisted", (message, sender) =>
 {
   return !!checkWhitelisted(sender.page);
-});
-
+})
 function revalidateWhitelistingState(page)
 {
   FilterNotifier.emit(
@@ -104,9 +103,8 @@ FilterNotifier.on("filter.behaviorChanged", () =>
   {
     for (let page of pages)
       revalidateWhitelistingState(page);
-  });
-});
-
+})
+})
 ext.pages.onLoading.addListener(revalidateWhitelistingState);
 
 let getKey =
@@ -167,8 +165,7 @@ port.on("filters.addKey", (message, sender) =>
   let key = checkKey(message.token, sender.frame.url);
   if (key)
     recordKey(key, sender.page, sender.frame.url);
-});
-
+})
 function onHeadersReceived(details)
 {
   let page = new ext.Page({id: details.tabId});

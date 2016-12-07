@@ -85,7 +85,8 @@ var Notification = exports.Notification =
     downloader.onExpirationChange = this._onExpirationChange.bind(this);
     downloader.onDownloadSuccess = this._onDownloadSuccess.bind(this);
     downloader.onDownloadError = this._onDownloadError.bind(this);
-    onShutdown.add(() => downloader.cancel());
+    onShutdown.add(() = > downloader.cancel()
+    )
   },
 
   /**
@@ -403,5 +404,5 @@ var Notification = exports.Notification =
     // HACK: JSON values aren't saved unless they are assigned a different object.
     Prefs.notifications_ignoredcategories = JSON.parse(JSON.stringify(categories));
   }
-};
+};;;
 Notification.init();

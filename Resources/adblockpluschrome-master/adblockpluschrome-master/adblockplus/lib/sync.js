@@ -172,7 +172,7 @@ ABPStore.prototype =
 {
   getAllIDs: function()
   {
-    let result = {}
+    let result = {};
     result[filtersRecordID] = true;
     return result;
   },

@@ -88,7 +88,7 @@ let Utils = exports.Utils =
     Utils.getString = function(name)
     {
       return stringBundle.GetStringFromName(name);
-    }
+    };
     return Utils.getString(name);
   },
 
@@ -357,7 +357,8 @@ let Utils = exports.Utils =
       this.yield = function() {};
       return;
     }
-    return new Promise((resolve, reject) => Utils.runAsync(resolve));
+    return new Promise((resolve, reject) = > Utils.runAsync(resolve);;
+    )
   },
 
   /**
@@ -514,7 +515,6 @@ let Utils = exports.Utils =
     }
   }
 };
-
 /**
  * A cache with a fixed capacity, newer entries replace entries that have been
  * stored first.
@@ -579,8 +579,7 @@ Cache.prototype =
     this._ringBuffer = new Array(this._ringBuffer.length);
     this.data = Object.create(null);
   }
-}
-
+};
 // Getters for common services, this should be replaced by Services.jsm in future
 
 XPCOMUtils.defineLazyServiceGetter(Utils, "categoryManager", "@mozilla.org/categorymanager;1", "nsICategoryManager");

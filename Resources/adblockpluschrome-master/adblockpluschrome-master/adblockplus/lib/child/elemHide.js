@@ -176,7 +176,7 @@ BaseChannel.prototype = {
       {
         // Listener failing isn't our problem
       }
-    });
+  })
   },
 
   asyncOpen2: function(listener)
@@ -208,9 +208,8 @@ BaseChannel.prototype = {
   suspend: notImplemented,
   resume: notImplemented,
 
-  QueryInterface: XPCOMUtils.generateQI([Ci.nsIChannel, Ci.nsIRequest])
-};
-
+  QueryInterface: XPCOMUtils.generateQI([Ci.nsIChannel, Ci.nsIRequest]);;
+}
 /**
  * Channel returning CSS data for the global stylesheet.
  * @constructor
@@ -291,11 +290,12 @@ HitRegistrationChannel.prototype = {
       let window = Utils.getRequestWindow(this);
       shouldAllowAsync(window, window.document, "ELEMHIDE", this.key, allow =>
       {
-        resolve(allow ? allowXBL : hideXBL);
-      });
-    });
+        resolve(allow ? allowXBL : hideXBL
+    )
+  })
+  })
   }
-};
+};;;
 
 let observer = {
   QueryInterface: XPCOMUtils.generateQI([
@@ -312,12 +312,11 @@ let observer = {
     onShutdown.add(() =>
     {
       Services.obs.removeObserver(this, this.topic);
-    });
-
+  })
     port.on("elemhideupdate", () =>
     {
       this.sheet = null;
-    });
+  })
   },
 
   observe: function(subject, topic, data)
@@ -382,7 +381,7 @@ let observer = {
           contentType, docDomain, thirdParty, location, filter, filterType
         });
       }
-    });
+  })
   }
-};
+};;;
 observer.init();

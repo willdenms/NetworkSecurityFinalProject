@@ -91,15 +91,13 @@ function onStoreWindowData({outerWindowID, data})
   let window = Services.wm.getOuterWindowWithId(outerWindowID);
   if (window)
     windowData.set(window.document, data);
-};
-
+}
 function onRetrieveWindowData(outerWindowID)
 {
   let window = Services.wm.getOuterWindowWithId(outerWindowID);
   if (window)
     return windowData.get(window.document) || null;
-};
-
+}
 /**
  * Creates a notifier object for a particular window. After creation the window
  * will first be scanned for previously saved requests. Once that scan is
@@ -383,8 +381,7 @@ RequestNotifier.addNodeData = function(node, topWnd, {contentType, docDomain, th
   for (let notifier of notifiers.values())
     if (!notifier.window || notifier.window == topWnd)
       notifier.notifyListener(node, entry);
-}
-
+};
 /**
  * Retrieves the statistics for a window.
  * @return {Object} Object with the properties items, blocked, whitelisted, hidden, filters containing statistics for the window (might be null)
@@ -395,8 +392,7 @@ RequestNotifier.getWindowStatistics = function(/**Window*/ wnd)
     return windowStats.get(wnd.document);
   else
     return null;
-}
-
+};
 /**
  * Retrieves the request data associated with a DOM node.
  * @param {Node} node

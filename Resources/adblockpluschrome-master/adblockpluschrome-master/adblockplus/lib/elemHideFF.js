@@ -35,12 +35,11 @@ FilterNotifier.on("elemhideupdate", () =>
     Utils.runAsync(() => {
       isDirty = false;
       port.emit("elemhideupdate")
-    });
+  })
   }
-});
-
-port.on("getSelectors", () => ElemHide.getSelectors());
-
+})
+port.on("getSelectors", () = > ElemHide.getSelectors();;
+)
 port.on("elemhideEnabled", ({frames, isPrivate}) =>
 {
   if (!Prefs.enabled)
@@ -63,4 +62,4 @@ port.on("elemhideEnabled", ({frames, isPrivate}) =>
   }
 
   return {enabled: true};
-});
+})

@@ -44,4 +44,4 @@ exports.getDomain = function(hostname)
     return hostname;
 
   return bits.slice(cutoff).join(".");
-}
+};

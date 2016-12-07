@@ -566,4 +566,4 @@ process_js = function(ast, filename, args)
   }
   else
     _print(js_beautify(decompileAST(ast), options));
-}
+};;

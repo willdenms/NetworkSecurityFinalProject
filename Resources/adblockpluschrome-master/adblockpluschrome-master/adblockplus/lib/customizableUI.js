@@ -24,8 +24,8 @@ let {XPCOMUtils} = Cu.import("resource://gre/modules/XPCOMUtils.jsm", null);
 let {Utils} = require("utils");
 
 // UI module has to be referenced lazily to avoid circular references
-XPCOMUtils.defineLazyGetter(this, "UI", () => require("ui").UI);
-
+XPCOMUtils.defineLazyGetter(this, "UI", () = > require("ui").UI
+)
 let widgets = new Map();
 
 function getToolbox(/**Window*/ window, /**Widget*/ widget) /**Element*/
@@ -185,13 +185,13 @@ function saveState(/**Element*/ toolbox, /**Widget*/ widget)
   if (node && node.parentNode.localName != "toolbarpalette")
   {
     if (typeof widget.onAdded == "function")
-      widget.onAdded(node)
+      widget.onAdded(node);;
 
     let toolbar = getToolbar(node);
     position = "visible," + toolbar.id + "," + (node.nextSibling ? node.nextSibling.id : "");
   }
   else
-    position = position.replace(/^visible,/, "hidden,")
+    position = position.replace(/^visible,/, "hidden,");;
 
   toolbox.setAttribute(widget.positionAttribute, position);
   toolbox.ownerDocument.persist(toolbox.id, widget.positionAttribute);

@@ -92,7 +92,7 @@ function serializeReportData()
   element.setAttribute("name", "Gecko");
   element.setAttribute("version", Services.appinfo.platformVersion);
   element.setAttribute("build", Services.appinfo.platformBuildID);
-};
+}
 {
   let element = reportElement("options");
   appendElement(element, "option", {id: "enabled"}, Prefs.enabled);
@@ -101,8 +101,7 @@ function serializeReportData()
   appendElement(element, "option", {id: "subscriptionsAutoUpdate"}, Prefs.subscriptions_autoupdate);
   appendElement(element, "option", {id: "javascript"}, Services.prefs.getBoolPref("javascript.enabled"));
   appendElement(element, "option", {id: "cookieBehavior"}, Services.prefs.getIntPref("network.cookie.cookieBehavior"));
-};
-
+}
 //
 // Data collectors
 //
@@ -136,7 +135,7 @@ var reportsListDataSource =
     E("recentReports").hidden = !this.list.length;
     if (this.list.length)
     {
-      let rows = E("recentReportsRows")
+      let rows = E("recentReportsRows");
       for (let i = 0; i < this.list.length; i++)
       {
         let entry = this.list[i];
@@ -254,18 +253,18 @@ var filtersDataSource =
         let filters = reportElement("filters");
         for (let f in wndStats.filters)
         {
-          let filter = Filter.fromText(f)
+          let filter = Filter.fromText(f);
           let hitCount = wndStats.filters[f];
           appendElement(filters, "filter", {
             text: filter.text,
             subscriptions: filter.subscriptions.filter(subscriptionsDataSource.subscriptionFilter).map(s => s.url).join(" "),
             hitCount: hitCount
-          });
+        })
           this.origFilters.push(filter);
-        }
+        };;
       }
       callback();
-    });
+  })
   }
 };
 
@@ -293,7 +292,7 @@ var subscriptionsDataSource =
       let subscriptionXML = appendElement(subscriptions, "subscription", {
         id: subscription.url,
         disabledFilters: subscription.filters.filter(filter => filter instanceof ActiveFilter && filter.disabled).length
-      });
+    })
       if (subscription.version)
         subscriptionXML.setAttribute("version", subscription.version);
       if (subscription.lastDownload)
@@ -331,10 +330,9 @@ var remoteDataSource =
       appendElement(element, "option", {id: "privateBrowsing"}, isPrivate);
 
       callback();
-    });
+  })
   }
-}
-
+};
 var screenshotDataSource =
 {
   imageOffset: 10,
@@ -389,7 +387,7 @@ var screenshotDataSource =
       return;
 
     this._enabled = enabled;
-    this._canvas.style.opacity = this._enabled ? "" : "0.3"
+    this._canvas.style.opacity = this._enabled ? "" : "0.3";
     E("screenshotMarkButton").disabled = !this._enabled;
     E("screenshotRemoveButton").disabled = !this._enabled;
     E("screenshotUndoButton").disabled = !this._enabled || !this._undoQueue.length;
@@ -815,7 +813,9 @@ var subscriptionUpdateDataSource =
             event.stopPropagation();
             window.close();
             this.browser.reload();
-          }, true);
+        },
+          true;;
+        )
         }
         else
         {
@@ -857,8 +857,7 @@ var subscriptionUpdateDataSource =
     for (let i = 0; i < this.outdated.length; i++)
       Synchronizer.execute(this.outdated[i], true);
   }
-}
-
+};
 var issuesDataSource =
 {
   browser: null,
@@ -1069,7 +1068,9 @@ var issuesDataSource =
       event.stopPropagation();
       window.close();
       this.browser.reload();
-    }, true);
+  },
+    true;;
+    )
   },
 
   removeWhitelist: function()
@@ -1154,7 +1155,6 @@ var issuesDataSource =
     this.forceReload();
   }
 };
-
 let dataCollectors = [reportsListDataSource, requestsDataSource, filtersDataSource, subscriptionsDataSource,
                       remoteDataSource, errorsDataSource, extensionsDataSource,
                       subscriptionUpdateDataSource, issuesDataSource];

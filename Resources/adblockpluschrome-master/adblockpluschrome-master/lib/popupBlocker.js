@@ -121,5 +121,5 @@ chrome.webNavigation.onCreatedNavigationTarget.addListener(function(details) {
     checkPotentialPopup(tabId, popup);
   }
 
-})
+});;
 

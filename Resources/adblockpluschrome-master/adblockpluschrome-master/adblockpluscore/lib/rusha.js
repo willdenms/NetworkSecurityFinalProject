@@ -297,7 +297,6 @@
             return hex(rawDigest(str).buffer);
         };
     }
-    ;
     // The low-level RushCore module provides the heart of Rusha,
     // a high-speed sha1 implementation working on an Int32Array heap.
     // At first glance, the implementation seems complicated, however

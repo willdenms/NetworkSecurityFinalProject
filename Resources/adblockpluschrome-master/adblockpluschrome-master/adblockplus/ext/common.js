@@ -32,13 +32,11 @@
     Object.defineProperty(frames, "url", {
       enumerable: true,
       get: () => new URL(frames[0].location)
-    });
-
+  })
     Object.defineProperty(frames, "parent", {
       enumerable: true,
       get: () => wrapFrames(frames.slice(1))
-    });
-
+  })
     return frames;
   }
 
@@ -69,8 +67,8 @@
             sender.frame = wrapFrames(message.frames);
           if (!listener(message.payload, sender, resolve))
             resolve(undefined);
-        });
-      };
+      })
+      }
       listener[wrapperSymbol] = wrapper;
       this._port.on("ext_message", wrapper);
     },
@@ -80,7 +78,7 @@
       if (listener[wrapperSymbol])
         this._port.off("ext_message", listener[wrapperSymbol]);
     }
-  };
+  };;;
 
   if (typeof exports == "object")
     exports = global.ext;

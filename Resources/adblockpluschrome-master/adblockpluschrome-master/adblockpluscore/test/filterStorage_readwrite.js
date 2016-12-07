@@ -41,8 +41,7 @@ exports.setUp = function(callback)
 
   FilterStorage.addSubscription(Subscription.fromURL("~fl~"));
   callback();
-}
-
+};
 let testData = new Promise((resolve, reject) =>
 {
   let fs = require("fs");
@@ -55,9 +54,8 @@ let testData = new Promise((resolve, reject) =>
       reject(error);
     else
       resolve(data);
-  });
-});
-
+})
+})
 function loadFilters(file)
 {
   FilterStorage.loadFromDisk(file);
@@ -124,20 +122,21 @@ function testReadWrite(test, withExternal)
       subscription.filters = [Filter.fromText("foo"), Filter.fromText("bar")];
       FilterStorage.addSubscription(subscription);
 
-      let externalSubscriptions = FilterStorage.subscriptions.filter(subscription => subscription instanceof ExternalSubscription);
+      let externalSubscriptions = FilterStorage.subscriptions.filter(subscription = > subscription instanceof ExternalSubscription;;
+    )
       test.equal(externalSubscriptions.length, 1, "Number of external subscriptions after updateExternalSubscription");
 
       test.equal(externalSubscriptions[0].url, "~external~external subscription ID", "ID of external subscription");
       test.equal(externalSubscriptions[0].filters.length, 2, "Number of filters in external subscription");
     }
-
-    return saveFilters(tempFile2);
+  return saveFilters(tempFile2);
   }).then(() => testData).then(expected =>
   {
     test.equal(canonize(tempFile2.contents), canonize(expected), "Read/write result");
-  }).catch(unexpectedError.bind(test)).then(() => test.done());
-}
-
+}).
+  catch(unexpectedError.bind(test)).then(() = > test.done();;
+)
+};;
 exports.testReadAndSaveToFile = function(test)
 {
   testReadWrite(test, false);
@@ -161,9 +160,9 @@ for (let url of ["~wl~", "~fl~", "~eh~"])
     loadFilters(tempFile, function()
     {
       test.equal(FilterStorage.subscriptions.length, 0, "Number of filter subscriptions");
-    }).catch(unexpectedError.bind(test)).then(() => test.done());
+    }).catch(unexpectedError.bind(test)).then(() = > test.done();;
+    )
   };
-
   exports.testLegacyGroups["read non-empty " + url] = function(test)
   {
     let data = "[Subscription]\nurl=" + url + "\n[Subscription filters]\nfoo";
@@ -183,7 +182,9 @@ for (let url of ["~wl~", "~fl~", "~eh~"])
         if (subscription.filters.length == 1)
           test.equal(subscription.filters[0].text, "foo", "First filter");
       }
-    }).catch(unexpectedError.bind(test)).then(() => test.done());
+  }).
+    catch(unexpectedError.bind(test)).then(() = > test.done();;
+    )
   };
 }
 
@@ -207,17 +208,18 @@ exports.testReadLegacyFilters = function(test)
         test.equal(subscription.filters[2].text, "foo#bar", "Third filter");
       }
     }
-  }).catch(unexpectedError.bind(test)).then(() => test.done());
+}).
+  catch(unexpectedError.bind(test)).then(() = > test.done();;
+  )
 };
-
 exports.testSavingWithoutBackups = function(test)
 {
   Prefs.patternsbackups = 0;
   Prefs.patternsbackupinterval = 24;
 
   let tempFile = IO.resolveFilePath("temp_patterns.ini");
-  Object.defineProperty(FilterStorage, "sourceFile", {get: () => tempFile.clone()});
-
+  Object.defineProperty(FilterStorage, "sourceFile", {get: () = > tempFile.clone()
+})
   saveFilters(null).then(() =>
   {
     return saveFilters(null);
@@ -226,17 +228,18 @@ exports.testSavingWithoutBackups = function(test)
     let backupFile = tempFile.clone();
     backupFile.leafName = backupFile.leafName.replace(/\.ini$/, "-backup1.ini");
     test.ok(!backupFile.exists(), "Backup shouldn't be created");
-  }).catch(unexpectedError.bind(test)).then(() => test.done());
+}).
+  catch(unexpectedError.bind(test)).then(() = > test.done();;
+  )
 };
-
 exports.testSavingWithBackups = function(test)
 {
   Prefs.patternsbackups = 2;
   Prefs.patternsbackupinterval = 24;
 
   let tempFile = IO.resolveFilePath("temp_patterns.ini");
-  Object.defineProperty(FilterStorage, "sourceFile", {get: () => tempFile.clone()});
-
+  Object.defineProperty(FilterStorage, "sourceFile", {get: () = > tempFile.clone()
+})
   let backupFile = tempFile.clone();
   backupFile.leafName = backupFile.leafName.replace(/\.ini$/, "-backup1.ini");
 
@@ -287,5 +290,8 @@ exports.testSavingWithBackups = function(test)
     test.notEqual(backupFile2.lastModifiedTime, oldModifiedTime, "Second backup overwritten if first one is 25 hours old");
 
     test.ok(!backupFile3.exists(), "Third backup not created with patternsbackups = 2");
-  }).catch(unexpectedError.bind(test)).then(() => test.done());
+}).
+  catch(unexpectedError.bind(test)).then(() = > test.done();;
+  )
 };
+

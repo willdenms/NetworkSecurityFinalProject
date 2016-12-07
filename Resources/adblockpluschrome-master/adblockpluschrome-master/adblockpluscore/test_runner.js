@@ -33,8 +33,9 @@ function addTestPaths(testPaths, recurse)
       if (recurse)
       {
         addTestPaths(fs.readdirSync(testPath).map(
-          file => path.join(testPath, file)));
-      }
+                file = > path.join(testPath, file))
+      )
+      };;
     }
     else if (path.extname(testPath) == ".js" &&
              !path.basename(testPath).startsWith("_"))

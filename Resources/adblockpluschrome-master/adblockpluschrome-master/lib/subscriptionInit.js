@@ -134,9 +134,8 @@ function getSubscriptions()
         }
 
         return subscriptions;
-      });
-  }
-
+  })
+  };;
   return subscriptions;
 }
 

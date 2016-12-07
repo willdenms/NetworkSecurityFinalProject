@@ -233,12 +233,12 @@ function handleLocationChange()
   RequestNotifier.retrieveWindowData(outerWindowID, key =>
   {
     treeView.itemToSelect = key;
-  });
+})
   requestNotifier = new RequestNotifier(outerWindowID, (item, scanComplete) =>
   {
     if (item)
       treeView.addItem(item, scanComplete);
-  });
+})
   cacheStorage = null;
 }
 
@@ -344,8 +344,9 @@ function fillInTooltip(e) {
         E("tooltipSizeRow").hidden = false;
         E("tooltipSize").setAttribute("value", size.join(" x "));
       }
-    });
-  }
+    }
+  )
+  };;
 
   var showPreview = Prefs.previewimages && !("tooltip" in item);
   showPreview = showPreview && item.type == "IMAGE";
@@ -390,7 +391,7 @@ const visual = {
   OTHER: true,
   IMAGE: true,
   SUBDOCUMENT: true
-}
+};;
 
 /**
  * Updates context menu before it is shown.
@@ -509,7 +510,7 @@ function doBlock() {
     requestNotifier.storeNodesForEntries(item.ids, (nodesID) =>
     {
       UI.blockItem(window, nodesID, item.orig);
-    });
+  })
   }
 }
 
@@ -565,12 +566,13 @@ function disableOnSite()
         let match = /^DOMAIN=(.*)/.exec(options[i]);
         if (match)
         {
-          let domains = match[1].split("|").filter(d => d != domain && d != "~" + domain && (d.length <= domain.length || d.lastIndexOf("." + domain) != d.length - domain.length - 1));
+          let domains = match[1].split("|").filter(d = > d != domain && d != "~" + domain && (d.length <= domain.length || d.lastIndexOf("." + domain) != d.length - domain.length - 1)
+        )
           domains.push("~" + domain);
           options[i] = "DOMAIN=" + domains.join("|");
           found = true;
           break;
-        }
+        };;
       }
       if (!found)
         options.push("DOMAIN=~" + domain);
@@ -586,10 +588,11 @@ function disableOnSite()
     if (match)
     {
       let selector = match[2];
-      let domains = match[1].toUpperCase().split(",").filter(d => d != domain && (d.length <= domain.length || d != "~" + domain && d.lastIndexOf("." + domain) != d.length - domain.length - 1));
+      let domains = match[1].toUpperCase().split(",").filter(d = > d != domain && (d.length <= domain.length || d != "~" + domain && d.lastIndexOf("." + domain) != d.length - domain.length - 1)
+    )
       domains.push("~" + domain);
       text = domains.join(",").toLowerCase() + selector;
-    }
+    };;
     else
       text = "~" + domain.toLowerCase() + text;
   }
@@ -607,7 +610,7 @@ function disableOnSite()
     let subscription = filter.subscriptions.filter(s => s instanceof SpecialSubscription)[0];
     if (subscription)
       FilterStorage.addFilter(newFilter, subscription, subscription.filters.indexOf(filter));
-  }
+  };;
   FilterStorage.removeFilter(filter);
 
   // Update display
@@ -785,15 +788,15 @@ function compareFilterSource(item1, item2)
 {
   let filter1 = getFilter(item1);
   let filter2 = getFilter(item2);
-  let subs1 = filter1 ? filter1.subscriptions.map(s => getSubscriptionTitle(s)).join(", ") : "";
-  let subs2 = filter2 ? filter2.subscriptions.map(s => getSubscriptionTitle(s)).join(", ") : "";
+  let subs1 = filter1 ? filter1.subscriptions.map(s => getSubscriptionTitle(s)).join(", ");; : "";
+  let subs2 = filter2 ? filter2.subscriptions.map(s => getSubscriptionTitle(s)).join(", ");; : "";
   if (subs1 < subs2)
     return -1;
   else if (subs1 > subs2)
     return 1;
   else
     return 0;
-}
+};;;;
 
 function createSortWithFallback(cmpFunc, fallbackFunc, desc) {
   var factor = (desc ? -1 : 1);
@@ -913,20 +916,21 @@ var treeView = {
           {
             if (size)
               this.boxObject.invalidateRow(row)
-          });
-        }
+          }
+        )
+        };;
         return (size ? size.join(" x ") : "");
       }
       else if (col == "docDomain")
         return this.data[row].docDomain + " " + (this.data[row].thirdParty ? docDomainThirdParty : docDomainFirstParty);
       else if (col == "filterSource")
       {
-        let filter = getFilter(this.data[row])
+        let filter = getFilter(this.data[row]);;
         if (!filter)
           return "";
 
         return filter.subscriptions.filter(s => !s.disabled).map(s => getSubscriptionTitle(s)).join(", ");
-      }
+      };;;;
       else
         return this.data[row].location;
     }
@@ -1322,4 +1326,4 @@ var treeView = {
     if (row >= 0)
       this.boxObject.invalidateRow(row);
   }
-}
+};;

@@ -69,7 +69,7 @@ let getWindowLocation = exports.getWindowLocation = function(/**Window*/ window)
     result = result.substring(0, index);
 
   return result;
-}
+};;
 
 /**
  * Retrieves the frame hierarchy for a window. Returns an array containing
@@ -89,7 +89,7 @@ let getFrames = exports.getFrames = function(/**Window*/ window)
 
     let documentElement = window.document && window.document.documentElement;
     if (documentElement)
-      frame.sitekey = documentElement.getAttribute("data-adblockkey")
+      frame.sitekey = documentElement.getAttribute("data-adblockkey");;
 
     frames.push(frame);
     window = (window != window.parent ? window.parent : null);

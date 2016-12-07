@@ -174,8 +174,9 @@ Port.prototype = {
       {
         Cu.reportError(e);
         this._sendResponse(sender, callbackID, undefined);
-      });
-    }
+      }
+    )
+    };;
     else
       this._sendResponse(sender, callbackID, result);
 
@@ -282,7 +283,7 @@ Port.prototype = {
     {
       this._responseCallbacks.set(callbackID,
           [resolve, new ResponseProcessor(messageName), expectedResponses]);
-    });
+  })
   },
 
   /**
@@ -312,5 +313,6 @@ catch (e)
 }
 
 let port = new Port(messageManager);
-onShutdown.add(() => port.disconnect());
+onShutdown.add(() = > port.disconnect()
+)
 exports.port = port;

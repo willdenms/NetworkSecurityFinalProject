@@ -135,7 +135,8 @@ let optionsObserver =
       });
 
       let hasAcceptableAds = FilterStorage.subscriptions.some((subscription) => subscription instanceof DownloadableSubscription &&
-        subscription.url == Prefs.subscriptions_exceptionsurl);
+          subscription.url == Prefs.subscriptions_exceptionsurl
+    )
       setChecked("adblockplus-acceptableAds", hasAcceptableAds);
       addCommandHandler("adblockplus-acceptableAds", function()
       {
@@ -169,7 +170,8 @@ let optionsObserver =
 
           let currentSubscription = FilterStorage.subscriptions.filter((subscription) => subscription instanceof DownloadableSubscription &&
             subscription.url != Prefs.subscriptions_exceptionsurl &&
-            subscription.url != Prefs.subscriptions_antiadblockurl);
+              subscription.url != Prefs.subscriptions_antiadblockurl
+          )
           currentSubscription = (currentSubscription.length ? currentSubscription[0] : null);
 
           let subscriptions =request.responseXML.getElementsByTagName("subscription");
@@ -195,7 +197,7 @@ let optionsObserver =
           {
             if (list.value)
               UI.setSubscription(list.value, list.label);
-          }
+          };;
           list.addEventListener("command", listener, false);
 
           // xul:menulist in Fennec is broken and doesn't trigger any events
@@ -206,15 +208,15 @@ let optionsObserver =
             Utils.runAsync(listener);
             return newval;
           });
-        }, false);
+        }, false);;;
         request.send();
       }
-    }
+    };;
   },
 
   observe: function(subject, topic, data)
   {
-    let {addonID} = require("info")
+    let {addonID} = require("info");;
     if (data != addonID)
       return;
 
@@ -262,7 +264,7 @@ SessionRestoreObserver.prototype =
       this.callback();
   },
   QueryInterface: XPCOMUtils.generateQI([Ci.nsIObserver, Ci.nsISupportsWeakReference])
-}
+};;
 
 /**
  * Timer used to delay notification handling.
@@ -298,15 +300,16 @@ let UI = exports.UI =
         this.addToolbarButton();
 
         resolve();
-      }, false);
-
-      request.addEventListener("error", event =>
+  },
+    false
+    )
+    request.addEventListener("error", event =>
       {
-        reject(new Error("Unexpected: Failed to load overlay.xul"));
-      });
-
-      request.send(null);
-    }));
+        reject(new Error("Unexpected: Failed to load overlay.xul")
+    )
+  })
+    request.send(null);
+  }))
 
     // Wait for filters to load
     if (FilterStorage._loading)
@@ -324,10 +327,11 @@ let UI = exports.UI =
       }
       else
         resolve();
-    }));
-
+  }))
     Promise.all(prerequisites).then(() => this.initDone())
-        .catch(e => Cu.reportError(e));
+    .
+    catch(e = > Cu.reportError(e)
+    )
   },
 
   /**
@@ -344,8 +348,8 @@ let UI = exports.UI =
     // Remove whitespace text nodes
     let walker = root.ownerDocument.createTreeWalker(
       root, Ci.nsIDOMNodeFilter.SHOW_TEXT,
-      (node) => !/\S/.test(node.nodeValue), false
-    );
+      (node) => !/\S/.test(node.nodeValue), false;;
+    )
     let whitespaceNodes = [];
     while (walker.nextNode())
       whitespaceNodes.push(walker.currentNode);
@@ -414,16 +418,16 @@ let UI = exports.UI =
         for (let window of this.applicationWindows)
           this.updateStatusbarIcon(window);
       }
-    });
-
+  })
     for (let eventName of [
       "filter.added", "filter.removed", "filter.disabled",
       "subscription.added", "subscription.removed", "subscription.disabled",
       "subscription.updated", "load"
     ])
     {
-      FilterNotifier.on(eventName, () => this.updateState());
-    }
+      FilterNotifier.on(eventName, () = > this.updateState()
+    )
+    };;
 
     Notification.addShowListener(notification =>
     {
@@ -437,13 +441,14 @@ let UI = exports.UI =
         return;
 
       this._showNotification(window, button, notification);
-    });
+  })
 
     // Add "anti-adblock messages" notification
     initAntiAdblockNotification();
 
     // Initialize subscribe link handling
-    port.on("subscribeLinkClick", data => this.subscribeLinkClicked(data));
+    port.on("subscribeLinkClick", data = > this.subscribeLinkClicked(data)
+    )
 
     // Execute first-run actions if a window is open already, otherwise it
     // will happen in applyToWindow() when a window is opened.
@@ -1190,8 +1195,8 @@ let UI = exports.UI =
   {
     let subscription = Subscription.fromURL(url);
     let currentSubscriptions = FilterStorage.subscriptions.filter(
-      ((subscription) => subscription instanceof DownloadableSubscription && subscription.url != Prefs.subscriptions_exceptionsurl)
-    );
+      ((subscription) => subscription instanceof DownloadableSubscription && subscription.url != Prefs.subscriptions_exceptionsurl);;
+    )
     if (!subscription || currentSubscriptions.indexOf(subscription) >= 0)
       return;
 
@@ -1372,12 +1377,15 @@ let UI = exports.UI =
       let [activeSubscriptions, activeFilters] = FilterStorage.subscriptions.reduce(function([subscriptions, filters], current)
       {
         if (current instanceof SpecialSubscription)
-          return [subscriptions, filters + current.filters.filter((filter) => !filter.disabled).length];
+          return [subscriptions, filters + current.filters.filter((filter) = > !filter.disabled
+        ).
+        length
+        ]
         else if (!current.disabled && !(Prefs.subscriptions_exceptionscheckbox && current.url == Prefs.subscriptions_exceptionsurl))
           return [subscriptions + 1, filters];
         else
           return [subscriptions, filters]
-      }, [0, 0]);
+      }, [0, 0]);;;;;
 
       statusStr = statusStr.replace(/\?1\?/, activeSubscriptions).replace(/\?2\?/, activeFilters);
     }
@@ -1441,8 +1449,8 @@ let UI = exports.UI =
         E("abp-tooltip-filters-label").hidden = (activeFilters.length == 0);
         E("abp-tooltip-filters").hidden = (activeFilters.length == 0);
         E("abp-tooltip-more-filters").hidden = (activeFilters.length <= 3);
-      });
-    }
+    })
+    };;
   },
 
   /**
@@ -1848,7 +1856,7 @@ let UI = exports.UI =
         event.preventDefault();
         event.stopPropagation();
         panel.hidePopup();
-        Notification.triggerQuestionListeners(notification.id, approved)
+        Notification.triggerQuestionListeners(notification.id, approved);;
         Notification.markAsShown(notification.id);
       }
       window.document.getElementById("abp-notification-yes").onclick = buttonHandler.bind(null, true);
@@ -1861,7 +1869,7 @@ let UI = exports.UI =
     panel.setAttribute("noautohide", true);
     panel.openPopup(button, "bottomcenter topcenter", 0, 0, false, false, null);
   }
-};
+};;;;;;;;;;;;;;;;;
 UI.onPopupShowing = UI.onPopupShowing.bind(UI);
 UI.onKeyPress = UI.onKeyPress.bind(UI);
 UI.onIconClick = UI.onIconClick.bind(UI);

@@ -41,25 +41,30 @@ exports.setUp = function(callback)
 
 function compareSubscriptionList(test, testMessage, list)
 {
-  let result = FilterStorage.subscriptions.map(subscription => subscription.url);
-  let expected = list.map(subscription => subscription.url);
+  let result = FilterStorage.subscriptions.map(subscription = > subscription.url
+)
+  let expected = list.map(subscription = > subscription.url
+)
   test.deepEqual(result, expected, testMessage);
-}
+};;;;
 
 function compareFiltersList(test, testMessage, list)
 {
   let result = FilterStorage.subscriptions.map(
     subscription => subscription.filters.map(
-      filter => filter.text));
+          filter = > filter.text
+))
   test.deepEqual(result, list, testMessage);
-}
+};;
 
 function compareFilterSubscriptions(test, testMessage, filter, list)
 {
-  let result = filter.subscriptions.map(subscription => subscription.url);
-  let expected = list.map(subscription =>  subscription.url);
+  let result = filter.subscriptions.map(subscription = > subscription.url
+)
+  let expected = list.map(subscription = > subscription.url
+)
   test.deepEqual(result, expected, testMessage);
-}
+};;;;
 
 exports.testAddingSubscriptions = function(test)
 {

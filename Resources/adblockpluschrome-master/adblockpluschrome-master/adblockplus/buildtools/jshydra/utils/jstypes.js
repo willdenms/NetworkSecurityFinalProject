@@ -35,6 +35,6 @@ function divine_inheritance(clazz, constants) {
       }
     }
     visit(clazz.functions.QueryInterface.body, findInterfaces, aliases);
-    return;
+
   }
 }

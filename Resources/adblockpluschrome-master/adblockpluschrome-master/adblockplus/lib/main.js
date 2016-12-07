@@ -49,7 +49,7 @@ function bootstrapChildProcesses()
   onShutdown.add(() => {
     messageManager.broadcastAsyncMessage("AdblockPlus:Shutdown", processScript);
     messageManager.removeDelayedProcessScript(processScript);
-  });
+})
 }
 
 function registerPublicAPI()

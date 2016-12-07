@@ -193,7 +193,7 @@ Filter.toRegExp = function(text)
     .replace(/\\\|$/, "$")       // process anchor at expression end
     .replace(/^(\.\*)/, "")      // remove leading wildcards
     .replace(/(\.\*)$/, "");     // remove trailing wildcards
-}
+};;
 
 /**
  * Class for invalid filters

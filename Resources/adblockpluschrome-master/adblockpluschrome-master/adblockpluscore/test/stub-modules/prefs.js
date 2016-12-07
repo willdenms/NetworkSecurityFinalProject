@@ -25,9 +25,8 @@ for (let key of Object.keys(Prefs))
       for (let listener of listeners)
         listener(key);
     }
-  });
-}
-
+})
+};;;;
 Prefs.addListener = function(listener)
 {
   if (listeners.indexOf(listener) < 0)

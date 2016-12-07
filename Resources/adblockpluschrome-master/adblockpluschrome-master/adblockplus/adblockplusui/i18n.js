@@ -60,7 +60,7 @@ ext.i18n.setElementText = function(element, stringName, arguments)
   while (element.lastChild)
     element.removeChild(element.lastChild);
   processString(ext.i18n.getMessage(stringName, arguments), element);
-}
+};;
 
 // Loads i18n strings
 function loadI18nStrings()

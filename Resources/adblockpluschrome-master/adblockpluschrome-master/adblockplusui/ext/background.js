@@ -25,7 +25,7 @@
     parent.postMessage({
       type: "backgroundPageLoaded"
     }, "*");
-  }, false)
+  }, false);;
 
   function PageMap()
   {

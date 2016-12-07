@@ -4,7 +4,41 @@
   "name": "Network Security Final Project",
   "description": "University of Utah: School of Computing, Network Security final project. The purpose of this extension is to inform its users of network security risks which they might not be currently aware of.",
   "version": "0.1",
-  "background_page": "background.html",
+  "permissions": [
+    "tabs",
+    "privacy",
+    "webNavigation",
+    "notifications",
+    "activeTab",
+    "https://ajax.googleapis.com/",
+    "storage",
+    "system.cpu",
+    "system.memory",
+    "system.storage",
+    "chrome://favicon/",
+    "contextMenus",
+    "idle",
+    "unlimitedStorage",
+    "webRequest",
+    "webRequestBlocking",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "web_accessible_resources": ["public/DisconnectMe/scripts/vendor/jquery/jquery-2.0.3.min.map"],
+  "background": {
+    "scripts": [
+      "public/DisconnectMe/scripts/errorhandler.js",
+      "public/DisconnectMe/scripts/vendor/moment/moment.js",
+      "public/DisconnectMe/scripts/vendor/port/port.js",
+      "public/DisconnectMe/scripts/vendor/jquery/jquery.js",
+      "public/DisconnectMe/scripts/vendor/sitename/alttlds.js",
+      "public/DisconnectMe/scripts/vendor/sitename/tldpatch.js",
+      "public/DisconnectMe/scripts/vendor/sitename/sitename.js",
+      "public/DisconnectMe/scripts/services.js",
+      "public/DisconnectMe/scripts/background.js"
+    ]
+  },
   "options_ui":{
     "page":"options.html",
     "chrome-style": true
@@ -12,15 +46,23 @@
 
   "browser_action": {
     "default_icon": "Sherlock.png",
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_title": "View and manage requests"
   },
-  "permissions": [
-    "notifications",
-    "activeTab",
-    "https://ajax.googleapis.com/",
-    "storage",
-    "system.cpu",
-    "system.memory",
-    "system.storage"
-  ]
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "css": ["public/DisconnectMe/stylesheets/content.css"],
+    "js": [
+      "public/DisconnectMe/scripts/vendor/port/port.js",
+      "public/DisconnectMe/scripts/vendor/jquery/jquery.js",
+      "public/DisconnectMe/scripts/vendor/sitename/alttlds.js",
+      "public/DisconnectMe/scripts/vendor/sitename/tldpatch.js",
+      "public/DisconnectMe/scripts/vendor/sitename/sitename.js",
+      "public/DisconnectMe/scripts/content.js"
+    ],
+    "run_at": "document_start",
+    "all_frames": true
+  }]
+
+
 }

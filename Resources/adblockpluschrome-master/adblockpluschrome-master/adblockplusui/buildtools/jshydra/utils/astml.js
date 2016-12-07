@@ -204,7 +204,7 @@ function convertTOK_ASSIGN(pn) {
   case JSOP_DIV: ast.operator = '/'; break;
   case JSOP_MOD: ast.operator = '%'; break;
   default: throw "Unexpected operator " + decode_op(pn.op);
-  };
+  }
   return ast;
 }
 

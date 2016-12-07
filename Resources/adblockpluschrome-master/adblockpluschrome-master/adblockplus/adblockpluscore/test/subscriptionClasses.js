@@ -24,10 +24,10 @@ let {
 
 function compareSubscription(test, url, expected, postInit)
 {
-  expected.push("[Subscription]")
+  expected.push("[Subscription]");;
   let subscription = Subscription.fromURL(url);
   if (postInit)
-    postInit(subscription)
+    postInit(subscription);;
   let result = [];
   subscription.serialize(result);
   test.equal(result.sort().join("\n"), expected.sort().join("\n"), url);
@@ -74,7 +74,7 @@ exports.testSubscriptionsWithState = function(test)
     subscription.expires = 20;
     subscription.downloadStatus = "foo";
     subscription.errors = 3;
-    subscription.version = 24
+    subscription.version = 24;;
     subscription.requiredVersion = "0.6";
   });
   compareSubscription(test, "~wl~", ["url=~wl~", "disabled=true", "title=Test group"], function(subscription)

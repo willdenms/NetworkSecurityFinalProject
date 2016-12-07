@@ -37,32 +37,52 @@ let globals = {
   btoa: data => new Buffer(data, "binary").toString("base64"),
   Ci: {
   },
-  Cu: {
-    import: () => {},
-    reportError: e => undefined
-  },
-  console: {
-    log: () => undefined,
-    error: () => undefined,
-  },
-  navigator: {
-  },
-  onShutdown: {
-    add: () =>
+  {
+  import:
+    () =
+  >
     {
     }
+  ,
+    e =
+  >
+    undefined
+  }
+;;,
+  {
+    () =
+  >
+    undefined,
+        error
+  :
+    () =
+  >
+    undefined,
+  }
+;;;,
+  {
   },
-  Services: {
-    obs: {
-      addObserver: () =>
+  {
+    () =
+  >
+    {
+    }
+  }
+;,
+  {
+    {
+      () =
+    >
       {
       }
-    },
-    vc: {
-      compare: (v1, v2) =>
+    }
+    ;
+  ,
+    {
+      (v1, v2) =
+    >
       {
-        function comparePart(p1, p2)
-        {
+        function comparePart(p1, p2) {
           if (p1 != "*" && p2 == "*")
             return -1;
           else if (p1 == "*" && p2 != "*")
@@ -75,8 +95,7 @@ let globals = {
 
         let parts1 = v1.split(".");
         let parts2 = v2.split(".");
-        for (let i = 0; i < Math.max(parts1.length, parts2.length); i++)
-        {
+        for (let i = 0; i < Math.max(parts1.length, parts2.length); i++) {
           let result = comparePart(parts1[i] || "0", parts2[i] || "0");
           if (result != 0)
             return result;
@@ -84,18 +103,20 @@ let globals = {
         return 0;
       }
     }
+    ;
   },
-  XPCOMUtils: {
-    generateQI: () =>
+  {
+    () =
+  >
     {
     }
-  },
+  }
+;,
   URL: function(urlString)
   {
     return require("url").parse(urlString);
   }
-};
-
+}
 let knownModules = new Map();
 for (let dir of [path.join(__dirname, "stub-modules"),
                  path.join(__dirname, "..", "lib")])
@@ -128,8 +149,8 @@ function rewriteRequires(source)
     if (request in knownModules)
       return prefix + escapeString(knownModules[request]);
     return match;
-  });
-}
+})
+};;
 
 exports.createSandbox = function(options)
 {
@@ -198,7 +219,7 @@ exports.setupTimerAndXMLHttp = function()
     this._host = "http://example.com";
     this._loadHandlers = [];
     this._errorHandlers = [];
-  };
+  }
   XMLHttpRequest.prototype =
   {
     _path: null,
@@ -297,7 +318,7 @@ exports.setupTimerAndXMLHttp = function()
         let event = {type: eventName};
         for (let handler of this["_" + eventName + "Handlers"])
           handler.call(this, event);
-      }));
+    }))
     },
 
     overrideMimeType: function(mime)
@@ -313,14 +334,12 @@ exports.setupTimerAndXMLHttp = function()
       VALIDATE_ALWAYS: 0,
       QueryInterface: () => this
     }
-  };
-
+}
   XMLHttpRequest.requestHandlers = {};
   this.registerHandler = (path, handler) =>
   {
     XMLHttpRequest.requestHandlers[path] = handler;
-  };
-
+  }
   function waitForRequests()
   {
     if (requests.length)
@@ -330,8 +349,10 @@ exports.setupTimerAndXMLHttp = function()
       return result.catch(e =>
       {
         console.error(e);
-      }).then(() => waitForRequests());
-    }
+    }).
+      then(() = > waitForRequests()
+    )
+    };;
     else
       return Promise.resolve();
   }
@@ -347,8 +368,9 @@ exports.setupTimerAndXMLHttp = function()
     else
     {
       fakeTimer.trigger();
-      return waitForRequests().then(() => runScheduledTasks(endTime - currentTime));
-    }
+      return waitForRequests().then(() = > runScheduledTasks(endTime - currentTime)
+    )
+    };;
 
     currentTime = endTime;
   }
@@ -378,14 +400,12 @@ exports.setupTimerAndXMLHttp = function()
         currentTime += skip * MILLIS_IN_HOUR;
       }
       return runScheduledTasks(maxHours * MILLIS_IN_HOUR);
-    });
-  };
-
+  })
+  };;;;
   this.getTimeOffset = () => (currentTime - startTime) / MILLIS_IN_HOUR;
   Object.defineProperty(this, "currentTime", {
     get: () => currentTime
-  });
-
+})
   return {
     Cc: {
       "@mozilla.org/timer;1": {
@@ -393,21 +413,24 @@ exports.setupTimerAndXMLHttp = function()
       }
     },
     Ci: {
-      nsITimer:
       {
-        TYPE_ONE_SHOT: 0,
-        TYPE_REPEATING_SLACK: 1,
-        TYPE_REPEATING_PRECISE: 2
-      },
-      nsIHttpChannel: () => null,
-    },
+        0,
+            TYPE_REPEATING_SLACK
+      :
+        1,
+            TYPE_REPEATING_PRECISE
+      :
+        2
+      };;,
+      () => null,
+    };;,
     Cr,
     XMLHttpRequest,
     Date: {
-      now: () => currentTime
-    }
-  };
-};
+      () => currentTime
+    };;
+}
+};;;;;;;;;;;
 
 exports.setupRandomResult = function()
 {
@@ -415,8 +438,7 @@ exports.setupRandomResult = function()
   Object.defineProperty(this, "randomResult", {
     get: () => randomResult,
     set: value => randomResult = value
-  });
-
+})
   return {
     Math: {
       random: () => randomResult,
@@ -424,8 +446,8 @@ exports.setupRandomResult = function()
       max: Math.max,
       round: Math.round
     }
-  };
-};
+}
+};;;;;
 
 exports.unexpectedError = function(error)
 {

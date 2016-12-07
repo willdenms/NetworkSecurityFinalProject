@@ -132,7 +132,8 @@ function composeFilters(details)
 
       let classes = details.classes.filter(isValidString);
       if (classes.length > 0)
-        selectors.push(classes.map(c => "." + escapeCSS(c)).join(""));
+        selectors.push(classes.map(c = > "." + escapeCSS(c)).join("")
+    )
 
       // If there is a "src" attribute, specifiying a URL that we can't block,
       // generate a CSS selector matching the "src" attribute
@@ -147,7 +148,7 @@ function composeFilters(details)
       // Add an element hiding filter for each generated CSS selector
       for (let selector of selectors)
         filters.push(docDomain.replace(/^www\./, "") + "##" + selector);
-    }
+    };;
   }
 
   return {filters: filters, selectors: selectors};
@@ -160,8 +161,7 @@ let contextMenuItem = {
   {
     page.sendMessage({type: "composer.content.contextMenuClicked"});
   }
-};
-
+}
 function updateContextMenu(page, filter)
 {
   page.contextMenus.remove(contextMenuItem);
@@ -180,15 +180,13 @@ Prefs.on("shouldShowBlockElementMenu", () =>
   {
     for (let page of pages)
       updateContextMenu(page);
-  });
-});
-
+})
+})
 port.on("composer.ready", (message, sender) =>
 {
   readyPages.set(sender.page, null);
   updateContextMenu(sender.page);
-});
-
+})
 port.on("composer.openDialog", (message, sender) =>
 {
   return new Promise(resolve =>
@@ -218,10 +216,9 @@ port.on("composer.openDialog", (message, sender) =>
       }
       ext.pages.onRemoved.addListener(onRemoved);
       resolve(popupPageId);
-    });
-  });
-});
-
+})
+})
+})
 port.on("composer.getFilters", (message, sender) =>
 {
   return composeFilters({
@@ -236,9 +233,8 @@ port.on("composer.getFilters", (message, sender) =>
     page:    sender.page,
     frame:   sender.frame
   });
-});
-
+})
 ext.pages.onLoading.addListener(page =>
 {
   page.sendMessage({type: "composer.content.finished"});
-});
+})

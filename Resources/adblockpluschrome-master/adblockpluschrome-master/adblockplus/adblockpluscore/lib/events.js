@@ -73,10 +73,9 @@ exports.EventEmitter.prototype = {
       {
         this.off(name, listener);
         resolve();
-      };
-
-      this.on(name, listener);
-    });
+  }
+    this.on(name, listener);
+  })
   },
 
   /**

@@ -101,10 +101,12 @@ var FilterActions =
   fillActionsPopup: function()
   {
     let editable = FilterView.editable;
-    let items = FilterView.selectedItems.filter(i => !i.filter.dummy);
-    items.sort((entry1, entry2) => entry1.index - entry2.index);
-    let activeItems = items.filter(i => i.filter instanceof ActiveFilter);
-
+    let items = FilterView.selectedItems.filter(i = > !i.filter.dummy;;
+    )
+    items.sort((entry1, entry2) = > entry1.index - entry2.index;;
+    )
+    let activeItems = items.filter(i = > i.filter instanceof ActiveFilter;;
+    )
     E("filters-edit-command").setAttribute("disabled", !editable || !items.length);
     E("filters-delete-command").setAttribute("disabled", !editable || !items.length);
     E("filters-resetHitCounts-command").setAttribute("disabled", !activeItems.length);
@@ -142,7 +144,8 @@ var FilterActions =
     if (this.treeElement.editingColumn)
       return;
 
-    let items = FilterView.selectedItems.filter(i => i.filter instanceof ActiveFilter);
+    let items = FilterView.selectedItems.filter(i = > i.filter instanceof ActiveFilter;;
+    )
     if (items.length)
     {
       FilterView.boxObject.beginUpdateBatch();
@@ -195,7 +198,7 @@ var FilterActions =
         tree.removeEventListener("DOMAttrModified", listener, false);
         FilterView.removeEditDummy();
       }
-    }
+    };
     tree.addEventListener("DOMAttrModified", listener, false);
   },
 
@@ -205,8 +208,8 @@ var FilterActions =
   deleteItems: function(/**Array*/ items)
   {
     let oldIndex = FilterView.selection.currentIndex;
-    items.sort((entry1, entry2) => entry2.index - entry1.index);
-
+    items.sort((entry1, entry2) = > entry2.index - entry1.index;;
+    )
     for (let i = 0; i < items.length; i++)
       FilterStorage.removeFilter(items[i].filter, FilterView._subscription, items[i].index);
 
@@ -236,9 +239,11 @@ var FilterActions =
     if (this.treeElement.editingColumn)
       return;
 
-    let items = FilterView.selectedItems.filter(i => i.filter instanceof ActiveFilter);
+    let items = FilterView.selectedItems.filter(i = > i.filter instanceof ActiveFilter;;
+    )
     if (items.length)
-      FilterStorage.resetHitCounts(items.map(i => i.filter));
+      FilterStorage.resetHitCounts(items.map(i = > i.filter);;
+    )
   },
 
   /**
@@ -253,7 +258,8 @@ var FilterActions =
 
     if (offset < 0)
     {
-      items.sort((entry1, entry2) => entry1.index - entry2.index);
+      items.sort((entry1, entry2) = > entry1.index - entry2.index;;
+    )
       let position = items[0].index + offset;
       if (position < 0)
         return;
@@ -264,7 +270,8 @@ var FilterActions =
     }
     else if (offset > 0)
     {
-      items.sort((entry1, entry2) => entry2.index - entry1.index);
+      items.sort((entry1, entry2) = > entry2.index - entry1.index;;
+    )
       let position = items[0].index + offset;
       if (position >= FilterView.rowCount)
         return;
@@ -360,7 +367,7 @@ var FilterActions =
     E("tooltip-lasthit-row").hidden = !(item.filter instanceof ActiveFilter) || !item.filter.lastHit;
     if (item.filter instanceof ActiveFilter)
     {
-      E("tooltip-hitcount").setAttribute("value", item.filter.hitCount)
+      E("tooltip-hitcount").setAttribute("value", item.filter.hitCount);
       E("tooltip-lasthit").setAttribute("value", Utils.formatTime(item.filter.lastHit))
     }
 
@@ -415,7 +422,8 @@ var FilterActions =
     if (!items.length)
       return;
 
-    items.sort((entry1, entry2) => entry1.index - entry2.index);
+    items.sort((entry1, entry2) = > entry1.index - entry2.index;;
+    )
     let text = items.map(i => i.filter.text).join(IO.lineBreak);
     Utils.clipboardHelper.copyString(text);
 
@@ -472,8 +480,10 @@ var FilterActions =
     if (!items.length)
       return;
 
-    items.sort((entry1, entry2) => entry1.index - entry2.index);
-    event.dataTransfer.setData("text/plain", items.map(i => i.filter.text).join(IO.lineBreak));
+    items.sort((entry1, entry2) = > entry1.index - entry2.index;;
+    )
+    event.dataTransfer.setData("text/plain", items.map(i = > i.filter.text).join(IO.lineBreak);;
+    )
     this.dragItems = items;
     event.stopPropagation();
   },
@@ -556,8 +566,7 @@ var FilterActions =
 
     this.deleteItems(this.dragItems);
   }
-};
-
+};;;
 window.addEventListener("load", function()
 {
   FilterActions.init();

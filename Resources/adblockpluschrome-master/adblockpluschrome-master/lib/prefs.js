@@ -269,8 +269,7 @@ function init()
 
       resolve();
     });
-  });
-
+})
   let managedLoaded = new Promise(resolve => {
     if (require("info").platform == "chromium" && "managed" in chrome.storage)
     {
@@ -292,8 +291,7 @@ function init()
     {
       resolve();
     }
-  });
-
+})
   function onLoaded()
   {
     ext.storage.onChanged.addListener(function(changes)
@@ -316,6 +314,6 @@ function init()
   }
 
   Prefs.untilLoaded = Promise.all([localLoaded, managedLoaded]).then(onLoaded);
-}
+};;
 
 init();

@@ -39,8 +39,9 @@ function PageMap()
 {
   this._map = new Map();
 
-  port.on("ext_disconnect", windowID => this._map.delete(windowID));
-}
+  port.on("ext_disconnect", windowID = > this._map.delete(windowID)
+)
+};;
 PageMap.prototype = {
   keys: function()
   {

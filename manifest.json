@@ -7,6 +7,7 @@
   "permissions": [
     "tabs",
     "privacy",
+    "background",
     "webNavigation",
     "notifications",
     "activeTab",
@@ -22,22 +23,12 @@
     "webRequest",
     "webRequestBlocking",
     "http://*/*",
-    "https://*/*"
+    "https://*/*",
+    "<all_urls>"
   ],
-  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
-  "web_accessible_resources": ["public/DisconnectMe/scripts/vendor/jquery/jquery-2.0.3.min.map"],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",=
   "background": {
-    "scripts": [
-      "public/DisconnectMe/scripts/errorhandler.js",
-      "public/DisconnectMe/scripts/vendor/moment/moment.js",
-      "public/DisconnectMe/scripts/vendor/port/port.js",
-      "public/DisconnectMe/scripts/vendor/jquery/jquery.js",
-      "public/DisconnectMe/scripts/vendor/sitename/alttlds.js",
-      "public/DisconnectMe/scripts/vendor/sitename/tldpatch.js",
-      "public/DisconnectMe/scripts/vendor/sitename/sitename.js",
-      "public/DisconnectMe/scripts/services.js",
-      "public/DisconnectMe/scripts/background.js"
-    ]
+    "page": "background.html"
   },
   "options_ui":{
     "page":"options.html",
@@ -47,22 +38,20 @@
   "browser_action": {
     "default_icon": "Sherlock.png",
     "default_popup": "popup.html",
-    "default_title": "View and manage requests"
+    "default_title": "View and manage internet security"
   },
   "content_scripts": [{
     "matches": ["http://*/*", "https://*/*"],
-    "css": ["public/DisconnectMe/stylesheets/content.css"],
+    "css": ["public/bootstrap/css/bootstrap.min.css"],
     "js": [
-      "public/DisconnectMe/scripts/vendor/port/port.js",
-      "public/DisconnectMe/scripts/vendor/jquery/jquery.js",
-      "public/DisconnectMe/scripts/vendor/sitename/alttlds.js",
-      "public/DisconnectMe/scripts/vendor/sitename/tldpatch.js",
-      "public/DisconnectMe/scripts/vendor/sitename/sitename.js",
-      "public/DisconnectMe/scripts/content.js"
+      "public/js/jquery.min.js",
+      "public/notify/bootstrap-notify.min.js",
+      "public/bootstrap/js/bootstrap.min.js",
+      "public/js/bootbox.min.js",
+      "public/js/getPagesSource.js"
+
     ],
-    "run_at": "document_start",
+    "run_at": "document_end",
     "all_frames": true
   }]
-
-
 }

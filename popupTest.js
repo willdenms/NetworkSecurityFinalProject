@@ -59,7 +59,7 @@ function NotificationOptions() {
 }
 
 function test() {
-    console.log(chrome.extension.getBackgroundPage());
+   // console.log(chrome.extension.getBackgroundPage());
 
     //console.log("made it to test");
     //// debugger;
@@ -78,5 +78,17 @@ function test() {
 
 $(document).ready(function() {
 
-    $("#btn").click(test);
+    if ("@adblockplus.org/abp/public;1" in Components.classes)
+    {
+        var abpURL = Components.classes["@adblockplus.org/abp/public;1"]
+            .getService(Components.interfaces.nsIURI);
+        var AdblockPlus = Components.utils.import(abpURL.spec, null).AdblockPlus;
+        alert(AdblockPlus.subscriptionCount);
+    }
+    else
+    {
+        // Adblock Plus is not installed
+    }
 });
+
+

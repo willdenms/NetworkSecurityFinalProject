@@ -5,6 +5,7 @@
     <link href="public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <script src="public/js/jquery.min.js" type="application/javascript"></script>
+    <script src="public/js/getPagesSource.js" type="application/javascript"></script>
     <script src="popupTest.js" type="application/javascript"></script>
     <script src="public/notify/bootstrap-notify.min.js" type="application/javascript"></script>
     <script src="public/bootstrap/js/bootstrap.min.js" type="application/javascript"></script>
@@ -23,22 +24,22 @@
     <!--<link rel="stylesheet" href="public/DisconnectMe/stylesheets/chrollusion/index.css">-->
     <!--<link rel="stylesheet" href="public/DisconnectMe/stylesheets/legacy.css">-->
     <!--<link rel="stylesheet" href="public/DisconnectMe/stylesheets/popup.css">-->
-    <script src="public/DisconnectMe/scripts/vendor/port/port.js"></script>
-    <script src="public/DisconnectMe/scripts/vendor/jquery/jquery.js"></script>
-    <script src="public/DisconnectMe/scripts/vendor/tipped/tipped.js"></script>
-    <script src="public/DisconnectMe/scripts/vendor/d3/d3.js"></script>
-    <script src="public/DisconnectMe/scripts/vendor/d3/d3.layout.js"></script>
-    <script src="public/DisconnectMe/scripts/vendor/d3/d3.geom.js"></script>
-    <script src="public/DisconnectMe/scripts/vendor/favicon/favicon.js"></script>
-    <script src="public/DisconnectMe/scripts/chrollusion/index-content-script.js"></script>
-    <script src="public/DisconnectMe/scripts/chrollusion/collusion-addon.js"></script>
-    <script src="public/DisconnectMe/scripts/chrollusion/graphrunner.js"></script>
-    <script src="public/DisconnectMe/scripts/chrollusion/index.js"></script>
-    <script src="public/DisconnectMe/scripts/popup.js"></script>
+    <!--<script src="public/DisconnectMe/scripts/vendor/port/port.js"></script>-->
+    <!--<script src="public/DisconnectMe/scripts/vendor/jquery/jquery.js"></script>-->
+    <!--<script src="public/DisconnectMe/scripts/vendor/tipped/tipped.js"></script>-->
+    <!--<script src="public/DisconnectMe/scripts/vendor/d3/d3.js"></script>-->
+    <!--<script src="public/DisconnectMe/scripts/vendor/d3/d3.layout.js"></script>-->
+    <!--<script src="public/DisconnectMe/scripts/vendor/d3/d3.geom.js"></script>-->
+    <!--<script src="public/DisconnectMe/scripts/vendor/favicon/favicon.js"></script>-->
+    <!--<script src="public/DisconnectMe/scripts/chrollusion/index-content-script.js"></script>-->
+    <!--<script src="public/DisconnectMe/scripts/chrollusion/collusion-addon.js"></script>-->
+    <!--<script src="public/DisconnectMe/scripts/chrollusion/graphrunner.js"></script>-->
+    <!--<script src="public/DisconnectMe/scripts/chrollusion/index.js"></script>-->
+    <!--<script src="public/DisconnectMe/scripts/popup.js"></script>-->
     <!--Disconnect Me-->
 
 
-    <title>FinalProject</title>
+    <title>SafeSurfer</title>
 </head>
 
 
@@ -47,7 +48,7 @@
     <div class="container-fluid" >
         <div class="row">
             <div class="col-xs-12" style="width: 400px">
-                <ul class="nav nav-pills">
+                <ul class="nav nav-pills ">
                     <li class="active"><a data-toggle="pill" href="#home">Settings</a></li>
                     <li><a data-toggle="pill" href="#menu1">Ad Blocker</a></li>
                     <li><a data-toggle="pill" href="#menu2">Trackers</a></li>
@@ -377,11 +378,12 @@
                           <h6><strong>Type:</strong><p id="stor-type"></p></h6>
                         <h4>Memory</h4>
                           <h6><strong>Capacity:</strong><p id="mem-cap"></p></h6>
-                        <button id="load">Load</button>
+
                         <script src="hardware.js"></script>
                     </div>
                     <!--End Hardware Tab-->
                 </div>
+
             </div>
             </div>
         </div>

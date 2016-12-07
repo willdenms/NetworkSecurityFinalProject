@@ -22,5 +22,6 @@ function loadData(){
   });
 }
 
-document.getElementById("load").addEventListener('click',
-    loadData);
+
+
+$(document).ready(loadData())

@@ -49,7 +49,7 @@ chrome.runtime.onMessage.addListener(function(request, sender) {
         if(request.source.NeedsAlert) {
 
             bootbox.confirm({
-                title: "Beware",
+                title: "Beware: " + request.source.SiteName,
                 message: "This site is not secure. Do NOT provide it any personal information or passwords.",
                 buttons: {
                     confirm: {
@@ -71,7 +71,7 @@ chrome.runtime.onMessage.addListener(function(request, sender) {
                         var notification = {
                             icon: "glyphicon glyphicon-warning-sign",        //Required for notifications.create .
                             title: "SSL Warning:",          //Required for notifications.create
-                            message: "This message has been dismissed for 24 hrs",        //Required for notifications.create
+                            message: "This message has been dismissed for 24 hrs for " + request.source.SiteName,        //Required for notifications.create
                         }
                         var settings = {
                             type: "danger"      //Required for notifications.create

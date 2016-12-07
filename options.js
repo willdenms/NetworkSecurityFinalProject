@@ -33,10 +33,15 @@ function set_checkboxes(){
 // stored in chrome.storage.
 function restore_options(optionType) {
   chrome.storage.sync.get(null, function(data){
-    for( var i = 0; i < data[optionType].length; i++){
-      document.getElementById(data[optionType][i]).checked = true;
+    try{
+      for( var i = 0; i < data[optionType].length; i++){
+        document.getElementById(data[optionType][i]).checked = true;
+      }
+    }catch(err){
+
     }
   });
 }
+document.addEventListener('DOMContentLoaded', restore_options("alertChecks"));
 document.getElementById('save-alerts').addEventListener('click',
     save_options);

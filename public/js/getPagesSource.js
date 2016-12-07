@@ -46,9 +46,7 @@ window.onload = onWindowLoad;
 //Create SSL Alert
 chrome.runtime.onMessage.addListener(function(request, sender) {
     if (request.action === "alert") {
-        if(request.source) {
-            //TOO alert that the site is not using ssl and may be asking for data you should not provide without one. Proceed with caution
-            //$('#sslWarning').modal('show');
+        if(request.source.NeedsAlert) {
 
             bootbox.confirm({
                 title: "Beware",
@@ -63,8 +61,10 @@ chrome.runtime.onMessage.addListener(function(request, sender) {
 
                 },
                 callback: function (result) {
-                    if(!result)
+                    if(!result) {
+                        resetSiteNotification(request.source.SiteName);
                         window.location.href = "https://google.com";
+                    }
 
                     else{
 
@@ -86,3 +86,24 @@ chrome.runtime.onMessage.addListener(function(request, sender) {
         }
     }
 });
+
+function resetSiteNotification(site) {
+
+    chrome.storage.local.get('sites', function (siteGet) {
+        var sites = siteGet.sites;
+
+        if(jQuery.isEmptyObject(sites)) {
+            sites = [];
+        }
+
+        for(var i = 0; i< sites.length; i++) {
+            if (sites[i].Name === site) {
+                sites[i].Time = Date.now()- 86400000;
+            }
+        }
+
+        chrome.storage.local.set({'sites': sites}, function (setResult) {
+
+        });
+    });
+}

@@ -17,6 +17,8 @@
     <script src="public/AdBlock/stats.js" type="application/javascript"></script>
     <!--Ad Blocker Scripts-->
 
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
     <title>FinalProject</title>
 </head>
 
@@ -27,10 +29,11 @@
         <div class="row">
             <div class="col-xs-12" style="width: 400px">
                 <ul class="nav nav-pills">
-                    <li class="active"><a data-toggle="pill" href="#home">Settings</a></li>
+                    <li class="active"><a data-toggle="pill" href="#home"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
                     <li><a data-toggle="pill" href="#menu1">Ad Blocker</a></li>
                     <li><a data-toggle="pill" href="#menu2">Trackers</a></li>
                     <li><a data-toggle="pill" href="#menu3">Hardware</a></li>
+                    <li><a data-toggle="pill" href="#menu4"><i class="fa fa-info-circle" aria-hidden="true"></i></a></li>
                 </ul>
 
                 <div class="tab-content">
@@ -195,10 +198,18 @@
                           <h6><strong>Type:</strong><p id="stor-type"></p></h6>
                         <h4>Memory</h4>
                           <h6><strong>Capacity:</strong><p id="mem-cap"></p></h6>
-                        <button id="load">Load</button>
                         <script src="hardware.js"></script>
                     </div>
                     <!--End Hardware Tab-->
+
+                    <!-- About Tab-->
+                    <div id="menu4" class="tab-pane fade">
+                      <h5>Summary</h5>
+                      <p>In an age where over 46% of the world has access to internet,
+                        this extension informs the user about how much they are exposing
+                        and providing education on tracking elements.</p>
+                    </div>
+                    <!--End About Tab-->
                 </div>
             </div>
             </div>

@@ -22,5 +22,4 @@ function loadData(){
   });
 }
 
-document.getElementById("load").addEventListener('click',
-    loadData);
+document.addEventListener('DOMContentLoaded', loadData);

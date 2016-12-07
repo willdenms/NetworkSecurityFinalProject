@@ -24,7 +24,7 @@
             labelFormat: d3.format(',g'),
             labelInset: 10,
 
-            arcColorFn: d3.interpolateHsl(d3.rgb('#e8e2ca'), d3.rgb('#3e6c0a'))
+            arcColorFn: d3.interpolateHsl(d3.rgb('#FF0000'), d3.rgb('#008000'))
         };
         var range = undefined;
         var r = undefined;
@@ -172,7 +172,7 @@
         var powerGauge = gauge('#power-gauge', {
             size: 300,
             clipWidth: 300,
-            clipHeight: 300,
+            clipHeight: 175,
             ringWidth: 60,
             maxValue: 10,
             transitionMs: 4000,

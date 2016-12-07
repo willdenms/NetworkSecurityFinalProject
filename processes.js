@@ -1,7 +1,7 @@
 /**
  * Created by mahowa on 12/7/2016.
  */
-
+//https://developer.chrome.com/extensions/processes#method-getProcessInfo
 //chrome.processes
 
 //chrome.processes.getProcessInfo(integer or array of integer processIds, boolean includeMemory, function callback)

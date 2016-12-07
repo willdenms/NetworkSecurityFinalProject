@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="public/Bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="public/css/bootstrap-switch.min.css" rel="stylesheet">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 
@@ -13,7 +13,8 @@
     <script src="public/notify/bootstrap-notify.min.js" type="application/javascript"></script>
     <script src="js/willden/browserSettings.js" type="application/javascript"></script>
     <script src="js/willden/mediaAlert.js" type="application/javascript"></script>
-    <script src="public/bootstrap/js/bootstrap.min.js" type="application/javascript"></script>
+    <script src="public/Bootstrap/js/bootstrap.min.js" type="application/javascript"></script>
+    <script src="public/js/d3.v2.js" type="text/javascript"></script>
     <!--Ad Blocker Scripts-->
     <!--<link rel="stylesheet" type="text/css" href="public/AdBlock/popup.css">-->
     <!--<script src="public/AdBlock/ext/popup.js" type="application/javascript"></script>-->
@@ -23,6 +24,7 @@
     <!--Ad Blocker Scripts-->
 
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/tach.css">
 
 
     <!--Disconnect Me-->
@@ -68,6 +70,10 @@
                 <!--Settings Tab-->
                 <div id="home" class="tab-pane fade in active">
                     <h3>Settings</h3>
+                    <div id="power-gauge">
+
+                    </div>
+                    <script src="js/willden/tach.js"></script>
                     <div id="accordion" role="tablist" aria-multiselectable="true">
                         <!--TODO ad place to enter safe spot html then need to connect it to ssl modal and verify its a good url. if they do not enter https then show error-->
                         <!--Browser Settings-->
@@ -393,6 +399,6 @@
             </div>
             </div>
         </div>
-
 </body>
+
 </html>

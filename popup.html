@@ -11,9 +11,8 @@
     <script src="public/js/getPagesSource.js" type="application/javascript"></script>
     <script src="popupTest.js" type="application/javascript"></script>
     <script src="public/notify/bootstrap-notify.min.js" type="application/javascript"></script>
-    <script src="public/bootstrap/js/bootstrap.min.js" type="application/javascript"></script>
-
-
+    <script src="public/Bootstrap/js/bootstrap.min.js" type="application/javascript"></script>
+    <script src="js/willden/browserSettings.js" type="application/javascript"></script>
 
     <!--Ad Blocker Scripts-->
     <!--<link rel="stylesheet" type="text/css" href="public/AdBlock/popup.css">-->
@@ -66,19 +65,107 @@
                     <li class="pull-right"><a data-toggle="pill" href="options.html" target="_blank" title="Options Page"><i class="fa fa-external-link" aria-hidden="true"></i></a></li>
                 </ul>
 
-                <div class="tab-content">
-                    <!--Settings Tab-->
-                    <div id="home" class="tab-pane fade in active">
-                        <h3>Settings</h3>
-                        <div id="accordion" role="tablist" aria-multiselectable="true">
-                            <div class="card">
-                                <div class="card-header" role="tab" id="headingOne">
-                                    <h5 class="mb-0">
-                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            Alerts
-                                        </a>
-                                    </h5>
+            <div class="tab-content">
+                <!--Settings Tab-->
+                <div id="home" class="tab-pane fade in active">
+                    <h3>Settings</h3>
+                    <div id="accordion" role="tablist" aria-multiselectable="true">
+
+                        <!--Browser Settings-->
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingBrowser">
+                                <h5 class="mb-0">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseBrowser" aria-expanded="true" aria-controls="collapseBrowser">
+                                        Browser Settings
+                                    </a>
+                                </h5>
+                            </div>
+
+                            <div id="collapseBrowser" class="collapse" role="tabpanel" aria-labelledby="headingBrowser">
+                                <div class="card-block">
+                                    <form id="browser-setting">
+                                        <fieldset >
+                                            <dl>
+                                                <dt><label for="cookies">Cookies: </label></dt>
+                                                <dd><select class="form-control" id="cookies" disabled>
+                                                    <option value="allow">Allow</option>
+                                                    <option value="session_only">Session only</option>
+                                                    <option value="block">Block</option>
+                                                </select></dd>
+                                                <dt><label for="images">Images: </label></dt>
+                                                <dd><select class="form-control" id="images" disabled>
+                                                    <option value="allow">Allow</option>
+                                                    <option value="block">Block</option>
+                                                </select>
+                                                <dt><label for="javascript">Javascript: </label></dt>
+                                                <dd><select class="form-control" id="javascript" disabled>
+                                                    <option value="allow">Allow</option>
+                                                    <option value="block">Block</option>
+                                                </select></dd>
+                                                <dt><label for="location">Location: </label></dt>
+                                                <dd><select class="form-control" id="location" disabled>
+                                                    <option value="allow">Allow</option>
+                                                    <option value="ask">Ask</option>
+                                                    <option value="block">Block</option>
+                                                </select></dd>
+                                                <dt><label for="plugins">Plugins: </label></dt>
+                                                <dd><select class="form-control" id="plugins" disabled>
+                                                    <option value="allow">Allow</option>
+                                                    <option value="block">Block</option>
+                                                </select></dd>
+                                                <dt><label for="popups">Pop-ups: </label></dt>
+                                                <dd><select class="form-control" id="popups" disabled>
+                                                    <option value="allow">Allow</option>
+                                                    <option value="block">Block</option>
+                                                </select></dd>
+                                                <dt><label for="notifications">Notifications: </label></dt>
+                                                <dd><select class="form-control" id="notifications" disabled>
+                                                    <option value="allow">Allow</option>
+                                                    <option value="ask">Ask</option>
+                                                    <option value="block">Block</option>
+                                                </select></dd>
+                                                <dt><label for="microphone">Microphone: </label></dt>
+                                                <dd><select class="form-control" id="microphone" disabled>
+                                                    <option value="allow">Allow</option>
+                                                    <option value="ask">Ask</option>
+                                                    <option value="block">Block</option>
+                                                </select></dd>
+                                                <dt><label for="camera">Camera: </label></dt>
+                                                <dd><select class="form-control" id="camera" disabled>
+                                                    <option value="allow">Allow</option>
+                                                    <option value="ask">Ask</option>
+                                                    <option value="block">Block</option>
+                                                </select></dd>
+                                                <dt><label for="unsandboxedPlugins">Unsandboxed plugin access: </label></dt>
+                                                <dd><select class="form-control" id="unsandboxedPlugins" disabled>
+                                                    <option value="allow">Allow</option>
+                                                    <option value="ask">Ask</option>
+                                                    <option value="block">Block</option>
+                                                </select></dd>
+                                                <dt><label for="automaticDownloads">Automatic Downloads: </label></dt>
+                                                <dd><select class="form-control" id="automaticDownloads" disabled>
+                                                    <option value="allow">Allow</option>
+                                                    <option value="ask">Ask</option>
+                                                    <option value="block">Block</option>
+                                                </select></dd>
+                                            </dl>
+                                        </fieldset>
+
+
+                                    </form>
                                 </div>
+                            </div>
+                        </div>
+
+                        <!--General Alerts-->
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingOne">
+                                <h5 class="mb-0">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        Alerts
+                                    </a>
+                                </h5>
+                            </div>
 
                                 <div id="collapseOne" class="collapse in" role="tabpanel" aria-labelledby="headingOne">
                                     <div class="card-block">

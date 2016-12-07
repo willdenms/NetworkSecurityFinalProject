@@ -833,7 +833,7 @@ const SERVICES = ['Facebook', 'Google', 'LinkedIn', 'Twitter', 'Yahoo'];
 const SERVICE_COUNT = SERVICES.length;
 
 /* The "tabs" API. */
-const TABS = BACKGROUND.TABS;
+const TABS = chrome.tabs;
 
 /* The content key. */
 const CONTENT_NAME = BACKGROUND.CONTENT_NAME;

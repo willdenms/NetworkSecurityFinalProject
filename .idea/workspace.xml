@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e114961-88e9-4987-8a2b-fab1be70c7cc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manifest.json" afterPath="$PROJECT_DIR$/manifest.json" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -59,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/manifest.json">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.52696246">
-              <caret line="28" column="81" selection-start-line="28" selection-start-column="81" selection-end-line="28" selection-end-column="81" />
+              <caret line="28" column="82" selection-start-line="28" selection-start-column="82" selection-end-line="28" selection-end-column="82" />
               <folding />
             </state>
           </provider>
@@ -336,7 +335,13 @@
       <option name="project" value="LOCAL" />
       <updated>1481080583573</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fixed manifest">
+      <created>1481080790706</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1481080790706</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -423,7 +428,8 @@
     <MESSAGE value="Fixed SSL Check" />
     <MESSAGE value="upload excluded files" />
     <MESSAGE value="another commit for manifest&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="another commit for manifest&#10;" />
+    <MESSAGE value="fixed manifest" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed manifest" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -758,7 +764,7 @@
     <entry file="file://$PROJECT_DIR$/manifest.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.52696246">
-          <caret line="28" column="81" selection-start-line="28" selection-start-column="81" selection-end-line="28" selection-end-column="81" />
+          <caret line="28" column="82" selection-start-line="28" selection-start-column="82" selection-end-line="28" selection-end-column="82" />
           <folding />
         </state>
       </provider>
